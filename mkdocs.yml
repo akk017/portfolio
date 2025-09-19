@@ -1,15 +1,20 @@
 # mkdocs.yml
 site_name: "AKK - Portfolio & Digital Garden"
+dev_addr: "127.0.0.1:9000"
 theme:
   name: shadcn
   show_title: true
-  show_stargazers: true
+  show_stargazers: false
   pygments_style:
         light: shadcn-light
         dark: github-dark
+  icon: lucide:rocket
   topbar_sections: false
   katex_options:
     macros:
       "\\RR": "\\mathbb{R}"
       "\\dx": "\\mathrm{d}x"
   show_datetime: false
+  icon: ./img/favicon.ico
+markdown_extensions:
+  - shadcn.extensions.iconify
