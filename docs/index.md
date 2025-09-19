@@ -1,17 +1,17 @@
-# Welcome to MkDocs
+---
+title: "About Me"
+icon: "fa-comment"
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Hey There, I am **Akash Kandasamy** (pronouced as "Akash Kandhasamy"), working in **Zoho as Member of TechnicalStaff**.
+Passed out of Motital Nehru National Institute of Technology, Allahabad (MNNIT).
+A Son to B-E-A-utiful Parents.
 
-## Commands
+Dyslexic about right and left. Severe anemia patient (I am being sarcastic here).
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+This is a no-fluff website, no fancy framework, pure HTML, JS, CSS. -- So feel free
+check source code.
 
-## Project layout
+Love Grinding in computers, learning about system design, and taking on open-source projects to crack them open and explore.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+__All Human Generated.__

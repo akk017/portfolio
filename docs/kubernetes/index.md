@@ -1,5 +1,0 @@
-## Kuberenetes
-
-## About Kuberneter
-
-## Kuberenetes

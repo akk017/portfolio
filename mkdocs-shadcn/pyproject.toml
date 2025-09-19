@@ -33,6 +33,7 @@ shadcn = "shadcn"
 [project.entry-points."mkdocs.plugins"]
 "shadcn/search" = "shadcn.plugins.search:SearchPlugin"
 "shadcn/excalidraw" = "shadcn.plugins.excalidraw:ExcalidrawPlugin"
+"shadcn/nav-to-json" = "shadcn.plugins.nav:NavToJsonPlugin"
 
 [build-system]
 requires = ["hatchling"]

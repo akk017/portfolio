@@ -15,6 +15,9 @@ theme:
       "\\RR": "\\mathbb{R}"
       "\\dx": "\\mathrm{d}x"
   show_datetime: false
-  icon: ./img/favicon.ico
+  icon: /img/favicon.ico
 markdown_extensions:
   - shadcn.extensions.iconify
+plugins:
+  - shadcn/nav-to-json
+  - shadcn/search
