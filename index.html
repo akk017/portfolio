@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <style>
+        * {
+            font-family: monospace;
+            line-height: 20px;
+        }
+
+        body {
+            margin-right: 60%;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .navbar>div {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar>div>a {
+            color: black;
+        }
+
+        .nav-link:hover::before {
+            content: ">";
+        }
+
+        .reference {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            cursor: pointer;
+        }
+
+        .muted {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .force-break {
+            margin-top: 20px;
+        }
+
+        .recents-list {
+            display: flex;
+        }
+
+        section {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const allElements = Array.from(document.body.querySelectorAll("*"));
+            const referenceElements = Array.from(document.querySelectorAll('.reference'));
+
+            function setMuted(target) {
+                allElements.forEach(el => {
+                    if (el !== target) {
+                        el.classList.add("muted");
+                    } else {
+                        el.classList.remove("muted");
+                    }
+                });
+            }
+
+            function clearMuted() {
+                allElements.forEach(el => el.classList.remove("muted"));
+            }
+
+            referenceElements.forEach(el => {
+                el.addEventListener("mouseover", function (e) {
+                    setMuted(e.currentTarget);
+                });
+                el.addEventListener("mouseout", function () {
+                    clearMuted();
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h4>Akash Kandasamy</h4>
+        <div>
+            <a href="/" class="nav-link">Home</a>
+            <a href="/about" class="nav-link">About</a>
+            <a href="/blogs" class="nav-link">Blogs</a>
+            <a href="/prs" class="nav-link">PR's</a>
+        </div>
+    </nav>
+    <main>
+        Hey There, I am <b>Akash Kandasamy</b>, working in <span class="reference">Zoho as Member of Technical
+            Staff</span>. Passed out of Motital Nehru
+        National
+        Institute of Technology, Allahabad (MNNIT). A Son to B-E-A-utiful Parents.
+        <br />
+        <div class="force-break">Dyslexic about right and left. Severe anemia patient (I am being sarcastic here).</div>
+        <div class="force-break">This is a no-fluff website, no fancy framework, pure HTML, JS, CSS. -- So feel free
+            check source code.</div>
+        <br />
+
+        All Human Generated.
+    </main>
+    <section id="recents">
+        <h3>Recents</h3>
+        <h4>Stuff that are recent added</h4>
+
+        <div class="recents-list">
+            <p>31 / Aug / 2025 - This Portfilio. I Always wanted to create portfolio, collecting all online activities
+                like job, coding & music. But it kept postponded due work, and mainly no priority for creating a
+                portfolio. But I slowly tend to forget on what happened during those momenets, I Guess Its time to
+                collect. This Portfolio or Personal Diary is a foundation for collecting things that i do online and feel
+                excited about it, I want to collect and recollect them.</p>
+        </div>
+    </section>
+    <section id="interesting-prs">
+        <h3>Interesting PR</h3>
+        <h4>During Job and Open Source</h4>
+
+
+    </section>
+</body>
+
+</html>
