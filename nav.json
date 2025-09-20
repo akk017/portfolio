@@ -15,6 +15,34 @@
   },
   {
     "type": "Section",
+    "title": "Data Structures & Algorithms",
+    "children": [
+      {
+        "type": "Page",
+        "title": "Materials",
+        "href": "/Data%20Structures%20%26%20Algorithms/Material/",
+        "folder": false,
+        "icon": "fa-bookmark"
+      }
+    ],
+    "folder": true
+  },
+  {
+    "type": "Section",
+    "title": "Graphic Design",
+    "children": [
+      {
+        "type": "Page",
+        "title": "Generative Art",
+        "href": "/Graphic%20Design/generative-art/",
+        "folder": false,
+        "icon": "fa-hexagon-nodes"
+      }
+    ],
+    "folder": true
+  },
+  {
+    "type": "Section",
     "title": "Mac OS Apps",
     "children": [
       {
@@ -44,6 +72,55 @@
           }
         ],
         "folder": true
+      }
+    ],
+    "folder": true
+  },
+  {
+    "type": "Section",
+    "title": "Python",
+    "children": [
+      {
+        "type": "Page",
+        "title": "Namespaces",
+        "href": "/Python/namespace/",
+        "folder": false,
+        "icon": null
+      }
+    ],
+    "folder": true
+  },
+  {
+    "type": "Section",
+    "title": "Queue",
+    "children": [
+      {
+        "type": "Page",
+        "title": "Read Queue",
+        "href": "/Queue/read-queue/",
+        "folder": false,
+        "icon": "fa-book-open-reader"
+      },
+      {
+        "type": "Page",
+        "title": "Watch Queue",
+        "href": "/Queue/watch-queue/",
+        "folder": false,
+        "icon": "fa-video"
+      }
+    ],
+    "folder": true
+  },
+  {
+    "type": "Section",
+    "title": "Read List",
+    "children": [
+      {
+        "type": "Page",
+        "title": "Tech Blogs",
+        "href": "/Read%20List/Tect/",
+        "folder": false,
+        "icon": "fa-file-code"
       }
     ],
     "folder": true

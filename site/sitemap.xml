@@ -1,3 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://akashk.dev/</loc>
+         <lastmod>2025-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://akashk.dev/TODO/</loc>
+         <lastmod>2025-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://akashk.dev/Mac%20OS%20Apps/apps/</loc>
+         <lastmod>2025-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://akashk.dev/Mathematics/Permutation/Material/</loc>
+         <lastmod>2025-09-20</lastmod>
+    </url>
 </urlset>

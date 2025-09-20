@@ -7,8 +7,8 @@ theme:
   show_title: true
   show_stargazers: false
   pygments_style:
-        light: shadcn-light
-        dark: github-dark
+    light: shadcn-light
+    dark: dracula
   icon: lucide:rocket
   topbar_sections: false
   katex_options:
@@ -18,7 +18,19 @@ theme:
   show_datetime: false
   icon: /img/favicon.ico
 markdown_extensions:
+  - pymdownx.fancylists:
+      inject_style: true
+  - pymdownx.saneheaders
   - shadcn.extensions.iconify
+  - pymdownx.escapeall:
+      hardbreak: true
+  - admonition
+  - pymdownx.fancylists
+  - pymdownx.saneheaders
+  - pymdownx.progressbar
+  - pymdownx.tilde
+  - codehilite
+  - shadcn.extensions.codexec
 plugins:
   - shadcn/nav-to-json
   - shadcn/search
