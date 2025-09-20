@@ -36,11 +36,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Todo - AKK - Portfolio & Digital Garden</title>
+    <title>Namespaces - AKK - Portfolio & Digital Garden</title>
     
 
 
-<title>Todo</title>
+<title>Namespaces</title>
 
 
 
@@ -50,18 +50,18 @@
 
 
 
-<link rel="canonical" href="https://akashk.dev/TODO/">
+<link rel="canonical" href="https://akashk.dev/Python/namespace/">
 
 
 <!-- Open Graph (Facebook, LinkedIn) -->
 
-<meta property="og:title" content="Todo">
+<meta property="og:title" content="Namespaces">
 
 
 
 
 
-<meta property="og:url" content="https://akashk.dev/TODO/">
+<meta property="og:url" content="https://akashk.dev/Python/namespace/">
 
 
 
@@ -70,7 +70,7 @@
 
 <!-- Twitter Card -->
 
-<meta name="twitter:title" content="Todo">
+<meta name="twitter:title" content="Namespaces">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-    <link rel="icon" href="../img/favicon.ico">
+    <link rel="icon" href="../../img/favicon.ico">
 
-    <link href="../css/base.css" rel="stylesheet">
-    <link href="../css/geist.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/geist.css" rel="stylesheet">
 
     
     
 
 <link id="pygments-light" rel="stylesheet"
-    href="../css/pygments/shadcn-light.css">
+    href="../../css/pygments/shadcn-light.css">
 <link id="pygments-dark" rel="stylesheet"
-    href="../css/pygments/dracula.css"
+    href="../../css/pygments/dracula.css"
     media="(prefers-color-scheme: dark)">
 
 
@@ -100,7 +100,7 @@
 
     
 
-    <script src="../js/callbacks.js"></script>
+    <script src="../../js/callbacks.js"></script>
 
     
 
@@ -108,12 +108,12 @@
 
     
 
-    <script src="../js/jquery.min.js"></script>
+    <script src="../../js/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/jquery.fancytree@2.27.0/dist/jquery.fancytree-all-deps.min.js"></script>
     <link href="//cdn.jsdelivr.net/npm/jquery.fancytree@2.27.0/dist/skin-material/ui.fancytree.min.css"
         rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v7.0.1/css/all.css" rel="stylesheet">
-    <link href="../css/fancytree-override.css" rel="stylesheet">
+    <link href="../../css/fancytree-override.css" rel="stylesheet">
 
 </head>
 
@@ -230,7 +230,7 @@
             <div id="page-header" class="flex items-start justify-between">
 
                 <h1 class="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-3xl xl:text-4xl">
-                    Todo
+                    Namespaces
                 </h1>
             </div>
             
@@ -242,10 +242,73 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <ul>
-<li>Dark Mode for Navigation</li>
-<li>Navigation for Mobile, and other Small Device</li>
+        <p>A Python namespaces is a mapping from names to objects. It works like a dictionary where keys are object names and values are the objects themselves.</p>
+<p>A <code>namespace</code> is a container that holds the currently defined symbolic names and the objects each name references.</p>
+<p>These namespaces have differing lifetimes. As Python executes a program, it creates namespaces as necessary and removes them when it no longer needs them.</p>
+<p>Four Different Namespace Available:</p>
+<ol style="list-style-type: decimal;" type="1">
+<li>Built-in</li>
+<li>Local</li>
+<li>Gobal</li>
+<li>Enclosing or nonlocal</li>
+</ol>
+<h3 id="built-in-namespace">Built-In Namespace</h3>
+<ul>
+<li>ex. Exception, Primitive Types, sort, reverse etc.</li>
 </ul>
+<pre class="codehilite"><code class="language-python">&gt;&gt;&gt; dir(__builtins__)
+[
+    'ArithmeticError',
+    'AssertionError',
+    'AttributeError',
+    'BaseException',
+    ...
+    'super',
+    'tuple',
+    'type',
+    'vars',
+    'zip'
+]
+</code></pre>
+
+<h3 id="global-namespace">Global Namespace</h3>
+<ul>
+<li>The global namespace contains the names defined at the module level.</li>
+<li>
+<p>Python creates a main global namespace when the main program’s body starts.</p>
+</li>
+<li>
+<p><code>Globals are seperate to module</code></p>
+</li>
+</ul>
+<h3 id="local-namespace">Local Namespace</h3>
+<ul>
+<li>function level namespace</li>
+<li>on enter of function -&gt; create a namespace, on exit of a function -&gt; delete the namespace.</li>
+</ul>
+<h3 id="enclosing-or-non-local-namespace">Enclosing or Non Local Namespace</h3>
+<pre class="codehilite"><code class="language-py">&gt;&gt;&gt; global_variable = &quot;global&quot;
+
+&gt;&gt;&gt; def outer_func():
+...     # Nonlocal scope
+...     nonlocal_variable = &quot;nonlocal&quot;
+...     def inner_func():
+...         # Local scope
+...         local_variable = &quot;local&quot;
+...         print(f&quot;Hi from the '{local_variable}' scope!&quot;)
+...         print(f&quot;Hi from the '{nonlocal_variable}' scope!&quot;)
+...         print(f&quot;Hi from the '{global_variable}' scope!&quot;)
+...     inner_func()
+...
+
+&gt;&gt;&gt; outer_func()
+Hi from the 'local' scope!
+Hi from the 'nonlocal' scope!
+Hi from the 'global' scope!
+</code></pre>
+
+<h3 id="the-legb-rule-for-searching-name">The LEGB Rule for Searching Name</h3>
+<p style="font-family: var(--font-mono)">LOCAL > ENCLOSING > GLOBAL > BUILTIN</p>
     </div>
 </article>
                                 <dialog id="bottom-sidebar" onclick="onBottomSidebarDialogClick(event)" class="bg-transparent"
@@ -264,13 +327,13 @@
                 <div class="text-muted-foreground text-sm font-medium">Menu</div>
                 <div class="flex flex-col gap-3">
                     
-                    <a class="text-2xl font-medium" href="..">
+                    <a class="text-2xl font-medium" href="../..">
                         
                         About Me
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="./">
+                    <a class="text-2xl font-medium" href="../../TODO/">
                         
                         Todo
                         
@@ -288,7 +351,7 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../Data%20Structures%20%26%20Algorithms/Material/">
+                        <a class="text-2xl font-medium" href="../../Data%20Structures%20%26%20Algorithms/Material/">
                             
                             Materials
                             
@@ -303,7 +366,7 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../Graphic%20Design/generative-art/">
+                        <a class="text-2xl font-medium" href="../../Graphic%20Design/generative-art/">
                             
                             Generative Art
                             
@@ -318,7 +381,7 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../Mac%20OS%20Apps/apps/">
+                        <a class="text-2xl font-medium" href="../../Mac%20OS%20Apps/apps/">
                             
                             Apps That I Use Daily
                             
@@ -342,7 +405,7 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../Python/namespace/">
+                        <a class="text-2xl font-medium" href="./">
                             
                             Namespaces
                             
@@ -357,13 +420,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../Queue/read-queue/">
+                        <a class="text-2xl font-medium" href="../../Queue/read-queue/">
                             
                             Read Queue
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="../Queue/watch-queue/">
+                        <a class="text-2xl font-medium" href="../../Queue/watch-queue/">
                             
                             Watch Queue
                             
@@ -378,7 +441,7 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../Read%20List/Tect/">
+                        <a class="text-2xl font-medium" href="../../Read%20List/Tect/">
                             
                             Tech Blogs
                             
@@ -403,6 +466,52 @@
     <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
         <p class="text-muted-foreground bg-background sticky top-0 h-6 text-xs">On This Page</p>
         
+        
+        
+        
+        <a href="#built-in-namespace"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Built-In Namespace
+        </a>
+        
+
+        
+        <a href="#global-namespace"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Global Namespace
+        </a>
+        
+
+        
+        <a href="#local-namespace"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Local Namespace
+        </a>
+        
+
+        
+        <a href="#enclosing-or-non-local-namespace"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Enclosing or Non Local Namespace
+        </a>
+        
+
+        
+        <a href="#the-legb-rule-for-searching-name"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            The LEGB Rule for Searching Name
+        </a>
+        
+
+        
+        
+        
+        
 
     </div>
     <div class="h-12"></div>
@@ -426,17 +535,17 @@
     </div>
      
 
-<script src="../search/main.js"></script>
+<script src="../../search/main.js"></script>
 
 
     
 
-    <script src="../js/copy-button.js"></script>
+    <script src="../../js/copy-button.js"></script>
     <script>updatePygmentsStylesheet();</script>
     
     
     
-    <script src="../js/socket.io.min.js"></script>
+    <script src="../../js/socket.io.min.js"></script>
 <script>
     function randomString(length = 10) {
         const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';

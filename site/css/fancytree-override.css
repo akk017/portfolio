@@ -61,3 +61,53 @@ ul.fancytree-container ul {
 .fancytree-active > .fancytree-title {
     background-color: transparent !important;
 }
+
+.mkdocs-nav {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+[data-slot="sidebar"] {
+  width: calc(var(--sidebar-width) + 2rem);
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+input[type="checkbox"]:checked {
+    background-color: darkblue; /* Checked state color */
+}
+
+input[type="checkbox"]:focus {
+    outline: 2px solid royalblue;
+}
+
+article ol {
+    margin-block: calc(var(--spacing)*1) !important;
+}
+
+article code:not(pre code) {
+    background-color: oklch(93.6% 0.032 17.717);
+    padding-left: 8px;
+    padding-right: 8px;
+    color: var(--color-destructive);
+    border-radius: var(--radius-sm) !important;
+}
+
+.transition-override {
+    transition: all 0.2s ease-in-out;
+}
+
+.transition-override:hover {
+    opacity: 1;
+}

@@ -70,5 +70,4 @@ Hi from the 'global' scope!
 ```
 
 ### The LEGB Rule for Searching Name
-`LOCAL > ENCLOSING > GLOBAL > BUILTIN
-
+<p style="font-family: var(--font-mono)">LOCAL > ENCLOSING > GLOBAL > BUILTIN</p>

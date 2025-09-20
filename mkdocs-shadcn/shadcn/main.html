@@ -69,7 +69,7 @@
                 <div data-slot="sidebar-wrapper" style="--sidebar-width: 16rem; --sidebar-width-icon: 3rem;"
                     class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex w-full 3xl:fixed:container 3xl:fixed:px-3 min-h-min flex-1 items-start px-0 [--sidebar-width:220px] [--top-spacing:0] lg:grid lg:grid-cols-[var(--sidebar-width)_minmax(0,1fr)] lg:[--sidebar-width:240px] lg:[--top-spacing:calc(var(--spacing)*4)]">
                     <div data-slot="sidebar"
-                        class="text-sidebar-foreground flex-col sticky top-[calc(var(--header-height)+1px)] z-30 hidden h-[calc(100svh-var(--header-height)-var(--footer-height))] bg-transparent lg:flex">
+                        class="transition-override text-sidebar-foreground flex-col sticky top-[calc(var(--header-height)+1px)] z-30 hidden h-[calc(100svh-var(--header-height)-var(--footer-height))] bg-transparent lg:flex">
                         <div data-slot="sidebar-content" data-sidebar="content"
                             class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden no-scrollbar px-2 pb-12">
                             <div id="tree"></div>
@@ -81,7 +81,7 @@
                                 {% include "templates/page.html" %}
                                 {% include "templates/bottom_sidebar.html" %}
                             </div>
-                            <div
+                            <div data-reader-slot="toc"
                                 class="sticky top-[calc(var(--header-height)+1px)] z-30 ml-auto hidden h-[calc(100svh-var(--header-height)-var(--footer-height))] w-72 flex-col gap-4 overflow-hidden overscroll-none xl:flex">
                                 <div class="h-(--top-spacing) shrink-0"></div>
                                 {% include "templates/toc.html" %}
@@ -206,6 +206,41 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        function toogleReaderMode(){
+            console.log("Reader Mode On")
+            const sidebar = document.querySelector('[data-slot="sidebar"]');
+            const sidebar_opacity = window.getComputedStyle(sidebar).opacity;
+
+            const theme = document.querySelector('[data-reader-slot="theme"]');
+            const layout = document.querySelector('[data-reader-slot="layout"]');
+            const github = document.querySelector('[data-reader-slot="github"]');
+            const header_nav = document.querySelector('[data-reader-slot="header_nav"]');
+            const toc = document.querySelector('[data-reader-slot="toc"]');
+            const footer = document.querySelector('[data-reader-slot="footer"]');
+
+            console.log("Header Nav", header_nav)
+
+            if (sidebar_opacity != 0) {
+                sidebar.style.opacity = 0
+                theme.style.opacity = 0
+                layout.style.opacity = 0
+                github.style.opacity = 0
+                header_nav.style.opacity = 0
+                toc.style.opacity = 0
+                footer.style.opacity = 0
+            } else {
+                sidebar.style.opacity = 1
+                theme.style.opacity = 1
+                layout.style.opacity = 1
+                github.style.opacity = 1
+                header_nav.style.opacity = 1
+                toc.style.opacity = 1
+                footer.style.opacity = 1
+            }
+        }
     </script>
 </body>
 
