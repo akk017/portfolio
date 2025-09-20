@@ -4,12 +4,18 @@ import json
 from mkdocs.plugins import BasePlugin
 from mkdocs.utils.meta import get_data
 
+log = logging.getLogger(f"mkdocs.plugins.{__name__}")
+
 def populate_nav(filename):
-    with open(filename, "r", encoding="utf-8") as f:
-        defn = json.load(f)
-    val = json.dumps(defn)
-    print(val)
-    return json.dumps(defn)
+    try:
+        with open(filename, "r", encoding="utf-8") as f:
+            defn = json.load(f)
+        val = json.dumps(defn)
+        log.info("Nav Config Loaded Successfully")
+        return val
+    except Exception:
+        log.error("Nav File Not Found")
+
 
 class NavToJsonPlugin(BasePlugin):
     def __init__(self):
@@ -19,7 +25,7 @@ class NavToJsonPlugin(BasePlugin):
         env.filters["populate_nav"] = populate_nav
 
     def on_nav(self, nav, config, files):
-        logging.info("Getting Meta for Nav")
+        log.info("Getting Meta for Nav")
         def convert(item):
             if item.is_page:
                 doc, meta = get_data(item.file.content_string)
@@ -41,7 +47,7 @@ class NavToJsonPlugin(BasePlugin):
                 }
 
         nav_json = [convert(i) for i in nav]
-        with open("site/js/nav.json", "w", encoding="utf-8") as f:
+        with open("nav.json", "w", encoding="utf-8") as f:
             json.dump(nav_json, f, indent=2, ensure_ascii=False)
-        logging.info("Nav Stored Successfully")
+        log.info("Nav Stored Successfully")
         return nav

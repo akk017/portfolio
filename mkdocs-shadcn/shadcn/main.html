@@ -141,20 +141,11 @@
     {% endif %}
     {% endmacro %}
 
+
     <script>
-        let nav_source_str = `{{ 'site/js/nav.json' | populate_nav}}`
+        let nav_source_str = `{{ 'nav.json' | populate_nav}}`
         let nav_source = JSON.parse(nav_source_str || "null")
-    </script>
-
-    <script>
-        let content = `{{ page.content }}`;
-        let nav = `{{nav}}`;
-
-
-
-        console.log(nav)
         document.addEventListener("DOMContentLoaded", function () {
-
             $("#tree").fancytree({
                 toggleEffect: false,
                 clickFolderMode: 2,

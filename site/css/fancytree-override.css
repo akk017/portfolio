@@ -1,0 +1,63 @@
+.ui-fancytree {
+    border: none !important;
+}
+
+.fancytree-title {
+    font-family: var(--font-sans) !important;
+    min-height: 0 !important;
+    color: inherit !important;
+}
+
+.fancytree-override-icon {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    /* color: var(--color-foreground) !important;; */
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.fancytree-node {
+    width: 100%;
+    display: flex !important;
+    justify-content: start !important;
+    align-items: center !important;
+    padding: 0 calc(var(--spacing)*2) !important;
+    border-radius: 2px;
+}
+
+.fancytree-node > span {
+    padding-left: 6px;
+}
+
+.fancytree-folder > span {
+    padding-left: 4px !important;
+}
+
+ul.fancytree-container ul {
+    padding: 0.1rem 0 0 1em !important;
+}
+
+.fancytree-container {
+    padding: calc(var(--spacing)*2) !important;
+}
+
+.tree-item-hover {
+  transition: background 0.2s ease;
+  border-radius: var(--radius-sm);
+  color: oklch(14.5% 0 0 / 0.8) !important;
+}
+
+/* Hover effect */
+.tree-item-hover:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* light gray background */
+  cursor: pointer;
+}
+
+.fancytree-active {
+   background-color: rgba(0, 0, 0, 0.05);
+   border-radius: var(--radius-sm);
+}
+
+.fancytree-active > .fancytree-title {
+    background-color: transparent !important;
+}
