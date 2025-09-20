@@ -143,7 +143,7 @@
                 </div>
                 <span class="flex h-8 items-center text-lg leading-none font-medium">Menu</span>
             </button>
-            <a data-slot="button"
+            <a data-slot="button" data-reader-slot="header_nav"
                 class="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-5 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 hidden h-8 lg:flex"
                 href="https://akashk.dev/">
                 <span class="size-8 flex flex-row justify-center items-center">
@@ -163,13 +163,13 @@
             <div class="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">
                 <button data-slot="button"
                     class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 group/toggle extend-touch-target size-8"
-                    title="Toggle Reader Mode">
+                    title="Toggle Reader Mode" onclick="toogleReaderMode()">
                     <span class="sr-only">Toggle Reader Mode</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
                         <path fill="currentColor" fill-rule="evenodd" d="M164 64c-21.289 0-37.183 6.758-49.083 18.831c-11.071 11.233-17.546 26.036-22.792 39.275L23.283 305.692a155 155 0 0 0-2.314 6.324q-.374 1.029-.602 2.068A104 104 0 0 0 16 344c0 57.438 46.562 104 104 104s104-46.562 104-104v-60.461l.04-.01l63.96.01V344c0 57.438 46.562 104 104 104s104-46.562 104-104c0-10.399-1.526-20.441-4.367-29.915c-.325-1.085-2.915-8.392-2.915-8.392l-68.207-181.915l-.636-1.672c-5.246-13.239-11.72-28.042-22.792-39.275C385.183 70.758 369.289 64 348 64c-18.436 0-33.934 7.239-44.611 19.607C292.943 95.707 288 111.638 288 128v34.809h-64V128c0-16.362-4.943-32.293-15.389-44.393C197.934 71.239 182.436 64 164 64M56 344c0-35.346 28.654-64 64-64s64 28.654 64 64s-28.654 64-64 64s-64-28.654-64-64m272 0c0-35.346 28.654-64 64-64s64 28.654 64 64s-28.654 64-64 64s-64-28.654-64-64" clip-rule="evenodd" />
                     </svg>
                 </button>
-                <a target="_blank" rel="noreferrer" data-slot="button"
+                <a target="_blank" rel="noreferrer" data-slot="button" data-reader-slot="github"
                     class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 h-8 shadow-none"
                     href="None">
                     <svg viewBox="0 0 438.549 438.549">
@@ -178,7 +178,7 @@
                         </path>
                     </svg>
                 </a>
-                <button data-slot="button"
+                <button data-slot="button" data-reader-slot="layout"
                     class="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-8 3xl:flex hidden"
                     title="Toggle layout" onclick="toggleLayout(event)">
                     <span class="sr-only">Toggle layout</span>
@@ -191,7 +191,7 @@
                     </svg>
                 </button>
 
-                <button data-slot="button"
+                <button data-slot="button" data-reader-slot="theme"
                     class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 group/toggle extend-touch-target size-8"
                     title="Toggle theme" onclick="onThemeSwitch(event)">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -215,7 +215,7 @@
                 <div data-slot="sidebar-wrapper" style="--sidebar-width: 16rem; --sidebar-width-icon: 3rem;"
                     class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex w-full 3xl:fixed:container 3xl:fixed:px-3 min-h-min flex-1 items-start px-0 [--sidebar-width:220px] [--top-spacing:0] lg:grid lg:grid-cols-[var(--sidebar-width)_minmax(0,1fr)] lg:[--sidebar-width:240px] lg:[--top-spacing:calc(var(--spacing)*4)]">
                     <div data-slot="sidebar"
-                        class="text-sidebar-foreground flex-col sticky top-[calc(var(--header-height)+1px)] z-30 hidden h-[calc(100svh-var(--header-height)-var(--footer-height))] bg-transparent lg:flex">
+                        class="transition-override text-sidebar-foreground flex-col sticky top-[calc(var(--header-height)+1px)] z-30 hidden h-[calc(100svh-var(--header-height)-var(--footer-height))] bg-transparent lg:flex">
                         <div data-slot="sidebar-content" data-sidebar="content"
                             class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden no-scrollbar px-2 pb-12">
                             <div id="tree"></div>
@@ -308,7 +308,7 @@ Hi from the 'global' scope!
 </code></pre>
 
 <h3 id="the-legb-rule-for-searching-name">The LEGB Rule for Searching Name</h3>
-<p>`LOCAL &gt; ENCLOSING &gt; GLOBAL &gt; BUILTIN</p>
+<p style="font-family: var(--font-mono)">LOCAL > ENCLOSING > GLOBAL > BUILTIN</p>
     </div>
 </article>
                                 <dialog id="bottom-sidebar" onclick="onBottomSidebarDialogClick(event)" class="bg-transparent"
@@ -459,7 +459,7 @@ Hi from the 'global' scope!
     </div>
 </dialog>
                             </div>
-                            <div
+                            <div data-reader-slot="toc"
                                 class="sticky top-[calc(var(--header-height)+1px)] z-30 ml-auto hidden h-[calc(100svh-var(--header-height)-var(--footer-height))] w-72 flex-col gap-4 overflow-hidden overscroll-none xl:flex">
                                 <div class="h-(--top-spacing) shrink-0"></div>
                                 <div view-transition-name="toc" class="no-scrollbar overflow-y-auto px-8">
@@ -522,7 +522,7 @@ Hi from the 'global' scope!
                 </div>
             </div>
         </main>
-        <footer view-transition-name="footer"
+        <footer view-transition-name="footer" data-reader-slot="footer"
     class="group-has-[.section-soft]/body:bg-surface/40 3xl:fixed:bg-transparent dark:bg-transparent">
     <div class="container-wrapper px-4 xl:px-6">
         <div class="flex h-(--footer-height) items-center justify-between">
@@ -705,6 +705,41 @@ Hi from the 'global' scope!
                 }
             });
         });
+    </script>
+
+    <script>
+        function toogleReaderMode(){
+            console.log("Reader Mode On")
+            const sidebar = document.querySelector('[data-slot="sidebar"]');
+            const sidebar_opacity = window.getComputedStyle(sidebar).opacity;
+
+            const theme = document.querySelector('[data-reader-slot="theme"]');
+            const layout = document.querySelector('[data-reader-slot="layout"]');
+            const github = document.querySelector('[data-reader-slot="github"]');
+            const header_nav = document.querySelector('[data-reader-slot="header_nav"]');
+            const toc = document.querySelector('[data-reader-slot="toc"]');
+            const footer = document.querySelector('[data-reader-slot="footer"]');
+
+            console.log("Header Nav", header_nav)
+
+            if (sidebar_opacity != 0) {
+                sidebar.style.opacity = 0
+                theme.style.opacity = 0
+                layout.style.opacity = 0
+                github.style.opacity = 0
+                header_nav.style.opacity = 0
+                toc.style.opacity = 0
+                footer.style.opacity = 0
+            } else {
+                sidebar.style.opacity = 1
+                theme.style.opacity = 1
+                layout.style.opacity = 1
+                github.style.opacity = 1
+                header_nav.style.opacity = 1
+                toc.style.opacity = 1
+                footer.style.opacity = 1
+            }
+        }
     </script>
 </body>
 
