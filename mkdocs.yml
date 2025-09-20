@@ -1,5 +1,6 @@
 # mkdocs.yml
 site_name: "AKK - Portfolio & Digital Garden"
+site_url: https://akashk.dev/
 dev_addr: "127.0.0.1:9000"
 theme:
   name: shadcn
