@@ -31,6 +31,8 @@ markdown_extensions:
   - pymdownx.tilde
   - codehilite
   - shadcn.extensions.codexec
+  - pymdownx.arithmatex:
+      generic: true
 plugins:
   - shadcn/nav-to-json
   - shadcn/search

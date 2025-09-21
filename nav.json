@@ -23,6 +23,27 @@
         "href": "/Data%20Structures%20%26%20Algorithms/Material/",
         "folder": false,
         "icon": "fa-bookmark"
+      },
+      {
+        "type": "Page",
+        "title": "Roadmap",
+        "href": "/Data%20Structures%20%26%20Algorithms/Roadmap/",
+        "folder": false,
+        "icon": "fa-chart-diagram"
+      },
+      {
+        "type": "Section",
+        "title": "Graphs",
+        "children": [
+          {
+            "type": "Page",
+            "title": "01 - Introduction",
+            "href": "/Data%20Structures%20%26%20Algorithms/Graphs/01-Introduction/",
+            "folder": false,
+            "icon": "fa-star"
+          }
+        ],
+        "folder": true
       }
     ],
     "folder": true
