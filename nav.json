@@ -19,13 +19,6 @@
     "children": [
       {
         "type": "Page",
-        "title": "Materials",
-        "href": "/Data%20Structures%20%26%20Algorithms/Material/",
-        "folder": false,
-        "icon": "fa-bookmark"
-      },
-      {
-        "type": "Page",
         "title": "Roadmap",
         "href": "/Data%20Structures%20%26%20Algorithms/Roadmap/",
         "folder": false,
