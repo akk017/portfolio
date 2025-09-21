@@ -252,7 +252,7 @@
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
         <iframe style="aspect-ratio: 16 / 9;" width="100%"  src="https://www.youtube.com/embed/videoseries?si=TrBXRu74Yb6TX1w2&amp;list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<p><u>Graph Theory</u> is the mathematical theory of properties anf application of graph networks</p>
+<p><u>Graph Theory</u> is the mathematical theory of properties and application of graph networks</p>
 <h3 id="types-of-graph">Types of Graph</h3>
 <ol style="list-style-type: decimal;" type="1">
 <li>Undirectied Graph: A Graph in which edges have no direction. the edge <span class="arithmatex">\((u, v) \equiv (v, u)\)</span></li>
@@ -263,12 +263,11 @@
 <p><u>Tree</u>: A Tree is unidirecteced graph with no cycles. <br />
 equivaltenly, If <span class="arithmatex">\(N = \text{Number of Nodes}\)</span> and <span class="arithmatex">\(E = \text{Number of Edges}\)</span>, then <span class="arithmatex">\(E = N - 1\)</span></p>
 <p><u>Rooted Tree</u>: A Rooted Tree is tree with a designated root. <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; edges point aways <span class="arithmatex">\(\rightarrow\)</span> arboresence or out-tree <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; edges point inwards <span class="arithmatex">\(\rightarrow\)</span> anti-arboresence or in-tree</p>
-<p><u>Directed Acylic Graph</u>: or Simply DAG, <u>Directed with No Cycles</u></p>
-<p><u>Bipartite Graph</u>: A Bipartite graph is one whose vertices can be split into independent graphs <span class="arithmatex">\(u, v\)</span>
-such that eery edge connect between group <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span></p>
-<p><u>Complete Graph</u>: A Completed graph is one where there is unqiue edge between every pair of nodes.</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; edges point away <span class="arithmatex">\(\rightarrow\)</span> arboresence or out-tree <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; edges point inward <span class="arithmatex">\(\rightarrow\)</span> anti-arboresence or in-tree</p>
+<p><u>Directed Acylic Graph</u>: or Simply DAG, <u>Directed Graph with No Cycles</u></p>
+<p><u>Bipartite Graph</u>: A Bipartite graph is one whose edge <span class="arithmatex">\((u, v)\)</span> can be split so that, the can form two independent graphs such that eery edge connect every node in graph <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span></p>
+<p><u>Complete Graph</u>: A Completed graph is one where there is unqiue edge between every pair of nodes. or Every node can be accessed from every other node in the graph.</p>
 <h3 id="representing-graph">Representing Graph</h3>
 <p><u>Adjacency Matrix</u>: for example</p>
 <div class="arithmatex">\[
@@ -280,8 +279,8 @@ M =
 4 &amp; 6 &amp; 4 &amp; 0
 \end{bmatrix}
 \]</div>
-<p>where <span class="arithmatex">\(M[u][v] = w\)</span> and <span class="arithmatex">\(w\)</span> is weight of the edge connected from <span class="arithmatex">\(u \rightarrow v\)</span>. <br />
-and <span class="arithmatex">\(M[u][u] = 0\)</span>, as there is weight for the edge connecting it own node.</p>
+<p>where <span class="arithmatex">\(M[u][v] = w\)</span> and <span class="arithmatex">\(w\)</span> is weight of the edge <span class="arithmatex">\(u \rightarrow v\)</span>. <br />
+and <span class="arithmatex">\(M[u][u] = 0\)</span>, as there is no weight for the edge <span class="arithmatex">\(u \rightarrow u\)</span>.</p>
 <table>
 <thead>
 <tr>
@@ -291,11 +290,11 @@ and <span class="arithmatex">\(M[u][u] = 0\)</span>, as there is weight for the 
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Space eff for represent graph</td>
+<td style="text-align: left;">Space efficient for represent graph</td>
 <td style="text-align: left;">Requires <span class="arithmatex">\(O(n^2)\)</span></td>
 </tr>
 <tr>
-<td style="text-align: left;">Edge Weight Lookup is <span class="arithmatex">\(O(n)\)</span></td>
+<td style="text-align: left;">Edge Weight Lookup is <span class="arithmatex">\(O(1)\)</span></td>
 <td style="text-align: left;">Iterating over all edges takes <span class="arithmatex">\(O(v^2)\)</span></td>
 </tr>
 <tr>
@@ -323,7 +322,7 @@ M(C) = [(A, 3), (D, 2), (B, 4)] \\
 <td style="text-align: left;">Not Effiecient for denser graph</td>
 </tr>
 <tr>
-<td style="text-align: left;">Iterating over all edges is off</td>
+<td style="text-align: left;">Iterating over all edges of a node is effiecient</td>
 <td style="text-align: left;">Edge weight lookup is <span class="arithmatex">\(O(E)\)</span> <br> where <span class="arithmatex">\(E = \text{No of Edges}\)</span></td>
 </tr>
 </tbody>
@@ -342,10 +341,10 @@ M = [(A, B, 1), (A, C, 2), (A, B, 2), (B, C, 3), (C, C, 8)]
 <tbody>
 <tr>
 <td style="text-align: left;">Space eff for representing sparse graph</td>
-<td style="text-align: left;">Not Effiecient for denser graph</td>
+<td style="text-align: left;">Not effiecient for denser graph</td>
 </tr>
 <tr>
-<td style="text-align: left;">Iterating over all edges is off</td>
+<td style="text-align: left;">Iterating over all edges of a node is effiecient</td>
 <td style="text-align: left;">Edge weight lookup is <span class="arithmatex">\(O(E)\)</span> <br> where <span class="arithmatex">\(E = \text{No of Edges}\)</span></td>
 </tr>
 <tr>
