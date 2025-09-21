@@ -30,10 +30,17 @@
         "children": [
           {
             "type": "Page",
-            "title": "01 - Introduction",
-            "href": "/Data%20Structures%20%26%20Algorithms/Graphs/01-Introduction/",
+            "title": "A - Introduction",
+            "href": "/Data%20Structures%20%26%20Algorithms/Graphs/A-Introduction/",
             "folder": false,
             "icon": "fa-star"
+          },
+          {
+            "type": "Page",
+            "title": "Common Graph Theory Problems",
+            "href": "/Data%20Structures%20%26%20Algorithms/Graphs/B-Common-Problems/",
+            "folder": false,
+            "icon": "fa-diagram-project"
           }
         ],
         "folder": true
