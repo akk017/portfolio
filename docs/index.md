@@ -14,4 +14,6 @@ check source code.
 
 Love Grinding in computers, learning about system design, and taking on open-source projects to crack them open and explore.
 
+$\heartsuit$ Math, mainly Geomentry, Arithemetic & Geometric Progresstion and Permuation & Combination.
+
 __All Human Generated.__
