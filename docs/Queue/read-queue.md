@@ -16,5 +16,7 @@ icon: fa-book-open-reader
 [Some Concurrency in GO](https://blog.cubed.run/the-cards-of-concurrency-in-go-0d7582cecb79)
 [Sinals in GO](https://www.calhoun.io/using-signals-with-go/)
 
+[Virtual DOM is pure overhead at Svelte by Rick Harris](https://svelte.dev/blog/virtual-dom-is-pure-overhead)
+
 > **LEARN RUST** and Contribute to Zed Code Editor
 > [link](https://github.com/zed-industries/zed/blob/main/docs/src/development/macos.md)

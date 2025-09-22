@@ -40,3 +40,16 @@ icon: fa-file-code
     2. Very Fun, Easy Understanble Tech Docs, ever read
 
     [=80% "80%"]
+
+!!! note "[**React Won by Default – And It's Killing Frontend Innovation**](https://arc.net/l/quote/fzaufnpl) <br>"
+    by: [**Loren Stewart**](https://ferd.ca/)
+
+    **A Lot Takeawys** \
+    1. Frontend Framework Evaluation Checklist \
+        A. Assess Performance Needs: Evaluate metrics like startup time, update efficiency, and bundle size.
+        B. Team Skills and Learning Curve: Consider existing expertise but factor in migration paths.
+        C. Scaling and Cost of Ownership: Calculate long-term costs, including maintenance, dependency management, and tech debt. Alternatives often reduce runtime overhead, lowering hosting costs and improving scalability.
+        D. Ecosystem Fit: Balance maturity with innovation; pilot in non-critical areas to test migration feasibility and ROI.
+    2. Monoculture slows web evolution when one framework’s constraints become de facto limits.
+
+    [=80% "80%"]
