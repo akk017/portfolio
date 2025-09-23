@@ -9,7 +9,7 @@ You are trapped in a 3D dungeon and need to find the quickest way out! The dunge
 
 Is an escape possible? If yes, how long will it take?
 
-#### Sample Input 1
+#### Sample Input
 
 ```
 3 4 5
