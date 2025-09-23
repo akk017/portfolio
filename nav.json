@@ -41,6 +41,20 @@
             "href": "/Data%20Structures%20%26%20Algorithms/Graphs/B-Common-Problems/",
             "folder": false,
             "icon": "fa-diagram-project"
+          },
+          {
+            "type": "Section",
+            "title": "Problems",
+            "children": [
+              {
+                "type": "Page",
+                "title": "A - Dungeon master",
+                "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/A%20-%20Dugen%20Master/",
+                "folder": false,
+                "icon": "fa-file"
+              }
+            ],
+            "folder": true
           }
         ],
         "folder": true
