@@ -50,6 +50,20 @@
   },
   {
     "type": "Section",
+    "title": "Design",
+    "children": [
+      {
+        "type": "Page",
+        "title": "CSS Collection",
+        "href": "/Design/CSS/",
+        "folder": false,
+        "icon": "fa-css"
+      }
+    ],
+    "folder": true
+  },
+  {
+    "type": "Section",
     "title": "Graphic Design",
     "children": [
       {
@@ -93,6 +107,20 @@
           }
         ],
         "folder": true
+      }
+    ],
+    "folder": true
+  },
+  {
+    "type": "Section",
+    "title": "Portfolios",
+    "children": [
+      {
+        "type": "Page",
+        "title": "Design Portfolio",
+        "href": "/Portfolios/Design/",
+        "folder": false,
+        "icon": "fa-pen-nib"
       }
     ],
     "folder": true

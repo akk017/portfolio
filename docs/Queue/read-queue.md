@@ -20,3 +20,7 @@ icon: fa-book-open-reader
 
 > **LEARN RUST** and Contribute to Zed Code Editor
 > [link](https://github.com/zed-industries/zed/blob/main/docs/src/development/macos.md)
+
+### Design
+
+[Boiled down: fixing the variable font inheritance problem](https://pixelambacht.nl/2022/boiled-down-fixing-variable-font-inheritance/)

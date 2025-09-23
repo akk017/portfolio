@@ -32,3 +32,9 @@ icon: fa-video
 
 ![Advanced Go Concurrency Patterns](http://localhost:8095/SCR-20250414-bjsz-2.png)
 *[Link](https://youtu.be/QDDwwePbDtw)*
+
+### Design
+
+<iframe style="aspect-ratio: 16 / 9;" width="100%" src="https://www.youtube.com/embed/X6azWrtHS-k?si=G2vwZVkMZZqWa2sa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[Layout and Reading Order by Rachel Andrew](https://www.youtube.com/watch?v=X6azWrtHS-k)
+Source: [CSS Day](https://cssday.nl/2024/#rachel)
