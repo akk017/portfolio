@@ -36,11 +36,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Design Portfolio - AKK - Portfolio & Digital Garden</title>
+    <title>A - Dungeon master - AKK - Portfolio & Digital Garden</title>
     
 
 
-<title>Design Portfolio</title>
+<title>A - Dungeon master</title>
 
 
 
@@ -50,18 +50,18 @@
 
 
 
-<link rel="canonical" href="https://akashk.dev/Portfolios/Design/">
+<link rel="canonical" href="https://akashk.dev/Data%20Structures%20%26%20Algorithms/Graphs/Problems/A%20-%20Dugen%20Master/">
 
 
 <!-- Open Graph (Facebook, LinkedIn) -->
 
-<meta property="og:title" content="Design Portfolio">
+<meta property="og:title" content="A - Dungeon master">
 
 
 
 
 
-<meta property="og:url" content="https://akashk.dev/Portfolios/Design/">
+<meta property="og:url" content="https://akashk.dev/Data%20Structures%20%26%20Algorithms/Graphs/Problems/A%20-%20Dugen%20Master/">
 
 
 
@@ -70,7 +70,7 @@
 
 <!-- Twitter Card -->
 
-<meta name="twitter:title" content="Design Portfolio">
+<meta name="twitter:title" content="A - Dungeon master">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-    <link rel="icon" href="../../img/favicon.ico">
+    <link rel="icon" href="../../../../img/favicon.ico">
 
-    <link href="../../css/base.css" rel="stylesheet">
-    <link href="../../css/geist.css" rel="stylesheet">
+    <link href="../../../../css/base.css" rel="stylesheet">
+    <link href="../../../../css/geist.css" rel="stylesheet">
 
     
     
 
 <link id="pygments-light" rel="stylesheet"
-    href="../../css/pygments/shadcn-light.css">
+    href="../../../../css/pygments/shadcn-light.css">
 <link id="pygments-dark" rel="stylesheet"
-    href="../../css/pygments/dracula.css"
+    href="../../../../css/pygments/dracula.css"
     media="(prefers-color-scheme: dark)">
 
 
@@ -100,15 +100,15 @@
 
     
 
-    <script src="../../js/callbacks.js"></script>
+    <script src="../../../../js/callbacks.js"></script>
 
     
     <!-- katex -->
-<link rel="stylesheet" href="../../css/katex.min.css">
+<link rel="stylesheet" href="../../../../css/katex.min.css">
 <!-- The loading of KaTeX is deferred to speed up page rendering -->
-<script defer src="../../js/katex.min.js"></script>
+<script defer src="../../../../js/katex.min.js"></script>
 <!-- To automatically render math in text elements, include the auto-render extension: -->
-<script defer src="../../js/auto-render.min.js"
+<script defer src="../../../../js/auto-render.min.js"
     onload='renderMathInElement(document.body, {"macros": {"\\RR": "\\mathbb{R}", "\\dx": "\\mathrm{d}x"}});'></script>
     
 
@@ -116,12 +116,12 @@
 
     
 
-    <script src="../../js/jquery.min.js"></script>
+    <script src="../../../../js/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/jquery.fancytree@2.27.0/dist/jquery.fancytree-all-deps.min.js"></script>
     <link href="//cdn.jsdelivr.net/npm/jquery.fancytree@2.27.0/dist/skin-material/ui.fancytree.min.css"
         rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v7.0.1/css/all.css" rel="stylesheet">
-    <link href="../../css/fancytree-override.css" rel="stylesheet">
+    <link href="../../../../css/fancytree-override.css" rel="stylesheet">
 
 </head>
 
@@ -238,7 +238,7 @@
             <div id="page-header" class="flex items-start justify-between">
 
                 <h1 class="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-3xl xl:text-4xl">
-                    Design Portfolio
+                    A - Dungeon master
                 </h1>
             </div>
             
@@ -250,10 +250,147 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p><img alt="Start using Scroll-driven animations today! Blog Post" src="http://localhost:8095/uploads/e43b9fc4-ed47-4b34-80af-4907ae79cc90.png" />
-<a href="https://cydstumpel.nl/">CYD Stumpel</a></p>
-<p><img alt="Design Blogs" src="http://localhost:8095/uploads/1c97f053-ba6a-4954-a839-a8013da9042c.png" />
-<a href="https://pixelambacht.nl/">Pixel Ambaght</a></p>
+        <p>source: <a href="https://open.kattis.com/problems/dungeon">problem-link</a></p>
+<p>You are trapped in a 3D dungeon and need to find the quickest way out! The dungeon is composed of unit cubes which may or may not be filled with rock. It takes one minute to move one unit north, south, east, west, up or down. You cannot move diagonally and the maze is surrounded by solid rock on all sides.</p>
+<p>Is an escape possible? If yes, how long will it take?</p>
+<h4 id="sample-input-1">Sample Input 1</h4>
+<pre class="codehilite"><code>3 4 5
+S....
+.###.
+.##..
+###.#
+
+#####
+#####
+##.##
+##...
+
+#####
+#####
+#.###
+####E
+
+1 3 3
+S##
+#E#
+###
+
+0 0 0
+</code></pre>
+
+<h4 id="sample-output">Sample Output</h4>
+<pre class="codehilite"><code>Escaped in 11 minute(s).
+Trapped!
+</code></pre>
+
+<h4 id="approach">Approach</h4>
+<p>Use, BFS in 3D Vector to find the shorted path between S and E or As mention in video, it could solved having by each queue for every diminention. We will try to find to out an optimal one based in pros and cons.
+s
+One unique catch here is that array is given in 3D, so for 2D if there are 4 Vector for Iterating, 3D has 6 Vectors</p>
+<div class="arithmatex">\[\begin{pmatrix}
+-1 &amp; 0 &amp; 0 \\
++1 &amp; 0 &amp; 0 \\
+0 &amp; -1 &amp; 0 \\
+0 &amp; +1 &amp; 0 \\
+0 &amp; 0 &amp; -1 \\
+0 &amp; 0 &amp; +1 \\
+\end{pmatrix}\]</div>
+<p>or simpily:</p>
+<pre class="codehilite"><code class="language-cpp">constexpr int DX6[] = {-1, 1,  0, 0, 0, 0};
+constexpr int DY6[] = { 0, 0, -1, 1, 0, 0};
+constexpr int DZ6[] = { 0, 0,  0, 0,-1, 1};
+</code></pre>
+
+<p>Simple BFS with 3D Vectors would solve the problem.</p>
+<pre class="codehilite"><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;list&gt;
+#include &lt;string&gt;
+#include &lt;queue&gt;
+#include &lt;utility&gt;
+#include &lt;tuple&gt;
+
+using namespace std;
+
+constexpr int DX6[] = {-1, 1,  0, 0, 0, 0};
+constexpr int DY6[] = { 0, 0, -1, 1, 0, 0};
+constexpr int DZ6[] = { 0, 0,  0, 0,-1, 1};
+
+bool is_inside(int tx, int ty, int tz, int r, int c, int level) {
+    if (tx &lt; 0 or ty &lt; 0 or tz &lt; 0) return false;
+    if (tx &gt;= r or ty &gt;= c or tz &gt;= level) return false;
+    return true;
+}
+
+void solve(int level, int r, int c) {
+    using pt = tuple&lt;int, int, int&gt;;
+    using vc = vector&lt;char&gt;;
+
+    vector&lt;vector&lt;vector&lt;char&gt;&gt;&gt; box(r, vector&lt;vector&lt;char&gt;&gt;(c, vector&lt;char&gt;(level, '.')));
+    vector&lt;vector&lt;vector&lt;bool&gt;&gt;&gt; vis(r, vector&lt;vector&lt;bool&gt;&gt;(c, vector&lt;bool&gt;(level)));
+
+    pt start, end;
+
+    for(int z=0;z&lt;level;z++){
+        for(int x=0;x&lt;r;x++){
+            for(int y=0;y&lt;c;y++){
+                char k;
+                cin &gt;&gt; k;
+                if (k == 'S') start = {x, y, z};
+                if (k == 'E') end = {x, y, z};
+                box[x][y][z] = k;
+            }
+        }
+    }
+
+    queue&lt;pt&gt; q;
+    q.push(start);
+
+    int res = 0;
+
+    while (!q.empty()) {
+        int size = q.size();
+
+        while (size--){
+            auto [x, y, z] = q.front(); q.pop();
+            auto [ex, ey, ez] = end;
+
+            if (x == ex and y == ey &amp;&amp; z == ez) {
+                cout &lt;&lt; &quot;Escaped in &quot; &lt;&lt; res &lt;&lt; &quot; minute(s).&quot; &lt;&lt; endl;
+                return;
+            }
+
+            for(int k=0;k&lt;6;k++){
+                int dx = x + DX6[k];
+                int dy = y + DY6[k];
+                int dz = z + DZ6[k];
+
+                if (is_inside(dx, dy, dz, r, c, level)){
+                    if (box[dx][dy][dz] != '#' and !vis[dx][dy][dz]){
+                        q.push({dx, dy, dz});
+                        vis[dx][dy][dz] = true;
+                    }
+                }
+            }
+        }
+
+        res++;
+    }
+
+    cout &lt;&lt; &quot;Trapped!&quot; &lt;&lt; endl;
+}
+
+int main() {
+    while(true){
+        int level, r, c;
+        cin &gt;&gt; level &gt;&gt; r &gt;&gt; c;
+        if(!level and !r and !c) break;
+        solve(level, r, c);
+    }
+}
+</code></pre>
+
+<p><code>TODO</code>: Write the same approach using queues for each dimension.</p>
     </div>
 </article>
                                 <dialog id="bottom-sidebar" onclick="onBottomSidebarDialogClick(event)" class="bg-transparent"
@@ -272,13 +409,13 @@
                 <div class="text-muted-foreground text-sm font-medium">Menu</div>
                 <div class="flex flex-col gap-3">
                     
-                    <a class="text-2xl font-medium" href="../..">
+                    <a class="text-2xl font-medium" href="../../../..">
                         
                         About Me
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="../../TODO/">
+                    <a class="text-2xl font-medium" href="../../../../TODO/">
                         
                         Todo
                         
@@ -296,7 +433,7 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../../Data%20Structures%20%26%20Algorithms/Roadmap/">
+                        <a class="text-2xl font-medium" href="../../../Roadmap/">
                             
                             Roadmap
                             
@@ -311,7 +448,7 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../../Design/CSS/">
+                        <a class="text-2xl font-medium" href="../../../../Design/CSS/">
                             
                             CSS Collection
                             
@@ -326,7 +463,7 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../../Graphic%20Design/generative-art/">
+                        <a class="text-2xl font-medium" href="../../../../Graphic%20Design/generative-art/">
                             
                             Generative Art
                             
@@ -341,7 +478,7 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../../Mac%20OS%20Apps/apps/">
+                        <a class="text-2xl font-medium" href="../../../../Mac%20OS%20Apps/apps/">
                             
                             Apps That I Use Daily
                             
@@ -365,7 +502,7 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="./">
+                        <a class="text-2xl font-medium" href="../../../../Portfolios/Design/">
                             
                             Design Portfolio
                             
@@ -380,7 +517,7 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../../Python/namespace/">
+                        <a class="text-2xl font-medium" href="../../../../Python/namespace/">
                             
                             Namespaces
                             
@@ -395,13 +532,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../../Queue/read-queue/">
+                        <a class="text-2xl font-medium" href="../../../../Queue/read-queue/">
                             
                             Read Queue
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="../../Queue/watch-queue/">
+                        <a class="text-2xl font-medium" href="../../../../Queue/watch-queue/">
                             
                             Watch Queue
                             
@@ -416,7 +553,7 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../../Read%20List/Tect/">
+                        <a class="text-2xl font-medium" href="../../../../Read%20List/Tect/">
                             
                             Tech Blogs
                             
@@ -441,6 +578,36 @@
     <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
         <p class="text-muted-foreground bg-background sticky top-0 h-6 text-xs">On This Page</p>
         
+        
+        
+        
+        <a href="#sample-input-1"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Sample Input 1
+        </a>
+        
+
+        
+        <a href="#sample-output"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Sample Output
+        </a>
+        
+
+        
+        <a href="#approach"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Approach
+        </a>
+        
+
+        
+        
+        
+        
 
     </div>
     <div class="h-12"></div>
@@ -464,17 +631,17 @@
     </div>
      
 
-<script src="../../search/main.js"></script>
+<script src="../../../../search/main.js"></script>
 
 
     
 
-    <script src="../../js/copy-button.js"></script>
+    <script src="../../../../js/copy-button.js"></script>
     <script>updatePygmentsStylesheet();</script>
     
     
     
-    <script src="../../js/socket.io.min.js"></script>
+    <script src="../../../../js/socket.io.min.js"></script>
 <script>
     function randomString(length = 10) {
         const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
