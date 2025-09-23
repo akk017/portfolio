@@ -159,4 +159,4 @@ int main() {
 ```
 
 
-`TODO`: Write the same approach using queues for each dimension.
+`TODO` Write the same approach using queues for each dimension.
