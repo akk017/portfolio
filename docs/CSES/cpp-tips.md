@@ -61,3 +61,13 @@ ostream &operator<<(ostream &os, const T &c) {
 #define print(...)                                                              \
   cerr << "Line " << __LINE__ << ": " FOR_EACH_MACRO(out, __VA_ARGS__) << "\n"
 ```
+
+
+
+https://codeforces.com/blog/entry/106346
+https://codeforces.com/blog/entry/91114
+https://codeforces.com/blog/entry/15643
+https://codeforces.com/blog/entry/15547
+https://codeforces.com/blog/entry/74684
+https://codeforces.com/blog/entry/925
+https://codeforces.com/blog/entry/112926
