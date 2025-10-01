@@ -36,11 +36,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Apps That I Use Daily - AKK - Portfolio & Digital Garden</title>
+    <title>CPP Tips and Tricks - AKK - Portfolio & Digital Garden</title>
     
 
 
-<title>Apps That I Use Daily</title>
+<title>CPP Tips and Tricks</title>
 
 
 
@@ -50,18 +50,18 @@
 
 
 
-<link rel="canonical" href="https://akashk.dev/Mac%20OS%20Apps/apps/">
+<link rel="canonical" href="https://akashk.dev/CSES/cpp-tips/">
 
 
 <!-- Open Graph (Facebook, LinkedIn) -->
 
-<meta property="og:title" content="Apps That I Use Daily">
+<meta property="og:title" content="CPP Tips and Tricks">
 
 
 
 
 
-<meta property="og:url" content="https://akashk.dev/Mac%20OS%20Apps/apps/">
+<meta property="og:url" content="https://akashk.dev/CSES/cpp-tips/">
 
 
 
@@ -70,7 +70,7 @@
 
 <!-- Twitter Card -->
 
-<meta name="twitter:title" content="Apps That I Use Daily">
+<meta name="twitter:title" content="CPP Tips and Tricks">
 
 
 
@@ -238,7 +238,7 @@
             <div id="page-header" class="flex items-start justify-between">
 
                 <h1 class="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-3xl xl:text-4xl">
-                    Apps That I Use Daily
+                    CPP Tips and Tricks
                 </h1>
             </div>
             
@@ -250,30 +250,52 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <ol style="list-style-type: decimal;" type="1">
-<li><a href="https://apps.apple.com/us/app/clipboard-manager-pasty/id1544620654">Pasty</a>: Clipboard Manager, Free</li>
-<li><a href="https://code.visualstudio.com/">VS Code</a>: Code Editor, Free</li>
-<li><a href="">Ghostty</a>: Terminal Emulator, Free</li>
-<li><a href="">Arc / Chrome</a>; Broswer</li>
-<li><a href="">Spotify</a></li>
-<li><a href="">Postman</a></li>
-<li>[VLC Play]: For Movies</li>
-<li>[QBit Torrent]: For Downloading Movies</li>
-<li>[Keyboard Clearner Tool]</li>
-<li><a href="">DBWeaver</a></li>
-<li><a href="">Obsdian</a></li>
-<li><a href="">Minibrain</a> - Todo, Nodes Planner</li>
-<li><a href="">Dozer</a>: Menubar Maintaince</li>
-<li><a href="">Numi</a>: Better Calculator</li>
-<li>AppClearner: For Uninstalling and Removing Left Over Application Files</li>
-<li>Velja: For opening youtube.com in idna browser, and rest in default, AirTraffic Basically</li>
-<li>Plain Text Editor: Good Quick Note Editor</li>
-<li>Zed: Sometimes, If I feel bored with VS Code</li>
-<li>Shotr: For Taking Screenshot</li>
-<li>Notion: For Mataining Internet Bookmarks</li>
-<li>ChatGPT: Off Course</li>
-<li>Karabiner-Elements: For Customizing KetStrokes</li>
-</ol>
+        <p>In <code>myprettyprint.hpp</code>, Support Only Upto 5 Args</p>
+<pre class="codehilite"><code class="language-cpp">template &lt;class T1, class T2&gt;
+ostream &amp;operator&lt;&lt;(ostream &amp;os, const pair&lt;T1, T2&gt; &amp;p) {
+  return os &lt;&lt; '{' &lt;&lt; p.first &lt;&lt; &quot;, &quot; &lt;&lt; p.second &lt;&lt; '}';
+}
+
+template &lt;class T, class = decay_t&lt;decltype(*begin(declval&lt;T&gt;()))&gt;,
+          class = enable_if_t&lt;!is_same&lt;T, string&gt;::value&gt;&gt;
+ostream &amp;operator&lt;&lt;(ostream &amp;os, const T &amp;c) {
+  os &lt;&lt; '[';
+  for (auto it = c.begin(); it != c.end(); ++it)
+    os &lt;&lt; &amp;&quot;, &quot;[2 * (it == c.begin())] &lt;&lt; *it;
+  return os &lt;&lt; ']';
+}
+//support up to 5 args
+#define _NTH_ARG(_1, _2, _3, _4, _5, _6, N, ...) N
+#define _FE_0(_CALL, ...)
+#define _FE_1(_CALL, x) _CALL(x)
+#define _FE_2(_CALL, x, ...) _CALL(x) _FE_1(_CALL, __VA_ARGS__)
+#define _FE_3(_CALL, x, ...) _CALL(x) _FE_2(_CALL, __VA_ARGS__)
+#define _FE_4(_CALL, x, ...) _CALL(x) _FE_3(_CALL, __VA_ARGS__)
+#define _FE_5(_CALL, x, ...) _CALL(x) _FE_4(_CALL, __VA_ARGS__)
+#define FOR_EACH_MACRO(MACRO, ...)                                             \
+  _NTH_ARG(dummy, ##__VA_ARGS__, _FE_5, _FE_4, _FE_3, _FE_2, _FE_1, _FE_0)     \
+  (MACRO, ##__VA_ARGS__)
+//Change output format here
+#define out(x) #x &quot; = &quot; &lt;&lt; x &lt;&lt; &quot;; &quot;
+#define print(...)                                                              \
+  cerr &lt;&lt; &quot;Line &quot; &lt;&lt; __LINE__ &lt;&lt; &quot;: &quot; FOR_EACH_MACRO(out, __VA_ARGS__) &lt;&lt; &quot;\n&quot;
+</code></pre>
+
+<pre class="codehilite"><code class="language-cpp">// ************************DEBUG START********************************
+#ifndef ONLINE_JUDGE  // if ONLINE_JUDGE is not defined (when compiling on our pc, this is true)
+//#define cerr cout  // if you want to print to stdout, uncomment this
+#include &quot;myprettyprint.hpp&quot; // include myprettyprint.hpp
+#else
+#define print(...) // else, when defined (most modern CP sites have this defined), define dbg(...).
+                 // this basically just would do nothing on seeing dbg() and thus no need to remove dbg() while submitting.
+#endif
+// ************************DEBUG END**********************************
+
+int main(){
+    int x = 5;
+    print(x) // Line 6: x = 5;
+}
+</code></pre>
     </div>
 </article>
                                 <dialog id="bottom-sidebar" onclick="onBottomSidebarDialogClick(event)" class="bg-transparent"
@@ -316,13 +338,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../../CSES/cpp-tips/">
+                        <a class="text-2xl font-medium" href="./">
                             
                             CPP Tips and Tricks
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="../../CSES/main/">
+                        <a class="text-2xl font-medium" href="../main/">
                             
                             Resource for CSES
                             
@@ -382,7 +404,7 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="./">
+                        <a class="text-2xl font-medium" href="../../Mac%20OS%20Apps/apps/">
                             
                             Apps That I Use Daily
                             
