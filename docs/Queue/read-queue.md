@@ -11,6 +11,10 @@ icon: fa-book-open-reader
 
 [Three Point Weekely](https://www.thdpth.com/) -- Seem Nice Writing about Marketing, Check Out.
 
+[Git Notes - Most Unloved Feature of Git](https://tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/)
+
+[CRDT - Conflict-free Replicated Data Type](https://madebyevan.com/algos/crdt-text-buffer/)
+
 
 [Ten Commands in GO](https://bitfieldconsulting.com/posts/commandments)
 [Some Concurrency in GO](https://blog.cubed.run/the-cards-of-concurrency-in-go-0d7582cecb79)
@@ -21,6 +25,12 @@ icon: fa-book-open-reader
 > **LEARN RUST** and Contribute to Zed Code Editor
 > [link](https://github.com/zed-industries/zed/blob/main/docs/src/development/macos.md)
 
+[What Makes System Calls Expensive: A Linux Internals Deep Dive](https://blog.codingconfessions.com/p/what-makes-system-calls-expensive)
+
 ### Design
 
 [Boiled down: fixing the variable font inheritance problem](https://pixelambacht.nl/2022/boiled-down-fixing-variable-font-inheritance/)
+
+[CSS Boilerplate](https://fokus.dev/tools/css-boilerplate/)
+
+[Web Accessibilty](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)

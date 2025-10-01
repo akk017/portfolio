@@ -5,4 +5,5 @@ icon: "fa-square-check"
 
 - Dark Mode for Navigation
 - Navigation for Mobile, and other Small Device
+- Last Update Date & Time to automattically update over every deploy
 

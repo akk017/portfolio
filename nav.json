@@ -15,6 +15,27 @@
   },
   {
     "type": "Section",
+    "title": "CSES",
+    "children": [
+      {
+        "type": "Page",
+        "title": "CPP Tips and Tricks",
+        "href": "/CSES/cpp-tips/",
+        "folder": false,
+        "icon": "fa-circle-up"
+      },
+      {
+        "type": "Page",
+        "title": "Resource for CSES",
+        "href": "/CSES/main/",
+        "folder": false,
+        "icon": "fa-list"
+      }
+    ],
+    "folder": true
+  },
+  {
+    "type": "Section",
     "title": "Data Structures & Algorithms",
     "children": [
       {

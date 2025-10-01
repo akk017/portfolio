@@ -24,6 +24,12 @@ icon: fa-video
 [System Design](https://youtube.com/watch?v=s9Qh9fWeOAk)
 
 
+### Python
+
+<iframe style="aspect-ratio: 16 / 9;" width="100%" src="https://www.youtube.com/watch?v=IhNSINolcSM&t=32s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Design Pressure: The Invisible Hand That Shapes Your Code - [Hynek Schlawack](https://hynek.me/talks/design-pressure/)
+
+
 ### Go
 
 ![Go Concurrency Patterns](http://localhost:8095/SCR-20250414-bkwi-2.png)
