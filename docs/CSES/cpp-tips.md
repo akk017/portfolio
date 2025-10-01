@@ -7,6 +7,31 @@ icon: fa-circle-up
 In `myprettyprint.hpp`, Support Only Upto 5 Args
 
 ```cpp
+#ifndef ONLINE_JUDGE
+    #include "myprettyprint.hpp"
+
+    template <typename T>
+    using mat = vector<vector<T>>;
+
+    template <typename T>
+    void show_mat_graph(mat<T> graph){
+        for(auto vec: graph){
+            for(auto k: vec){
+                cout << k << " ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
+#else
+    #define print(...)
+    void show_mat_graph(...)
+#endif
+```
+
+
+
+```cpp
 template <class T1, class T2>
 ostream &operator<<(ostream &os, const pair<T1, T2> &p) {
   return os << '{' << p.first << ", " << p.second << '}';
@@ -36,24 +61,3 @@ ostream &operator<<(ostream &os, const T &c) {
 #define print(...)                                                              \
   cerr << "Line " << __LINE__ << ": " FOR_EACH_MACRO(out, __VA_ARGS__) << "\n"
 ```
-
-
-
-``` cpp
-// ************************DEBUG START********************************
-#ifndef ONLINE_JUDGE  // if ONLINE_JUDGE is not defined (when compiling on our pc, this is true)
-//#define cerr cout  // if you want to print to stdout, uncomment this
-#include "myprettyprint.hpp" // include myprettyprint.hpp
-#else
-#define print(...) // else, when defined (most modern CP sites have this defined), define dbg(...).
-                 // this basically just would do nothing on seeing dbg() and thus no need to remove dbg() while submitting.
-#endif
-// ************************DEBUG END**********************************
-
-int main(){
-    int x = 5;
-    print(x) // Line 6: x = 5;
-}
-```
-
-
