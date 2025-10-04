@@ -64,8 +64,8 @@ ostream &operator<<(ostream &os, const T &c) {
 
 
 
-https://codeforces.com/blog/entry/106346
-https://codeforces.com/blog/entry/91114
+<!-- https://codeforces.com/blog/entry/106346 -->
+<!-- https://codeforces.com/blog/entry/91114 -->
 https://codeforces.com/blog/entry/15643
 https://codeforces.com/blog/entry/15547
 https://codeforces.com/blog/entry/74684

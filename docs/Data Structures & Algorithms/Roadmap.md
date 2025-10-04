@@ -25,3 +25,7 @@ icon: fa-chart-diagram
 [MIT Design of Algorithms](https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2012/)
 [Course Material](https://courses.csail.mit.edu/) \
 [Priceton Lecture](https://www.cs.princeton.edu/~wayne/kleinberg-tardos/)
+
+### Common Algorithms
+
+![Image](/img/uploads/graphs.png)
