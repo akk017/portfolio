@@ -22,6 +22,8 @@ icon: fa-book-open-reader
 
 [Virtual DOM is pure overhead at Svelte by Rick Harris](https://svelte.dev/blog/virtual-dom-is-pure-overhead)
 
+[Diff Algorithms](https://flo.znkr.io/diff/)
+
 > **LEARN RUST** and Contribute to Zed Code Editor
 > [link](https://github.com/zed-industries/zed/blob/main/docs/src/development/macos.md)
 
