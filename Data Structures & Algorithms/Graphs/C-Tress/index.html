@@ -36,11 +36,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>A - Introduction - AKK - Portfolio & Digital Garden</title>
+    <title>Trees - AKK - Portfolio & Digital Garden</title>
     
 
 
-<title>A - Introduction</title>
+<title>Trees</title>
 
 
 
@@ -50,18 +50,18 @@
 
 
 
-<link rel="canonical" href="https://akashk.dev/Data%20Structures%20%26%20Algorithms/Graphs/A-Introduction/">
+<link rel="canonical" href="https://akashk.dev/Data%20Structures%20%26%20Algorithms/Graphs/C-Tress/">
 
 
 <!-- Open Graph (Facebook, LinkedIn) -->
 
-<meta property="og:title" content="A - Introduction">
+<meta property="og:title" content="Trees">
 
 
 
 
 
-<meta property="og:url" content="https://akashk.dev/Data%20Structures%20%26%20Algorithms/Graphs/A-Introduction/">
+<meta property="og:url" content="https://akashk.dev/Data%20Structures%20%26%20Algorithms/Graphs/C-Tress/">
 
 
 
@@ -70,7 +70,7 @@
 
 <!-- Twitter Card -->
 
-<meta name="twitter:title" content="A - Introduction">
+<meta name="twitter:title" content="Trees">
 
 
 
@@ -238,7 +238,7 @@
             <div id="page-header" class="flex items-start justify-between">
 
                 <h1 class="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-3xl xl:text-4xl">
-                    A - Introduction
+                    Trees
                 </h1>
             </div>
             
@@ -250,118 +250,54 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <iframe style="aspect-ratio: 16 / 9;" width="100%"  src="https://www.youtube.com/embed/videoseries?si=TrBXRu74Yb6TX1w2&amp;list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<p><strong><a href="https://csacademy.com/app/graph_editor">Website To Visualize Graphs</a></strong></p>
-<p><u>Graph Theory</u> is the mathematical theory of properties and application of graph networks</p>
-<h3 id="types-of-graph">Types of Graph</h3>
+        <p>A Tree is a Graph but a Graph is not Tree.</p>
+<p>for <span class="arithmatex">\(N =\)</span> No of Nodes, <span class="arithmatex">\(E =\)</span> No of Edges, <br />
+Always <span class="arithmatex">\(N = E - 1\)</span></p>
+<h3 id="application-of-tree">Application of Tree</h3>
 <ol style="list-style-type: decimal;" type="1">
-<li>Undirectied Graph: A Graph in which edges have no direction. the edge <span class="arithmatex">\((u, v) \equiv (v, u)\)</span></li>
-<li>Directed Graph: A Graph in which edges have direction.</li>
-<li>Weighted Graph: A Graph in which edge have weight, ie edge is represented by <span class="arithmatex">\((u, v, w)\)</span>.</li>
+<li>File Parsing / HTML / JSON / Abstract Syntax Tree</li>
+<li>Many Sub Data Structures:<ol style="list-style-type: lower-alpha;" type="a">
+<li>AVL Tree</li>
+<li>B-Tree</li>
+<li>Red Black Tree</li>
+<li>Segment Tree</li>
+<li>Fenwick Tree</li>
+<li>Treaps</li>
+<li>Suffix Tree</li>
+<li>Tree Map.</li>
 </ol>
-<h3 id="special-graph">Special Graph</h3>
-<p><u>Tree</u>: A Tree is unidirecteced graph with no cycles. <br />
-equivaltenly, If <span class="arithmatex">\(N = \text{Number of Nodes}\)</span> and <span class="arithmatex">\(E = \text{Number of Edges}\)</span>, then <span class="arithmatex">\(E = N - 1\)</span></p>
-<p><u>Rooted Tree</u>: A Rooted Tree is tree with a designated root. <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; edges point away <span class="arithmatex">\(\rightarrow\)</span> arboresence or out-tree <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; edges point inward <span class="arithmatex">\(\rightarrow\)</span> anti-arboresence or in-tree</p>
-<p><u>Directed Acylic Graph</u>: or Simply DAG, <u>Directed Graph with No Cycles</u></p>
-<p><u>Bipartite Graph</u>: A Bipartite graph is one whose edge <span class="arithmatex">\((u, v)\)</span> can be split so that, the can form two independent graphs such that eery edge connect every node in graph <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span></p>
-<p><u>Complete Graph</u>: A Completed graph is one where there is unqiue edge between every pair of nodes. or Every node can be accessed from every other node in the graph.</p>
-<h3 id="representing-graph">Representing Graph</h3>
-<p><u>Adjacency Matrix</u>: for example</p>
+</li>
+<li>Game Theory</li>
+<li>Probality Tree</li>
+</ol>
+<h3 id="binary-search-tree">Binary Search Tree</h3>
+<p>Binary Seach Tree(BST) which are trees which statis the BST invariant which stats that every node x</p>
 <div class="arithmatex">\[
-M =
-\begin{bmatrix}
-0 &amp; 3 &amp; 1 &amp; 10 \\
-6 &amp; 0 &amp; 5 &amp; 5 \\
-1 &amp; 4 &amp; 0 &amp; 3 \\
-4 &amp; 6 &amp; 4 &amp; 0
-\end{bmatrix}
+\forall x \in \text{Nodes}, \;\;\;\;\; x.left.value &lt;= x.value &lt;= x.right.value
 \]</div>
-<p>where <span class="arithmatex">\(M[u][v] = w\)</span> and <span class="arithmatex">\(w\)</span> is weight of the edge <span class="arithmatex">\(u \rightarrow v\)</span>. <br />
-and <span class="arithmatex">\(M[u][u] = 0\)</span>, as there is no weight for the edge <span class="arithmatex">\(u \rightarrow u\)</span>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Pros</th>
-<th style="text-align: left;">Cons</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Space efficient for represent graph</td>
-<td style="text-align: left;">Requires <span class="arithmatex">\(O(n^2)\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;">Edge Weight Lookup is <span class="arithmatex">\(O(1)\)</span></td>
-<td style="text-align: left;">Iterating over all edges takes <span class="arithmatex">\(O(v^2)\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;">Simplest Graph Representation</td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<p><u>Adjanceny List</u>:</p>
+<h3 id="storing-binary-tree">Storing Binary Tree</h3>
+<p>If given tree is binary tree, then binary tree can store in flattered array.</p>
+<div style="display:flex;justify-content:center;width:100%;">
+<img src="/img/uploads/bin-tree.png" style="height: 300px"/>
+</div>
+
+<p><strong>Flattered Array</strong> :-</p>
 <div class="arithmatex">\[
-M(A) = [(B, 1), (C, 2)] \\
-M(B) = [(C, 3)] \\
-M(C) = [(A, 3), (D, 2), (B, 4)] \\
+\boxed{
+\begin{array}{c | c | c | c | c | c | c}
+0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\
+\hline
+A &amp; X &amp; C &amp; D &amp; E &amp; Y &amp; K
+\end{array}
+}
 \]</div>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Pros</th>
-<th style="text-align: left;">Cons</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Great for sparse graph</td>
-<td style="text-align: left;">Not Effiecient for denser graph</td>
-</tr>
-<tr>
-<td style="text-align: left;">Iterating over all edges of a node is effiecient</td>
-<td style="text-align: left;">Edge weight lookup is <span class="arithmatex">\(O(E)\)</span> <br> where <span class="arithmatex">\(E = \text{No of Edges}\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><u>Edge List</u>: <br> Unordeded List of edges represent in triplets.</p>
+<p><strong>Accesing the value of Node &amp; Children</strong> :-</p>
+<p>The root node is always at index 0
+and children of the current node are accessed to relative to position <span class="arithmatex">\(i\)</span></p>
 <div class="arithmatex">\[
-M = [(A, B, 1), (A, C, 2), (A, B, 2), (B, C, 3), (C, C, 8)]
+\text{left node}: M[2*i+1] \\
+\text{right node}: M[2*i+2]
 \]</div>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Pros</th>
-<th style="text-align: left;">Cons</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Space eff for representing sparse graph</td>
-<td style="text-align: left;">Not effiecient for denser graph</td>
-</tr>
-<tr>
-<td style="text-align: left;">Iterating over all edges of a node is effiecient</td>
-<td style="text-align: left;">Edge weight lookup is <span class="arithmatex">\(O(E)\)</span> <br> where <span class="arithmatex">\(E = \text{No of Edges}\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;">Very simple structure</td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<p><br>
-<br>
-<br>
-<br>
-<br>
-<br></p>
-<hr />
-<p>PS: These are notes taken from above Video Series Playlist.</p>
     </div>
 </article>
                                 <dialog id="bottom-sidebar" onclick="onBottomSidebarDialogClick(event)" class="bg-transparent"
@@ -573,26 +509,26 @@ M = [(A, B, 1), (A, C, 2), (A, B, 2), (B, C, 3), (C, C, 8)]
         
         
         
-        <a href="#types-of-graph"
+        <a href="#application-of-tree"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="2">
-            Types of Graph
+            Application of Tree
         </a>
         
 
         
-        <a href="#special-graph"
+        <a href="#binary-search-tree"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="2">
-            Special Graph
+            Binary Search Tree
         </a>
         
 
         
-        <a href="#representing-graph"
+        <a href="#storing-binary-tree"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="2">
-            Representing Graph
+            Storing Binary Tree
         </a>
         
 
