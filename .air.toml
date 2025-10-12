@@ -1,0 +1,11 @@
+# .air.toml
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  cmd = "mkdocs serve -w ./docs"
+  include_ext = [".*]
+  exclude_dir = ["garden_venv", "tmp"]
+
+[log]
+  time = true

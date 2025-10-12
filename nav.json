@@ -64,6 +64,13 @@
             "icon": "fa-diagram-project"
           },
           {
+            "type": "Page",
+            "title": "Trees",
+            "href": "/Data%20Structures%20%26%20Algorithms/Graphs/C-Tress/",
+            "folder": false,
+            "icon": "fa-star"
+          },
+          {
             "type": "Section",
             "title": "Problems",
             "children": [
@@ -73,6 +80,41 @@
                 "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/A%20-%20Dugen%20Master/",
                 "folder": false,
                 "icon": "fa-file"
+              },
+              {
+                "type": "Page",
+                "title": "Beginner Tree Problems",
+                "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/B%20-%20Beginner%20Tree%20Problems/",
+                "folder": false,
+                "icon": "fa-tree"
+              },
+              {
+                "type": "Page",
+                "title": "Medium Level Tree Problems",
+                "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/C%20-%20Medium%20Tree%20Problems/",
+                "folder": false,
+                "icon": "fa-tree"
+              },
+              {
+                "type": "Page",
+                "title": "Graph Isomorphism",
+                "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/D%20-%20Graph%20Isomorphism/",
+                "folder": false,
+                "icon": "fa-tree"
+              },
+              {
+                "type": "Page",
+                "title": "Lowest Common Ancestor",
+                "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/E%20-%20Lowest%20Common%20Ancestor/",
+                "folder": false,
+                "icon": "fa-tree"
+              },
+              {
+                "type": "Page",
+                "title": "Topological Sort",
+                "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/F%20-%20Topological%20Sort%20Algorithms/",
+                "folder": false,
+                "icon": "fa-code-branch"
               }
             ],
             "folder": true
