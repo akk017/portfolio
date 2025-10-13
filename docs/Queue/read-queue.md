@@ -36,3 +36,21 @@ icon: fa-book-open-reader
 [CSS Boilerplate](https://fokus.dev/tools/css-boilerplate/)
 
 [Web Accessibilty](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)
+
+[Tails at Scale](https://www.barroso.org/publications/TheTailAtScale.pdf)
+> Discuss about why Low Latency is Important, and how if affects user exeperience.
+
+[My First Contribution to Linux](https://vkoskiv.com/first-linux-patch/)
+
+[Debugging Book](https://www.debuggingbook.org/#A-Textbook-for-Paper,-Screen,-and-Keyboard)
+> On how debugger work.
+
+[Diff Algorithm](https://flo.znkr.io/diff/)
+
+[Design Quality](https://matthewstrom.com/writing/decentralizing-quality/)
+
+[A complete guide to HTTP caching](https://www.jonoalderson.com/performance/http-caching/)
+
+[Beyond Indexes: How Open Table Formats Optimize Query Performance](https://jack-vanlightly.com/blog/2025/10/8/beyond-indexes-how-open-table-formats-optimize-query-performance)
+
+

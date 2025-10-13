@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Docs - Start Dev",
+      "type": "shell",
+      "command": [
+        "cd /Users/akash-21652/Projects/portfolio &&",
+        "source ./garden_venv/bin/activate &&",
+        "watchexec -r -w docs -- mkdocs build --dirty -d ./test"
+      ],
+      "group": {
+        "kind": "none",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "icon": {
+        "id": "file-code"
+      },
+    }
+  ]
+}
