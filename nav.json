@@ -177,17 +177,17 @@
         "children": [
           {
             "type": "Page",
-            "title": "Introduction to Permuation",
-            "href": "/Mathematics/Permutation/Introduction/",
+            "title": "Materials",
+            "href": "/Mathematics/Permutation/A%20-%20Material/",
             "folder": false,
-            "icon": "fa-hashtag"
+            "icon": "fa-book"
           },
           {
             "type": "Page",
-            "title": "Materials",
-            "href": "/Mathematics/Permutation/Material/",
+            "title": "Introduction to Permuation",
+            "href": "/Mathematics/Permutation/B%20-%20Introduction/",
             "folder": false,
-            "icon": "fa-book"
+            "icon": "fa-hashtag"
           }
         ],
         "folder": true
