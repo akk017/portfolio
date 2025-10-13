@@ -36,11 +36,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Materials - AKK - Portfolio & Digital Garden</title>
+    <title>Introduction to Permuation - AKK - Portfolio & Digital Garden</title>
     
 
 
-<title>Materials</title>
+<title>Introduction to Permuation</title>
 
 
 
@@ -50,18 +50,18 @@
 
 
 
-<link rel="canonical" href="https://akashk.dev/Mathematics/Permutation/Material/">
+<link rel="canonical" href="https://akashk.dev/Mathematics/Permutation/B%20-%20Introduction/">
 
 
 <!-- Open Graph (Facebook, LinkedIn) -->
 
-<meta property="og:title" content="Materials">
+<meta property="og:title" content="Introduction to Permuation">
 
 
 
 
 
-<meta property="og:url" content="https://akashk.dev/Mathematics/Permutation/Material/">
+<meta property="og:url" content="https://akashk.dev/Mathematics/Permutation/B%20-%20Introduction/">
 
 
 
@@ -70,7 +70,7 @@
 
 <!-- Twitter Card -->
 
-<meta name="twitter:title" content="Materials">
+<meta name="twitter:title" content="Introduction to Permuation">
 
 
 
@@ -238,7 +238,7 @@
             <div id="page-header" class="flex items-start justify-between">
 
                 <h1 class="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-3xl xl:text-4xl">
-                    Materials
+                    Introduction to Permuation
                 </h1>
             </div>
             
@@ -250,7 +250,43 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p><a href="https://ncert.nic.in/textbook/pdf/kemh106.pdf">Class 11 - Chapter 6</a> -- Best For Learning both Permutation and Combination</p>
+        <p>Given A 4 Letter Word ex. ROSE, all ways that letters that jumbled to form meaningless words are
+ROES, RSOE, REOS ... EOSR. In order to find the number of possible arrangements, we use tool called <em><strong>Permutation</strong></em>.</p>
+<h3 id="631-permuataion-where-all-objects-are-distinct">6.3.1 Permuataion where all objects are distinct</h3>
+<p><strong>Theorem 1</strong> The number of permutations of <span class="arithmatex">\(n\)</span> different objects taken <span class="arithmatex">\(r\)</span> at time, where <span class="arithmatex">\(0 &lt; r &lt; n\)</span> and objects do not repeat is <span class="arithmatex">\((n-1)(n-2) ... (n-r+1)\)</span> which is denoted by <span class="arithmatex">\({}^{n}P_{r}\)</span></p>
+<p><strong>Proof</strong> There will be many permuations filling <span class="arithmatex">\(r\)</span> vancant spaces by <span class="arithmatex">\(n\)</span> objects. The first place can filled with <span class="arithmatex">\(n\)</span> ways, secondy place be <span class="arithmatex">\(n-1\)</span> and so on, the <span class="arithmatex">\(r^{\text{th}}\)</span> place be <span class="arithmatex">\((n - (r-1))\)</span>. Therefore, the number of
+ways of filling in <span class="arithmatex">\(r\)</span> vacant places in succession is <span class="arithmatex">\((n)(n-1)(n-2) ... (n - r + 1)\)</span>.</p>
+<p>Similyfying <span class="arithmatex">\({}^{n}P_{r}\)</span></p>
+<div class="arithmatex">\[
+{}^{n}P_{r} = \frac{n!}{(n - r)!}
+\]</div>
+<div class="arithmatex">\[
+{}^{n}P_{r} =
+\begin{cases}
+n!, &amp; \text{if } n = r \\
+\frac{n!}{(n - r)!}, &amp; \text{else } r &lt; n
+\end{cases}
+\]</div>
+<p><strong>Theorem 2</strong> Similarly, The number of permutations of n different objects taken r at a time,
+where repetition is allowed, is <span class="arithmatex">\({n}^{r}\)</span></p>
+<h3 id="634-permutations-when-all-the-objects-are-not-distinct-objects">6.3.4 Permutations when all the objects are not distinct objects</h3>
+<p>Suppose we have to find the number of ways of rearranging the letters of the word ROOT. There are 2 Os, which are of the same kind. Let us treat, temporarily, the 2 <span class="arithmatex">\(O\)</span> s as different, say, <span class="arithmatex">\(O_{1}\)</span> and <span class="arithmatex">\(O_{2}\)</span>.</p>
+<p>The number of permutations of 4-different letters, in this case, taken all at a time is <span class="arithmatex">\(4!\)</span>.
+The number of permutation of 2-apparently-different letters, in this 2 <span class="arithmatex">\(O\)</span> s, is <span class="arithmatex">\(2!\)</span>, ie, <span class="arithmatex">\(O_{1}O_{2} O_{2}O_{1}\)</span>, all its arrangement are same.</p>
+<p>Therefore, the required number of permutataion are = <span class="arithmatex">\(\frac{4!}{2!} = 12\)</span>.</p>
+<p><strong>Theorem 3</strong> The number of permutation of n objects taken n time given p of them are same, then the number of permutations are
+<span class="arithmatex">\(\frac{n!}{p!}\)</span></p>
+<p><strong>Theorem 4</strong> The number of permutations of n objects, where <span class="arithmatex">\(p_{1}\)</span> objects are of one kind, <span class="arithmatex">\(p_{2}\)</span> are of second kind, ..., pk are of <span class="arithmatex">\(k_{th}\)</span> kind and the rest, if any, are of different kind is</p>
+<div class="arithmatex">\[
+\frac{n!}{p_1!p_2!...p_k!}
+\]</div>
+<p><strong>Example 14</strong> Find the number of different 8-letter arrangements that can be made from the word <span class="arithmatex">\(\text{DAUGHTER}\)</span> so that</p>
+<div class="arithmatex">\[
+\text{(i) All vowels are together} \;\;\; \text{(ii) All vowels are not togther}
+\]</div>
+<p><strong>Solution</strong></p>
+<p>(i) There are 8 different letter in word <span class="arithmatex">\(DAUGHTER\)</span>, which 3 Vowels <span class="arithmatex">\(AEU\)</span>, For Time Assume, <span class="arithmatex">\(AUE\)</span> as single letter, so the number of permuation of 6 Letter would be <span class="arithmatex">\({}^{6}P{_6} = 6!\)</span> and the number of combination that <span class="arithmatex">\(AUE\)</span> can rearranged are
+<span class="arithmatex">\({}^{3}P_3 = 3!\)</span>. So cummlilative number of permuation given vowels are together are <span class="arithmatex">\(6! \times 3! = 4320\)</span></p>
     </div>
 </article>
                                 <dialog id="bottom-sidebar" onclick="onBottomSidebarDialogClick(event)" class="bg-transparent"
@@ -459,6 +495,28 @@
     <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
         <p class="text-muted-foreground bg-background sticky top-0 h-6 text-xs">On This Page</p>
         
+        
+        
+        
+        <a href="#631-permuataion-where-all-objects-are-distinct"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            6.3.1 Permuataion where all objects are distinct
+        </a>
+        
+
+        
+        <a href="#634-permutations-when-all-the-objects-are-not-distinct-objects"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            6.3.4 Permutations when all the objects are not distinct objects
+        </a>
+        
+
+        
+        
+        
+        
 
     </div>
     <div class="h-12"></div>
@@ -587,7 +645,7 @@
 
 
     <script>
-        let nav_source_str = `[{"type": "Page", "title": "About Me", "href": "/", "folder": false, "icon": "fa-comment"}, {"type": "Page", "title": "Todo", "href": "/TODO/", "folder": false, "icon": "fa-square-check"}, {"type": "Section", "title": "CSES", "children": [{"type": "Page", "title": "CPP Tips and Tricks", "href": "/CSES/cpp-tips/", "folder": false, "icon": "fa-circle-up"}, {"type": "Page", "title": "Resource for CSES", "href": "/CSES/main/", "folder": false, "icon": "fa-list"}], "folder": true}, {"type": "Section", "title": "Data Structures & Algorithms", "children": [{"type": "Page", "title": "Roadmap", "href": "/Data%20Structures%20%26%20Algorithms/Roadmap/", "folder": false, "icon": "fa-chart-diagram"}, {"type": "Section", "title": "Graphs", "children": [{"type": "Page", "title": "A - Introduction", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/A-Introduction/", "folder": false, "icon": "fa-star"}, {"type": "Page", "title": "Common Graph Theory Problems", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/B-Common-Problems/", "folder": false, "icon": "fa-diagram-project"}, {"type": "Page", "title": "Trees", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/C-Tress/", "folder": false, "icon": "fa-star"}, {"type": "Section", "title": "Problems", "children": [{"type": "Page", "title": "A - Dungeon master", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/A%20-%20Dugen%20Master/", "folder": false, "icon": "fa-file"}, {"type": "Page", "title": "Beginner Tree Problems", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/B%20-%20Beginner%20Tree%20Problems/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Medium Level Tree Problems", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/C%20-%20Medium%20Tree%20Problems/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Graph Isomorphism", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/D%20-%20Graph%20Isomorphism/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Lowest Common Ancestor", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/E%20-%20Lowest%20Common%20Ancestor/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Topological Sort", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/F%20-%20Topological%20Sort%20Algorithms/", "folder": false, "icon": "fa-code-branch"}], "folder": true}], "folder": true}], "folder": true}, {"type": "Section", "title": "Design", "children": [{"type": "Page", "title": "CSS Collection", "href": "/Design/CSS/", "folder": false, "icon": "fa-css"}], "folder": true}, {"type": "Section", "title": "Graphic Design", "children": [{"type": "Page", "title": "Generative Art", "href": "/Graphic%20Design/generative-art/", "folder": false, "icon": "fa-hexagon-nodes"}], "folder": true}, {"type": "Section", "title": "Mac OS Apps", "children": [{"type": "Page", "title": "Apps That I Use Daily", "href": "/Mac%20OS%20Apps/apps/", "folder": false, "icon": "fa-border-all"}], "folder": true}, {"type": "Section", "title": "Mathematics", "children": [{"type": "Section", "title": "Permutation", "children": [{"type": "Page", "title": "Introduction to Permuation", "href": "/Mathematics/Permutation/Introduction/", "folder": false, "icon": "fa-hashtag"}, {"type": "Page", "title": "Materials", "href": "/Mathematics/Permutation/Material/", "folder": false, "icon": "fa-book"}], "folder": true}], "folder": true}, {"type": "Section", "title": "Portfolios", "children": [{"type": "Page", "title": "Design Portfolio", "href": "/Portfolios/Design/", "folder": false, "icon": "fa-pen-nib"}], "folder": true}, {"type": "Section", "title": "Python", "children": [{"type": "Page", "title": "Namespaces", "href": "/Python/namespace/", "folder": false, "icon": null}], "folder": true}, {"type": "Section", "title": "Queue", "children": [{"type": "Page", "title": "Read Queue", "href": "/Queue/read-queue/", "folder": false, "icon": "fa-book-open-reader"}, {"type": "Page", "title": "Watch Queue", "href": "/Queue/watch-queue/", "folder": false, "icon": "fa-video"}], "folder": true}, {"type": "Section", "title": "Read List", "children": [{"type": "Page", "title": "Tech Blogs", "href": "/Read%20List/Tect/", "folder": false, "icon": "fa-file-code"}], "folder": true}]`
+        let nav_source_str = `[{"type": "Page", "title": "About Me", "href": "/", "folder": false, "icon": "fa-comment"}, {"type": "Page", "title": "Todo", "href": "/TODO/", "folder": false, "icon": "fa-square-check"}, {"type": "Section", "title": "CSES", "children": [{"type": "Page", "title": "CPP Tips and Tricks", "href": "/CSES/cpp-tips/", "folder": false, "icon": "fa-circle-up"}, {"type": "Page", "title": "Resource for CSES", "href": "/CSES/main/", "folder": false, "icon": "fa-list"}], "folder": true}, {"type": "Section", "title": "Data Structures & Algorithms", "children": [{"type": "Page", "title": "Roadmap", "href": "/Data%20Structures%20%26%20Algorithms/Roadmap/", "folder": false, "icon": "fa-chart-diagram"}, {"type": "Section", "title": "Graphs", "children": [{"type": "Page", "title": "A - Introduction", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/A-Introduction/", "folder": false, "icon": "fa-star"}, {"type": "Page", "title": "Common Graph Theory Problems", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/B-Common-Problems/", "folder": false, "icon": "fa-diagram-project"}, {"type": "Page", "title": "Trees", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/C-Tress/", "folder": false, "icon": "fa-star"}, {"type": "Section", "title": "Problems", "children": [{"type": "Page", "title": "A - Dungeon master", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/A%20-%20Dugen%20Master/", "folder": false, "icon": "fa-file"}, {"type": "Page", "title": "Beginner Tree Problems", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/B%20-%20Beginner%20Tree%20Problems/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Medium Level Tree Problems", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/C%20-%20Medium%20Tree%20Problems/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Graph Isomorphism", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/D%20-%20Graph%20Isomorphism/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Lowest Common Ancestor", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/E%20-%20Lowest%20Common%20Ancestor/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Topological Sort", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/F%20-%20Topological%20Sort%20Algorithms/", "folder": false, "icon": "fa-code-branch"}], "folder": true}], "folder": true}], "folder": true}, {"type": "Section", "title": "Design", "children": [{"type": "Page", "title": "CSS Collection", "href": "/Design/CSS/", "folder": false, "icon": "fa-css"}], "folder": true}, {"type": "Section", "title": "Graphic Design", "children": [{"type": "Page", "title": "Generative Art", "href": "/Graphic%20Design/generative-art/", "folder": false, "icon": "fa-hexagon-nodes"}], "folder": true}, {"type": "Section", "title": "Mac OS Apps", "children": [{"type": "Page", "title": "Apps That I Use Daily", "href": "/Mac%20OS%20Apps/apps/", "folder": false, "icon": "fa-border-all"}], "folder": true}, {"type": "Section", "title": "Mathematics", "children": [{"type": "Section", "title": "Permutation", "children": [{"type": "Page", "title": "Materials", "href": "/Mathematics/Permutation/A%20-%20Material/", "folder": false, "icon": "fa-book"}, {"type": "Page", "title": "Introduction to Permuation", "href": "/Mathematics/Permutation/B%20-%20Introduction/", "folder": false, "icon": "fa-hashtag"}], "folder": true}], "folder": true}, {"type": "Section", "title": "Portfolios", "children": [{"type": "Page", "title": "Design Portfolio", "href": "/Portfolios/Design/", "folder": false, "icon": "fa-pen-nib"}], "folder": true}, {"type": "Section", "title": "Python", "children": [{"type": "Page", "title": "Namespaces", "href": "/Python/namespace/", "folder": false, "icon": null}], "folder": true}, {"type": "Section", "title": "Queue", "children": [{"type": "Page", "title": "Read Queue", "href": "/Queue/read-queue/", "folder": false, "icon": "fa-book-open-reader"}, {"type": "Page", "title": "Watch Queue", "href": "/Queue/watch-queue/", "folder": false, "icon": "fa-video"}], "folder": true}, {"type": "Section", "title": "Read List", "children": [{"type": "Page", "title": "Tech Blogs", "href": "/Read%20List/Tect/", "folder": false, "icon": "fa-file-code"}], "folder": true}]`
         let nav_source = JSON.parse(nav_source_str || "null")
         document.addEventListener("DOMContentLoaded", function () {
             $("#tree").fancytree({
