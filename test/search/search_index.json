@@ -1,1 +1,1 @@
-{"config":{"indexing":"full","lang":["en"],"min_search_length":3,"prebuild_index":false,"separator":"[\\s\\-]+"},"docs":[]}
+{"config":{"indexing":"full","lang":["en"],"min_search_length":3,"prebuild_index":false,"separator":"[\\s\\-]+"},"docs":[{"location":"Mathematics/Permutation/Introduction/","text":"Given A 4 Letter Word ex. ROSE, all ways that letters that jumbled to form meaningless words are ROES, RSOE, REOS ... EOSR. In order to find the number of possible arrangements, we use tool called Permutation .","title":"Introduction to Permuation"}]}

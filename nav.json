@@ -177,6 +177,13 @@
         "children": [
           {
             "type": "Page",
+            "title": "Introduction to Permuation",
+            "href": "/Mathematics/Permutation/Introduction/",
+            "folder": false,
+            "icon": "fa-hashtag"
+          },
+          {
+            "type": "Page",
             "title": "Materials",
             "href": "/Mathematics/Permutation/Material/",
             "folder": false,
