@@ -59,7 +59,9 @@ The root node is always at index 0
 and children of the current node are accessed to relative to position $i$
 
 $$
-\text{left node}: M[2*i+1] \\
-\text{right node}: M[2*i+2]
+\begin{aligned}
+\text{left node} & : M[2*i+1] \\
+\text{right node} & : M[2*i+2]
+\end{aligned}
 $$
 
