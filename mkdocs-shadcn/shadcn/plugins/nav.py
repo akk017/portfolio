@@ -27,8 +27,7 @@ def last_commit(arg):
 
 
 def do_action(value):
-    log.info(f"Output, {value=}")
-    log.info(f"Type, {value.__dict__}")
+    ...
 
 
 class NavToJsonPlugin(BasePlugin):

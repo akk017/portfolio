@@ -1,6 +1,7 @@
 ---
 title: Todo
 icon: "fa-square-check"
+order: 2
 ---
 
 - Dark Mode for Navigation

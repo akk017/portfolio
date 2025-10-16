@@ -1,6 +1,7 @@
 ---
 title: "About Me"
 icon: "fa-comment"
+order: 1
 ---
 
 Hey There, I am **Akash Kandasamy** (pronouced as "Akash Kandhasamy"), working in **Zoho as Member of Technical Staff**.

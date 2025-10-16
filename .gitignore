@@ -1,4 +1,4 @@
-site/*
-garden_venv/*
+site/
+garden_venv/
 
-test/*
+test/
