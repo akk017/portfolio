@@ -2,3 +2,4 @@ site/
 garden_venv/
 
 test/
+tmp/
