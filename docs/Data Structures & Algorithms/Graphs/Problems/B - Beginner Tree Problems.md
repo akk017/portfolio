@@ -89,7 +89,7 @@ private:
 ```
 
 
-Height/Depth of Binary Tree
+### Height/Depth of Binary Tree
 
 ```cpp
 class Solution {
@@ -99,6 +99,40 @@ public:
         int h1 = maxDepth(root->left);
         int h2 = maxDepth(root->right);
         return max(h1, h2) + 1;
+    }
+};
+```
+
+
+### Binary Tree Level Order Traversal
+
+[submission](https://leetcode.com/problems/binary-tree-level-order-traversal/submissions/1802956404/)
+
+`BFS`
+
+```cpp
+class Solution {
+public:
+    vector<vector<int>> levelOrder(TreeNode* root) {
+        if(!root) return {};
+
+        queue<TreeNode*> q;
+        q.push(root);
+
+        vector<vector<int>> ans;
+
+        while(!q.empty()){
+            int size = q.size();
+            vector<int> curr;
+            while(size--){
+                TreeNode* top = q.front();q.pop();
+                curr.push_back(top->val);
+                if(top->left) q.push(top->left);
+                if(top->right) q.push(top->right);
+            }
+            ans.push_back(curr);
+        }
+        return ans;
     }
 };
 ```
