@@ -5,6 +5,9 @@ icon: "fa-comment"
 
 Hey There, I am **Akash Kandasamy** (pronouced as "Akash Kandhasamy"), working in **Zoho as Member of Technical Staff**.
 Passed out from Motital Nehru National Institute of Technology, Allahabad (MNNIT).
+
+Currenly Living in Chennai, TamilNadu, India.
+
 A Son to B-E-A-utiful Parents.
 
 Dyslexic about right and left. Severe anemia patient (I am being sarcastic here).

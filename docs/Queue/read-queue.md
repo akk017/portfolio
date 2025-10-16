@@ -53,4 +53,5 @@ icon: fa-book-open-reader
 
 [Beyond Indexes: How Open Table Formats Optimize Query Performance](https://jack-vanlightly.com/blog/2025/10/8/beyond-indexes-how-open-table-formats-optimize-query-performance)
 
+[Awesome Tech and Conference by Madhav Jivrajani](https://nonmonotonic.dev/talks-and-conferences/)
 

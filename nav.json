@@ -205,6 +205,13 @@
         "href": "/Portfolios/Design/",
         "folder": false,
         "icon": "fa-pen-nib"
+      },
+      {
+        "type": "Page",
+        "title": "Software Devs / CS Engineers",
+        "href": "/Portfolios/Dev/",
+        "folder": false,
+        "icon": "fa-pen-nib"
       }
     ],
     "folder": true
@@ -246,12 +253,12 @@
   },
   {
     "type": "Section",
-    "title": "Read List",
+    "title": "Read TakeAways",
     "children": [
       {
         "type": "Page",
         "title": "Tech Blogs",
-        "href": "/Read%20List/Tect/",
+        "href": "/Read%20TakeAways/Tect/",
         "folder": false,
         "icon": "fa-file-code"
       }

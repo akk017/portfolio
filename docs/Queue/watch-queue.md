@@ -46,3 +46,12 @@ Design Pressure: The Invisible Hand That Shapes Your Code - [Hynek Schlawack](ht
 Source: [CSS Day](https://cssday.nl/2024/#rachel)
 
 [Prev P99 Conf](https://www.p99conf.io/session/patterns-of-low-latency/)
+
+### Programming / CS
+
+<iframe style="aspect-ratio: 16 / 9;" width="100%" src="https://www.youtube.com/embed/OyfBQmvr2Hc?si=_qF8Vil6oEGg2wdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[William Byrd on "The Most Beautiful Program Ever Written](https://www.youtube.com/watch?v=X6azWrtHS-k)
+
+a Lisp interpreter written in Lisp---and a few of the many amazing ideas related to this metacircular interpreter.
+
+Source: [CSS Day](https://cssday.nl/2024/#rachel)
