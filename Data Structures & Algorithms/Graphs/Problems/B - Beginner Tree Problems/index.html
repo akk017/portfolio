@@ -326,7 +326,7 @@ private:
 };
 </code></pre>
 
-<p>Height/Depth of Binary Tree</p>
+<h3 id="heightdepth-of-binary-tree">Height/Depth of Binary Tree</h3>
 <pre class="codehilite"><code class="language-cpp">class Solution {
 public:
     int maxDepth(TreeNode* root) {
@@ -334,6 +334,35 @@ public:
         int h1 = maxDepth(root-&gt;left);
         int h2 = maxDepth(root-&gt;right);
         return max(h1, h2) + 1;
+    }
+};
+</code></pre>
+
+<h3 id="binary-tree-level-order-traversal">Binary Tree Level Order Traversal</h3>
+<p><a href="https://leetcode.com/problems/binary-tree-level-order-traversal/submissions/1802956404/">submission</a></p>
+<p><code>BFS</code></p>
+<pre class="codehilite"><code class="language-cpp">class Solution {
+public:
+    vector&lt;vector&lt;int&gt;&gt; levelOrder(TreeNode* root) {
+        if(!root) return {};
+
+        queue&lt;TreeNode*&gt; q;
+        q.push(root);
+
+        vector&lt;vector&lt;int&gt;&gt; ans;
+
+        while(!q.empty()){
+            int size = q.size();
+            vector&lt;int&gt; curr;
+            while(size--){
+                TreeNode* top = q.front();q.pop();
+                curr.push_back(top-&gt;val);
+                if(top-&gt;left) q.push(top-&gt;left);
+                if(top-&gt;right) q.push(top-&gt;right);
+            }
+            ans.push_back(curr);
+        }
+        return ans;
     }
 };
 </code></pre>
@@ -487,6 +516,22 @@ public:
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="2">
             Diametere of Binary Tree
+        </a>
+        
+
+        
+        <a href="#heightdepth-of-binary-tree"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Height/Depth of Binary Tree
+        </a>
+        
+
+        
+        <a href="#binary-tree-level-order-traversal"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Binary Tree Level Order Traversal
         </a>
         
 
@@ -755,7 +800,7 @@ public:
         const elem = document.getElementById("last-deployment")
         elem.innerText = formatted
 
-        let last_commit = `4b507d2a4da0fb2d694ff3799733868ea4800a23`
+        let last_commit = `2864cabd6bda74800a217577db0997544eab7696`
 
         const lastCommitElem = document.getElementById("last-commit")
         lastCommitElem.href = "https://github.com/akk017/portfolio/commit/" + last_commit
