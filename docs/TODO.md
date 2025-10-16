@@ -7,5 +7,3 @@ icon: "fa-square-check"
 - Navigation for Mobile, and other Small Device
 - ~~Last Update Date & Time to automattically update over every deploy with a Commit and Diff showing what has beed added~~
 
-Test
-
