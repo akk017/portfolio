@@ -244,7 +244,7 @@
     </script>
 
     <script>
-        // Hanldes the logic for Last Deployment in Footter Section
+        // Hanldes the logic for Last Deployment & Last Commit in Footter Section
 
         const date = new Date();
         const formatted = date.toLocaleString('en-GB', {
@@ -257,6 +257,11 @@
         });
         const elem = document.getElementById("last-deployment")
         elem.innerText = formatted
+
+        let last_commit = `{{ 'dummy_arg' | last_commit }}`
+
+        const lastCommitElem = document.getElementById("last-commit")
+        lastCommitElem.href = "https://github.com/akk017/portfolio/commit/" + last_commit
 
     </script>
 </body>
