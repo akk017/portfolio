@@ -250,7 +250,95 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <h3 id="leaf-sum">Leaf Sum</h3>
+        <h3 id="invert-binary-tree">Invert Binary Tree</h3>
+<p><a href="https://leetcode.com/problems/invert-binary-tree/">source</a>
+<a href="https://leetcode.com/problems/invert-binary-tree/submissions/1802931304/">submission</a></p>
+<pre class="codehilite"><code class="language-cpp">class Solution {
+public:
+
+    void dfs(TreeNode* root){
+        // Handle Base Case:
+        if (root == NULL) return;
+
+        // Process Child
+        swap(root-&gt;left, root-&gt;right);
+
+        dfs(root-&gt;left);
+        dfs(root-&gt;right);
+    }
+
+    TreeNode* invertTree(TreeNode* root) {
+        dfs(root);
+        return root;
+    }
+};
+</code></pre>
+
+<h3 id="balanced-binary-tree">Balanced Binary Tree</h3>
+<pre class="codehilite"><code class="language-cpp">class Solution {
+public:
+    int dfs(TreeNode* root){
+        if(root == NULL) return 0;
+
+        int h1 = dfs(root-&gt;left);
+        if(h1 == -1) return -1;
+
+        int h2 = dfs(root-&gt;right);
+        if(h2 == -1) return -1;
+
+        if(abs(h1-h2) &gt; 1) return -1;
+
+        return max(h1, h2) + 1;
+    }
+
+    bool isBalanced(TreeNode* root) {
+        return dfs(root) != -1;
+    }
+};
+</code></pre>
+
+<h3 id="diametere-of-binary-tree">Diametere of Binary Tree</h3>
+<p><a href="https://leetcode.com/problems/diameter-of-binary-tree/">source</a>
+<a href="https://leetcode.com/problems/diameter-of-binary-tree/submissions/1802941483/">susmission</a></p>
+<pre class="codehilite"><code class="language-cpp">class Solution {
+public:
+    int diameterOfBinaryTree(TreeNode* root) {
+        int res = 0;
+        diameter(root, res);
+        return res;
+    }
+
+private:
+    int diameter(TreeNode* curr, int&amp; res){
+        // Base Case
+        if (!curr) return 0;
+
+        // Process Child
+        int left = diameter(curr-&gt;left, res);
+        int right = diameter(curr-&gt;right, res);
+
+        // Finalize
+        res = max(res, left + right);
+
+        // Return
+        return max(left, right) + 1;
+    }
+};
+</code></pre>
+
+<p>Height/Depth of Binary Tree</p>
+<pre class="codehilite"><code class="language-cpp">class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        if(root == NULL) return 0;
+        int h1 = maxDepth(root-&gt;left);
+        int h2 = maxDepth(root-&gt;right);
+        return max(h1, h2) + 1;
+    }
+};
+</code></pre>
+
+<h3 id="leaf-sum">Leaf Sum</h3>
 <h3 id="height-of-tree">Height of Tree</h3>
     </div>
 </article>
@@ -267,25 +355,6 @@
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="../../../..">
-                        
-                        About Me
-                        
-                    </a>
-                    
-                    <a class="text-2xl font-medium" href="../../../../TODO/">
-                        
-                        Todo
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
@@ -294,18 +363,6 @@
                     <div class="text-muted-foreground text-sm font-medium">CSES</div>
                     
                     <div class="flex flex-col gap-3">
-                        
-                        <a class="text-2xl font-medium" href="../../../../CSES/cpp-tips/">
-                            
-                            CPP Tips and Tricks
-                            
-                        </a>
-                        
-                        <a class="text-2xl font-medium" href="../../../../CSES/main/">
-                            
-                            Resource for CSES
-                            
-                        </a>
                         
                     </div>
                     
@@ -316,12 +373,6 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../../../Roadmap/">
-                            
-                            Roadmap
-                            
-                        </a>
-                        
                     </div>
                     
                 </div>
@@ -330,12 +381,6 @@
                     <div class="text-muted-foreground text-sm font-medium">Design</div>
                     
                     <div class="flex flex-col gap-3">
-                        
-                        <a class="text-2xl font-medium" href="../../../../Design/CSS/">
-                            
-                            CSS Collection
-                            
-                        </a>
                         
                     </div>
                     
@@ -346,12 +391,6 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../../../../Graphic%20Design/generative-art/">
-                            
-                            Generative Art
-                            
-                        </a>
-                        
                     </div>
                     
                 </div>
@@ -360,12 +399,6 @@
                     <div class="text-muted-foreground text-sm font-medium">Mac OS Apps</div>
                     
                     <div class="flex flex-col gap-3">
-                        
-                        <a class="text-2xl font-medium" href="../../../../Mac%20OS%20Apps/apps/">
-                            
-                            Apps That I Use Daily
-                            
-                        </a>
                         
                     </div>
                     
@@ -385,18 +418,6 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../../../../Portfolios/Design/">
-                            
-                            Design Portfolio
-                            
-                        </a>
-                        
-                        <a class="text-2xl font-medium" href="../../../../Portfolios/Dev/">
-                            
-                            Software Devs / CS Engineers
-                            
-                        </a>
-                        
                     </div>
                     
                 </div>
@@ -405,12 +426,6 @@
                     <div class="text-muted-foreground text-sm font-medium">Python</div>
                     
                     <div class="flex flex-col gap-3">
-                        
-                        <a class="text-2xl font-medium" href="../../../../Python/namespace/">
-                            
-                            Namespaces
-                            
-                        </a>
                         
                     </div>
                     
@@ -421,18 +436,6 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../../../../Queue/read-queue/">
-                            
-                            Read Queue
-                            
-                        </a>
-                        
-                        <a class="text-2xl font-medium" href="../../../../Queue/watch-queue/">
-                            
-                            Watch Queue
-                            
-                        </a>
-                        
                     </div>
                     
                 </div>
@@ -441,12 +444,6 @@
                     <div class="text-muted-foreground text-sm font-medium">Read TakeAways</div>
                     
                     <div class="flex flex-col gap-3">
-                        
-                        <a class="text-2xl font-medium" href="../../../../Read%20TakeAways/Tect/">
-                            
-                            Tech Blogs
-                            
-                        </a>
                         
                     </div>
                     
@@ -469,6 +466,30 @@
         
         
         
+        
+        <a href="#invert-binary-tree"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Invert Binary Tree
+        </a>
+        
+
+        
+        <a href="#balanced-binary-tree"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Balanced Binary Tree
+        </a>
+        
+
+        
+        <a href="#diametere-of-binary-tree"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Diametere of Binary Tree
+        </a>
+        
+
         
         <a href="#leaf-sum"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
@@ -734,7 +755,7 @@
         const elem = document.getElementById("last-deployment")
         elem.innerText = formatted
 
-        let last_commit = `3af266249267bfc5638b2fa755dccb27fbd2ba44`
+        let last_commit = `4b507d2a4da0fb2d694ff3799733868ea4800a23`
 
         const lastCommitElem = document.getElementById("last-commit")
         lastCommitElem.href = "https://github.com/akk017/portfolio/commit/" + last_commit
