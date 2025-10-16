@@ -90,7 +90,7 @@
     
 
 <link id="pygments-light" rel="stylesheet"
-    href="../../../css/pygments/shadcn-light.css">
+    href="../../../css/pygments/colorful.css">
 <link id="pygments-dark" rel="stylesheet"
     href="../../../css/pygments/dracula.css"
     media="(prefers-color-scheme: dark)">
@@ -557,7 +557,7 @@ and children of the current node are accessed to relative to position <span clas
     <div class="container-wrapper px-4 xl:px-6">
         <div class="flex h-(--footer-height) items-center justify-between">
             <div class="text-muted-foreground w-full text-center text-xs leading-loose sm:text-sm">
-                Built With Love by A K K
+                Built With Love by A K K  ·  Last Deployment at <span id="last-deployment"></span>
             </div>
         </div>
     </div>
@@ -738,7 +738,7 @@ and children of the current node are accessed to relative to position <span clas
     </script>
 
     <script>
-        function toogleReaderMode(){
+        function toogleReaderMode() {
             console.log("Reader Mode On")
             const sidebar = document.querySelector('[data-slot="sidebar"]');
             const sidebar_opacity = window.getComputedStyle(sidebar).opacity;
@@ -770,6 +770,23 @@ and children of the current node are accessed to relative to position <span clas
                 footer.style.opacity = 1
             }
         }
+    </script>
+
+    <script>
+        // Hanldes the logic for Last Deployment in Footter Section
+
+        const date = new Date();
+        const formatted = date.toLocaleString('en-GB', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true,
+        });
+        const elem = document.getElementById("last-deployment")
+        elem.innerText = formatted
+
     </script>
 </body>
 
