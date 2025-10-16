@@ -7,7 +7,7 @@ theme:
   show_title: true
   show_stargazers: false
   pygments_style:
-    light: shadcn-light
+    light: colorful
     dark: dracula
   icon: lucide:rocket
   topbar_sections: false

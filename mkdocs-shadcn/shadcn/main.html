@@ -209,7 +209,7 @@
     </script>
 
     <script>
-        function toogleReaderMode(){
+        function toogleReaderMode() {
             console.log("Reader Mode On")
             const sidebar = document.querySelector('[data-slot="sidebar"]');
             const sidebar_opacity = window.getComputedStyle(sidebar).opacity;
@@ -241,6 +241,23 @@
                 footer.style.opacity = 1
             }
         }
+    </script>
+
+    <script>
+        // Hanldes the logic for Last Deployment in Footter Section
+
+        const date = new Date();
+        const formatted = date.toLocaleString('en-GB', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true,
+        });
+        const elem = document.getElementById("last-deployment")
+        elem.innerText = formatted
+
     </script>
 </body>
 
