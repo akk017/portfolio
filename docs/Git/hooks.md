@@ -1,7 +1,9 @@
 ---
-title: Generative Art
+title: Useful Hooks
 icon: fa-hexagon-nodes
 ---
+
+### Commit Message
 
 ```bash
 

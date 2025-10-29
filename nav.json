@@ -145,7 +145,7 @@
     "children": [
       {
         "type": "Page",
-        "title": "Generative Art",
+        "title": "Useful Hooks",
         "href": "/Git/hooks/",
         "folder": false,
         "icon": "fa-hexagon-nodes"
