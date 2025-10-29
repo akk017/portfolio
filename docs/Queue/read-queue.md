@@ -54,6 +54,8 @@ Paper that Discuss about why Low Latency is Important, and how if affects user e
 
 [TCP Server in Zig](https://www.openmymind.net/TCP-Server-In-Zig-Part-1-Single-Threaded/)
 
+[Gossip Protocol Explained](https://highscalability.com/gossip-protocol-explained/)
+
 
 ### Marketing
 
