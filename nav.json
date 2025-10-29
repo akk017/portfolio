@@ -141,6 +141,20 @@
   },
   {
     "type": "Section",
+    "title": "Git",
+    "children": [
+      {
+        "type": "Page",
+        "title": "Generative Art",
+        "href": "/Git/hooks/",
+        "folder": false,
+        "icon": "fa-hexagon-nodes"
+      }
+    ],
+    "folder": true
+  },
+  {
+    "type": "Section",
     "title": "Graphic Design",
     "children": [
       {
