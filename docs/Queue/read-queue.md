@@ -56,6 +56,8 @@ Paper that Discuss about why Low Latency is Important, and how if affects user e
 
 [Gossip Protocol Explained](https://highscalability.com/gossip-protocol-explained/)
 
+[C++ Performance Optimization](https://abseil.io/fast/hints.html)
+
 
 ### Marketing
 

@@ -155,6 +155,27 @@
   },
   {
     "type": "Section",
+    "title": "Go",
+    "children": [
+      {
+        "type": "Section",
+        "title": "100 Mistakes",
+        "children": [
+          {
+            "type": "Page",
+            "title": "Mistake 32",
+            "href": "/Go/100%20Mistakes/Mistake%20%2332/",
+            "folder": false,
+            "icon": "fa-hexagon-nodes"
+          }
+        ],
+        "folder": true
+      }
+    ],
+    "folder": true
+  },
+  {
+    "type": "Section",
     "title": "Graphic Design",
     "children": [
       {
