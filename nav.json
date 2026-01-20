@@ -158,6 +158,13 @@
     "title": "Go",
     "children": [
       {
+        "type": "Page",
+        "title": "Blogs",
+        "href": "/Go/Blogs/",
+        "folder": false,
+        "icon": "fa-file"
+      },
+      {
         "type": "Section",
         "title": "100 Mistakes",
         "children": [

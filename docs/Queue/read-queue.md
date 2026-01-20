@@ -62,3 +62,7 @@ Paper that Discuss about why Low Latency is Important, and how if affects user e
 ### Marketing
 
 [Three Point Weekely](https://www.thdpth.com/) -- Seem Nice Writing about Marketing, Check Out.
+
+### Give It A Read
+
+[How Markdown Took Over the World](https://www.anildash.com/2026/01/09/how-markdown-took-over-the-world/)
