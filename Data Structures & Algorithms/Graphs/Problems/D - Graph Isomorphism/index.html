@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <script>
-        // for search plugin notably
-        const base_url = "https://akashk.dev/";
-    </script>
-    <script>
+    <head>
+        <script>
+            // for search plugin notably
+            const base_url = "https://akashk.dev/";
+        </script>
+        <script>
     const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
     darkTheme.onchange = (e) => {
         if (e.matches) {
@@ -33,11 +32,12 @@
     document.documentElement.classList.add(localStorage.getItem("html-layout") || "layout-fixed");
 </script>
 
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Graph Isomorphism - AKK - Portfolio & Digital Garden</title>
-    
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+            Graph Isomorphism - AKK - Portfolio & Digital Garden
+        </title>
+        
 
 
 <title>Graph Isomorphism</title>
@@ -81,54 +81,56 @@
 
 
 
-    <link rel="icon" href="../../../../img/favicon.ico">
+        <link rel="icon" href="../../../../img/favicon.ico" />
 
-    <link href="../../../../css/base.css" rel="stylesheet">
-    <link href="../../../../css/geist.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet" />
+        <link href="../../../../css/geist.css" rel="stylesheet" />
 
-    
-    
+         
 
 <link id="pygments-light" rel="stylesheet"
-    href="../../../../css/pygments/colorful.css">
+    href="../../../../css/pygments/dracula.css">
 <link id="pygments-dark" rel="stylesheet"
     href="../../../../css/pygments/dracula.css"
     media="(prefers-color-scheme: dark)">
 
 
-    
+         
 
-    
+        <script src="../../../../js/callbacks.js"></script>
 
-    <script src="../../../../js/callbacks.js"></script>
-
-    
-    <!-- katex -->
+         <!-- katex -->
 <link rel="stylesheet" href="../../../../css/katex.min.css">
 <!-- The loading of KaTeX is deferred to speed up page rendering -->
 <script defer src="../../../../js/katex.min.js"></script>
 <!-- To automatically render math in text elements, include the auto-render extension: -->
 <script defer src="../../../../js/auto-render.min.js"
-    onload='renderMathInElement(document.body, {"macros": {"\\RR": "\\mathbb{R}", "\\dx": "\\mathrm{d}x"}});'></script>
-    
+    onload='renderMathInElement(document.body, {"macros": {"\\RR": "\\mathbb{R}", "\\dx": "\\mathrm{d}x"}});'></script>   
 
-    
+        <script src="../../../../js/jquery.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/jquery.fancytree@2.27.0/dist/jquery.fancytree-all-deps.min.js"></script>
+        <link
+            href="//cdn.jsdelivr.net/npm/jquery.fancytree@2.27.0/dist/skin-material/ui.fancytree.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://use.fontawesome.com/releases/v7.0.1/css/all.css"
+            rel="stylesheet"
+        />
+        <link
+            href="../../../../css/fancytree-override.css"
+            rel="stylesheet"
+        />
+    </head>
 
-    
-
-    <script src="../../../../js/jquery.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/jquery.fancytree@2.27.0/dist/jquery.fancytree-all-deps.min.js"></script>
-    <link href="//cdn.jsdelivr.net/npm/jquery.fancytree@2.27.0/dist/skin-material/ui.fancytree.min.css"
-        rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v7.0.1/css/all.css" rel="stylesheet">
-    <link href="../../../../css/fancytree-override.css" rel="stylesheet">
-
-</head>
-
-<body
-    class="text-foreground group/body overscroll-none font-sans antialiased [--footer-height:calc(var(--spacing)*14)] [--header-height:calc(var(--spacing)*14)] xl:[--footer-height:calc(var(--spacing)*24)] theme-default">
-    <div id="inner-body" class="bg-background relative z-10 flex min-h-svh flex-col">
-        <header class="bg-background sticky top-0 z-50 w-full" view-transition-name="header">
+    <body
+        class="text-foreground group/body overscroll-none font-sans antialiased [--footer-height:calc(var(--spacing)*14)] [--header-height:calc(var(--spacing)*14)] xl:[--footer-height:calc(var(--spacing)*24)] theme-default"
+    >
+        <div
+            id="inner-body"
+            class="bg-background relative z-10 flex min-h-svh flex-col"
+        >
+            <header class="bg-background sticky top-0 z-50 w-full" view-transition-name="header">
     <div class="container-wrapper 3xl:fixed:px-0 px-6">
         <div class="3xl:fixed:container flex h-(--header-height) items-center gap-2 **:data-[slot=separator]:!h-4 mkdocs-nav">
             <button id="menu-button" data-slot="popover-trigger" onclick="onMobileMenuButtonClick(event)"
@@ -218,21 +220,35 @@
         </div>
     </div>
 </header>
-        <main class="flex flex-1 flex-col">
-            <div class="container-wrapper flex flex-1 flex-col px-2">
-                <div data-slot="sidebar-wrapper" style="--sidebar-width: 16rem; --sidebar-width-icon: 3rem;"
-                    class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex w-full 3xl:fixed:container 3xl:fixed:px-3 min-h-min flex-1 items-start px-0 [--sidebar-width:220px] [--top-spacing:0] lg:grid lg:grid-cols-[var(--sidebar-width)_minmax(0,1fr)] lg:[--sidebar-width:240px] lg:[--top-spacing:calc(var(--spacing)*4)]">
-                    <div data-slot="sidebar"
-                        class="transition-override text-sidebar-foreground flex-col sticky top-[calc(var(--header-height)+1px)] z-30 hidden h-[calc(100svh-var(--header-height)-var(--footer-height))] bg-transparent lg:flex">
-                        <div data-slot="sidebar-content" data-sidebar="content"
-                            class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden no-scrollbar px-2 pb-12">
-                            <div id="tree"></div>
+            <main class="flex flex-1 flex-col">
+                <div class="container-wrapper flex flex-1 flex-col px-2">
+                    <div
+                        data-slot="sidebar-wrapper"
+                        style="
+                            --sidebar-width: 16rem;
+                            --sidebar-width-icon: 3rem;
+                        "
+                        class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex w-full 3xl:fixed:container 3xl:fixed:px-3 min-h-min flex-1 items-start px-0 [--sidebar-width:220px] [--top-spacing:0] lg:grid lg:grid-cols-[var(--sidebar-width)_minmax(0,1fr)] lg:[--sidebar-width:240px] lg:[--top-spacing:calc(var(--spacing)*4)]"
+                    >
+                        <div
+                            data-slot="sidebar"
+                            class="transition-override text-sidebar-foreground flex-col sticky top-[calc(var(--header-height)+1px)] z-30 hidden h-[calc(100svh-var(--header-height)-var(--footer-height))] bg-transparent lg:flex"
+                        >
+                            <div
+                                data-slot="sidebar-content"
+                                data-sidebar="content"
+                                class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden no-scrollbar px-2 pb-12"
+                            >
+                                <div id="tree"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="h-full w-full">
-                        <div data-slot="docs" class="flex items-stretch text-[1.05rem] sm:text-[15px] xl:w-full">
-                            <div class="flex min-w-0 flex-1 flex-col">
-                                <article class="w-full" view-transition-name="page">
+                        <div class="h-full w-full">
+                            <div
+                                data-slot="docs"
+                                class="flex items-stretch text-[1.05rem] sm:text-[15px] xl:w-full"
+                            >
+                                <div class="flex min-w-0 flex-1 flex-col">
+                                    <article class="w-full" view-transition-name="page">
     <div class="flex flex-col gap-2">
         <div class="flex flex-col gap-2">
             <div id="page-header" class="flex items-start justify-between">
@@ -252,8 +268,7 @@
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
         
     </div>
-</article>
-                                <dialog id="bottom-sidebar" onclick="onBottomSidebarDialogClick(event)" class="bg-transparent"
+</article> <dialog id="bottom-sidebar" onclick="onBottomSidebarDialogClick(event)" class="bg-transparent"
     style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 58px); min-width: max-content; --radix-popper-transform-origin: 0% 0px; will-change: transform; z-index: 50; --radix-popper-available-width: 504px; --radix-popper-available-height: 857px; --radix-popper-anchor-width: 72.94999694824219px; --radix-popper-anchor-height: 32px;">
     <div data-side="bottom" data-align="start" data-state="open" role="dialog" data-slot="popover-content"
         class="text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 origin-(--radix-popover-content-transform-origin) border outline-hidden bg-background/90 no-scrollbar h-(--radix-popper-available-height) w-(--radix-popper-available-width) overflow-y-auto rounded-none border-none p-0 shadow-none backdrop-blur duration-100"
@@ -385,11 +400,15 @@
         </div>
     </div>
 </dialog>
-                            </div>
-                            <div data-reader-slot="toc"
-                                class="sticky top-[calc(var(--header-height)+1px)] z-30 ml-auto hidden h-[calc(100svh-var(--header-height)-var(--footer-height))] w-72 flex-col gap-4 overflow-hidden overscroll-none xl:flex">
-                                <div class="h-(--top-spacing) shrink-0"></div>
-                                <div view-transition-name="toc" class="no-scrollbar overflow-y-auto px-8">
+                                </div>
+                                <div
+                                    data-reader-slot="toc"
+                                    class="sticky top-[calc(var(--header-height)+1px)] z-30 ml-auto hidden h-[calc(100svh-var(--header-height)-var(--footer-height))] w-72 flex-col gap-4 overflow-hidden overscroll-none xl:flex"
+                                >
+                                    <div
+                                        class="h-(--top-spacing) shrink-0"
+                                    ></div>
+                                    <div view-transition-name="toc" class="no-scrollbar overflow-y-auto px-8">
     <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
         <p class="text-muted-foreground bg-background sticky top-0 h-6 text-xs">On This Page</p>
         
@@ -397,13 +416,13 @@
     </div>
     <div class="h-12"></div>
 </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
-        <footer view-transition-name="footer" data-reader-slot="footer"
+            </main>
+            <footer view-transition-name="footer" data-reader-slot="footer"
     class="group-has-[.section-soft]/body:bg-surface/40 3xl:fixed:bg-transparent dark:bg-transparent">
     <div class="container-wrapper px-4 xl:px-6">
         <div class="flex h-(--footer-height) items-center justify-between">
@@ -413,20 +432,16 @@
         </div>
     </div>
 </footer>
-    </div>
-     
+        </div>  
 
 <script src="../../../../search/main.js"></script>
+ 
 
-
-    
-
-    <script src="../../../../js/copy-button.js"></script>
-    <script>updatePygmentsStylesheet();</script>
-    
-    
-    
-    <script src="../../../../js/socket.io.min.js"></script>
+        <script src="../../../../js/copy-button.js"></script>
+        <script>
+            updatePygmentsStylesheet();
+        </script>
+           <script src="../../../../js/socket.io.min.js"></script>
 <script>
     function randomString(length = 10) {
         const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -503,9 +518,7 @@
         });
     }
 
-</script>
-    
-    <script type="speculationrules">
+</script>  <script type="speculationrules">
 {
   "prerender": [
     {
@@ -515,135 +528,146 @@
     }
   ]
 }
-</script>
+</script> 
 
-    
+        <script>
+            let nav_source_str = `[{"type": "Page", "title": "About Me", "href": "/", "folder": false, "icon": "fa-comment"}, {"type": "Page", "title": "Todo", "href": "/TODO/", "folder": false, "icon": "fa-square-check"}, {"type": "Section", "title": "CSES", "children": [{"type": "Page", "title": "CPP Tips and Tricks", "href": "/CSES/cpp-tips/", "folder": false, "icon": "fa-circle-up"}, {"type": "Page", "title": "Resource for CSES", "href": "/CSES/main/", "folder": false, "icon": "fa-list"}], "folder": true}, {"type": "Section", "title": "Data Structures & Algorithms", "children": [{"type": "Page", "title": "Roadmap", "href": "/Data%20Structures%20%26%20Algorithms/Roadmap/", "folder": false, "icon": "fa-chart-diagram"}, {"type": "Section", "title": "Graphs", "children": [{"type": "Page", "title": "A - Introduction", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/A-Introduction/", "folder": false, "icon": "fa-star"}, {"type": "Page", "title": "Common Graph Theory Problems", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/B-Common-Problems/", "folder": false, "icon": "fa-diagram-project"}, {"type": "Page", "title": "Trees", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/C-Tress/", "folder": false, "icon": "fa-star"}, {"type": "Section", "title": "Problems", "children": [{"type": "Page", "title": "A - Dungeon master", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/A%20-%20Dugen%20Master/", "folder": false, "icon": "fa-file"}, {"type": "Page", "title": "Beginner Tree Problems", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/B%20-%20Beginner%20Tree%20Problems/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Medium Level Tree Problems", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/C%20-%20Medium%20Tree%20Problems/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Graph Isomorphism", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/D%20-%20Graph%20Isomorphism/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Lowest Common Ancestor", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/E%20-%20Lowest%20Common%20Ancestor/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Topological Sort", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/F%20-%20Topological%20Sort%20Algorithms/", "folder": false, "icon": "fa-code-branch"}], "folder": true}], "folder": true}], "folder": true}, {"type": "Section", "title": "Design", "children": [{"type": "Page", "title": "CSS Collection", "href": "/Design/CSS/", "folder": false, "icon": "fa-eye"}], "folder": true}, {"type": "Section", "title": "Git", "children": [{"type": "Page", "title": "Useful Hooks", "href": "/Git/hooks/", "folder": false, "icon": "fa-hexagon-nodes"}], "folder": true}, {"type": "Section", "title": "Go", "children": [{"type": "Page", "title": "Blogs", "href": "/Go/Blogs/", "folder": false, "icon": "fa-file"}, {"type": "Section", "title": "100 Mistakes", "children": [{"type": "Page", "title": "Mistake 32", "href": "/Go/100%20Mistakes/Mistake%20%2332/", "folder": false, "icon": "fa-hexagon-nodes"}], "folder": true}], "folder": true}, {"type": "Section", "title": "Graphic Design", "children": [{"type": "Page", "title": "Generative Art", "href": "/Graphic%20Design/generative-art/", "folder": false, "icon": "fa-hexagon-nodes"}], "folder": true}, {"type": "Section", "title": "Mac OS Apps", "children": [{"type": "Page", "title": "Apps That I Use Daily", "href": "/Mac%20OS%20Apps/apps/", "folder": false, "icon": "fa-border-all"}], "folder": true}, {"type": "Section", "title": "Mathematics", "children": [{"type": "Section", "title": "Permutation", "children": [{"type": "Page", "title": "Materials", "href": "/Mathematics/Permutation/A%20-%20Material/", "folder": false, "icon": "fa-book"}, {"type": "Page", "title": "Introduction to Permuation", "href": "/Mathematics/Permutation/B%20-%20Introduction/", "folder": false, "icon": "fa-hashtag"}], "folder": true}], "folder": true}, {"type": "Section", "title": "Portfolios", "children": [{"type": "Page", "title": "Design Portfolio", "href": "/Portfolios/Design/", "folder": false, "icon": "fa-pen-nib"}, {"type": "Page", "title": "Software Devs / CS Engineers", "href": "/Portfolios/Dev/", "folder": false, "icon": "fa-pen-nib"}], "folder": true}, {"type": "Section", "title": "Python", "children": [{"type": "Page", "title": "Namespaces", "href": "/Python/namespace/", "folder": false, "icon": null}], "folder": true}, {"type": "Section", "title": "Queue", "children": [{"type": "Page", "title": "Read Queue", "href": "/Queue/read-queue/", "folder": false, "icon": "fa-book-open-reader"}, {"type": "Page", "title": "Watch Queue", "href": "/Queue/watch-queue/", "folder": false, "icon": "fa-video"}], "folder": true}, {"type": "Section", "title": "Read TakeAways", "children": [{"type": "Page", "title": "Tech Blogs", "href": "/Read%20TakeAways/Tect/", "folder": false, "icon": "fa-file-code"}], "folder": true}]`;
+            let nav_source = JSON.parse(nav_source_str || "null");
+            document.addEventListener("DOMContentLoaded", function () {
+                $("#tree").fancytree({
+                    toggleEffect: false,
+                    clickFolderMode: 2,
+                    extensions: ["persist"],
+                    persist: {
+                        store: "local", // "cookie", "local" (localStorage), "session"
+                        types: "expanded selected", // which states to store
+                        // overrideSource: false, // restore initial state
+                        cookiePrefix: "fancytree-",
+                        cookie: { expires: 365 },
+                        expandLazy: true, // expand lazy nodes when restoring
+                    },
+                    source: nav_source,
+                    renderNode: function (event, data) {
+                        console.log(data);
+                        let expander = data.node.span.querySelector(
+                            ".fancytree-expander",
+                        );
+                        if (expander) {
+                            expander.remove();
+                        }
 
+                        const onTreeItemClick = (e) => {
+                            console.log(e, "clicked");
+                            // e.preventDefault()
+                            e.stopPropagation();
+                        };
 
-    <script>
-        let nav_source_str = `[{"type": "Page", "title": "About Me", "href": "/", "folder": false, "icon": "fa-comment"}, {"type": "Page", "title": "Todo", "href": "/TODO/", "folder": false, "icon": "fa-square-check"}, {"type": "Section", "title": "CSES", "children": [{"type": "Page", "title": "CPP Tips and Tricks", "href": "/CSES/cpp-tips/", "folder": false, "icon": "fa-circle-up"}, {"type": "Page", "title": "Resource for CSES", "href": "/CSES/main/", "folder": false, "icon": "fa-list"}], "folder": true}, {"type": "Section", "title": "Data Structures & Algorithms", "children": [{"type": "Page", "title": "Roadmap", "href": "/Data%20Structures%20%26%20Algorithms/Roadmap/", "folder": false, "icon": "fa-chart-diagram"}, {"type": "Section", "title": "Graphs", "children": [{"type": "Page", "title": "A - Introduction", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/A-Introduction/", "folder": false, "icon": "fa-star"}, {"type": "Page", "title": "Common Graph Theory Problems", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/B-Common-Problems/", "folder": false, "icon": "fa-diagram-project"}, {"type": "Page", "title": "Trees", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/C-Tress/", "folder": false, "icon": "fa-star"}, {"type": "Section", "title": "Problems", "children": [{"type": "Page", "title": "A - Dungeon master", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/A%20-%20Dugen%20Master/", "folder": false, "icon": "fa-file"}, {"type": "Page", "title": "Beginner Tree Problems", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/B%20-%20Beginner%20Tree%20Problems/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Medium Level Tree Problems", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/C%20-%20Medium%20Tree%20Problems/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Graph Isomorphism", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/D%20-%20Graph%20Isomorphism/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Lowest Common Ancestor", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/E%20-%20Lowest%20Common%20Ancestor/", "folder": false, "icon": "fa-tree"}, {"type": "Page", "title": "Topological Sort", "href": "/Data%20Structures%20%26%20Algorithms/Graphs/Problems/F%20-%20Topological%20Sort%20Algorithms/", "folder": false, "icon": "fa-code-branch"}], "folder": true}], "folder": true}], "folder": true}, {"type": "Section", "title": "Design", "children": [{"type": "Page", "title": "CSS Collection", "href": "/Design/CSS/", "folder": false, "icon": "fa-css"}], "folder": true}, {"type": "Section", "title": "Git", "children": [{"type": "Page", "title": "Useful Hooks", "href": "/Git/hooks/", "folder": false, "icon": "fa-hexagon-nodes"}], "folder": true}, {"type": "Section", "title": "Go", "children": [{"type": "Page", "title": "Blogs", "href": "/Go/Blogs/", "folder": false, "icon": "fa-file"}, {"type": "Section", "title": "100 Mistakes", "children": [{"type": "Page", "title": "Mistake 32", "href": "/Go/100%20Mistakes/Mistake%20%2332/", "folder": false, "icon": "fa-hexagon-nodes"}], "folder": true}], "folder": true}, {"type": "Section", "title": "Graphic Design", "children": [{"type": "Page", "title": "Generative Art", "href": "/Graphic%20Design/generative-art/", "folder": false, "icon": "fa-hexagon-nodes"}], "folder": true}, {"type": "Section", "title": "Mac OS Apps", "children": [{"type": "Page", "title": "Apps That I Use Daily", "href": "/Mac%20OS%20Apps/apps/", "folder": false, "icon": "fa-border-all"}], "folder": true}, {"type": "Section", "title": "Mathematics", "children": [{"type": "Section", "title": "Permutation", "children": [{"type": "Page", "title": "Materials", "href": "/Mathematics/Permutation/A%20-%20Material/", "folder": false, "icon": "fa-book"}, {"type": "Page", "title": "Introduction to Permuation", "href": "/Mathematics/Permutation/B%20-%20Introduction/", "folder": false, "icon": "fa-hashtag"}], "folder": true}], "folder": true}, {"type": "Section", "title": "Portfolios", "children": [{"type": "Page", "title": "Design Portfolio", "href": "/Portfolios/Design/", "folder": false, "icon": "fa-pen-nib"}, {"type": "Page", "title": "Software Devs / CS Engineers", "href": "/Portfolios/Dev/", "folder": false, "icon": "fa-pen-nib"}], "folder": true}, {"type": "Section", "title": "Python", "children": [{"type": "Page", "title": "Namespaces", "href": "/Python/namespace/", "folder": false, "icon": null}], "folder": true}, {"type": "Section", "title": "Queue", "children": [{"type": "Page", "title": "Read Queue", "href": "/Queue/read-queue/", "folder": false, "icon": "fa-book-open-reader"}, {"type": "Page", "title": "Watch Queue", "href": "/Queue/watch-queue/", "folder": false, "icon": "fa-video"}], "folder": true}, {"type": "Section", "title": "Read TakeAways", "children": [{"type": "Page", "title": "Tech Blogs", "href": "/Read%20TakeAways/Tect/", "folder": false, "icon": "fa-file-code"}], "folder": true}]`
-        let nav_source = JSON.parse(nav_source_str || "null")
-        document.addEventListener("DOMContentLoaded", function () {
-            $("#tree").fancytree({
-                toggleEffect: false,
-                clickFolderMode: 2,
-                extensions: ["persist"],
-                persist: {
-                    store: "local", // "cookie", "local" (localStorage), "session"
-                    types: "expanded selected", // which states to store
-                    // overrideSource: false, // restore initial state
-                    cookiePrefix: "fancytree-",
-                    cookie: { expires: 365 },
-                    expandLazy: true // expand lazy nodes when restoring
-                },
-                source: nav_source,
-                renderNode: function (event, data) {
-                    console.log(data)
-                    let expander = data.node.span.querySelector(".fancytree-expander");
-                    if (expander) {
-                        expander.remove();
-                    }
+                        let title =
+                            data.node.span.querySelector(".fancytree-title");
+                        if (title) {
+                            title.classList.add("text-sm");
+                        }
+                        if (title && data.node.data.href) {
+                            title.innerHTML = `<a href="${data.node.data.href}" class="tree-link">${data.node.title}</a>`;
+                            const link = title.querySelector("a");
+                            link.addEventListener("click", onTreeItemClick);
+                        }
 
-                    const onTreeItemClick = (e) => {
-                        console.log(e, "clicked")
-                        // e.preventDefault()
-                        e.stopPropagation()
-                    }
+                        let iconSpan = data.node.span.querySelector(
+                            'span[role="presentation"]',
+                        );
+                        if (iconSpan) {
+                            iconSpan.classList.add("fas");
+                            iconSpan.classList.add("fancytree-override-icon");
 
-                    let title = data.node.span.querySelector(".fancytree-title");
-                    if (title) {
-                        title.classList.add("text-sm");
-                    }
-                    if (title && data.node.data.href) {
-                        title.innerHTML = `<a href="${data.node.data.href}" class="tree-link">${data.node.title}</a>`;
-                        const link = title.querySelector("a")
-                        link.addEventListener("click", onTreeItemClick)
-                    }
-
-
-                    let iconSpan = data.node.span.querySelector('span[role="presentation"]');
-                    if (iconSpan) {
-                        iconSpan.classList.add("fas");
-                        iconSpan.classList.add("fancytree-override-icon");
-
-                        if (data.node.folder) {
-                            if (data.node.expanded) {
-                                iconSpan.classList.remove("fa-folder")
-                                iconSpan.classList.add("fa-folder-open")
+                            if (data.node.folder) {
+                                if (data.node.expanded) {
+                                    iconSpan.classList.remove("fa-folder");
+                                    iconSpan.classList.add("fa-folder-open");
+                                } else {
+                                    iconSpan.classList.add("fa-folder");
+                                    iconSpan.classList.remove("fa-folder-open");
+                                }
                             } else {
-                                iconSpan.classList.add("fa-folder")
-                                iconSpan.classList.remove("fa-folder-open")
-                            }
-                        } else {
-                            if (data.node.icon) {
-                                iconSpan.classList.add(data.node.icon)
-                            } else {
-                                iconSpan.classList.add("fa-file")
+                                if (data.node.icon) {
+                                    iconSpan.classList.add(data.node.icon);
+                                } else {
+                                    iconSpan.classList.add("fa-file");
+                                }
                             }
                         }
-                    }
-                    data.node.span.classList.add("tree-item-hover");
-                }
+                        data.node.span.classList.add("tree-item-hover");
+                    },
+                });
             });
-        });
-    </script>
+        </script>
 
-    <script>
-        function toogleReaderMode() {
-            console.log("Reader Mode On")
-            const sidebar = document.querySelector('[data-slot="sidebar"]');
-            const sidebar_opacity = window.getComputedStyle(sidebar).opacity;
+        <script>
+            function toogleReaderMode() {
+                console.log("Reader Mode On");
+                const sidebar = document.querySelector('[data-slot="sidebar"]');
+                const sidebar_opacity =
+                    window.getComputedStyle(sidebar).opacity;
 
-            const theme = document.querySelector('[data-reader-slot="theme"]');
-            const layout = document.querySelector('[data-reader-slot="layout"]');
-            const github = document.querySelector('[data-reader-slot="github"]');
-            const header_nav = document.querySelector('[data-reader-slot="header_nav"]');
-            const toc = document.querySelector('[data-reader-slot="toc"]');
-            const footer = document.querySelector('[data-reader-slot="footer"]');
+                const theme = document.querySelector(
+                    '[data-reader-slot="theme"]',
+                );
+                const layout = document.querySelector(
+                    '[data-reader-slot="layout"]',
+                );
+                const github = document.querySelector(
+                    '[data-reader-slot="github"]',
+                );
+                const header_nav = document.querySelector(
+                    '[data-reader-slot="header_nav"]',
+                );
+                const toc = document.querySelector('[data-reader-slot="toc"]');
+                const footer = document.querySelector(
+                    '[data-reader-slot="footer"]',
+                );
 
-            console.log("Header Nav", header_nav)
+                console.log("Header Nav", header_nav);
 
-            if (sidebar_opacity != 0) {
-                sidebar.style.opacity = 0
-                theme.style.opacity = 0
-                layout.style.opacity = 0
-                github.style.opacity = 0
-                header_nav.style.opacity = 0
-                toc.style.opacity = 0
-                footer.style.opacity = 0
-            } else {
-                sidebar.style.opacity = 1
-                theme.style.opacity = 1
-                layout.style.opacity = 1
-                github.style.opacity = 1
-                header_nav.style.opacity = 1
-                toc.style.opacity = 1
-                footer.style.opacity = 1
+                if (sidebar_opacity != 0) {
+                    sidebar.style.opacity = 0;
+                    theme.style.opacity = 0;
+                    layout.style.opacity = 0;
+                    github.style.opacity = 0;
+                    header_nav.style.opacity = 0;
+                    toc.style.opacity = 0;
+                    footer.style.opacity = 0;
+                } else {
+                    sidebar.style.opacity = 1;
+                    theme.style.opacity = 1;
+                    layout.style.opacity = 1;
+                    github.style.opacity = 1;
+                    header_nav.style.opacity = 1;
+                    toc.style.opacity = 1;
+                    footer.style.opacity = 1;
+                }
             }
-        }
-    </script>
+        </script>
 
-    <script>
-        // Hanldes the logic for Last Deployment & Last Commit in Footter Section
+        <script>
+            // Hanldes the logic for Last Deployment & Last Commit in Footter Section
 
-        const date = new Date();
-        const formatted = date.toLocaleString('en-GB', {
-            day: '2-digit',
-            month: 'short',
-            year: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-            hour12: true,
-        });
-        const elem = document.getElementById("last-deployment")
-        elem.innerText = formatted
+            const date = new Date();
+            const formatted = date.toLocaleString("en-GB", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: true,
+            });
+            const elem = document.getElementById("last-deployment");
+            elem.innerText = formatted;
 
-        let last_commit = `54c7e0c53f44353fc0adae31755a10720cfbbc15`
+            let last_commit = `5ba6ef9f1b5245611ded74f7153efe08d681bc42`;
 
-        const lastCommitElem = document.getElementById("last-commit")
-        lastCommitElem.href = "https://github.com/akk017/portfolio/commit/" + last_commit
-
-    </script>
-</body>
-
+            const lastCommitElem = document.getElementById("last-commit");
+            lastCommitElem.href =
+                "https://github.com/akk017/portfolio/commit/" + last_commit;
+        </script>
+    </body>
 </html>
