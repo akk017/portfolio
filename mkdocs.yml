@@ -7,7 +7,7 @@ theme:
   show_title: true
   show_stargazers: false
   pygments_style:
-    light: colorful
+    light: dracula
     dark: dracula
   icon: lucide:rocket
   topbar_sections: false
@@ -29,7 +29,13 @@ markdown_extensions:
   - pymdownx.saneheaders
   - pymdownx.progressbar
   - pymdownx.tilde
-  - codehilite
+  - pymdownx.highlight:
+      pygments_style: dracula
+      css_class: codehilite
+      noclasses: false
+      guess_lang: false
+      use_pygments: true
+  - pymdownx.superfences
   - shadcn.extensions.codexec
   - pymdownx.arithmatex:
       generic: true
