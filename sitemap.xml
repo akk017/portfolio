@@ -9,6 +9,14 @@
          <lastmod>2026-02-12</lastmod>
     </url>
     <url>
+         <loc>https://akashk.dev/dump/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://akashk.dev/Algorithmic%20Trading/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
          <loc>https://akashk.dev/CSES/cpp-tips/</loc>
          <lastmod>2026-02-12</lastmod>
     </url>
@@ -61,6 +69,10 @@
          <lastmod>2026-02-12</lastmod>
     </url>
     <url>
+         <loc>https://akashk.dev/Design/fonts/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
          <loc>https://akashk.dev/Git/hooks/</loc>
          <lastmod>2026-02-12</lastmod>
     </url>
@@ -110,6 +122,14 @@
     </url>
     <url>
          <loc>https://akashk.dev/Read%20TakeAways/Tect/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://akashk.dev/Self%20Host/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://akashk.dev/kubernetes/Learn%20Kube/</loc>
          <lastmod>2026-02-12</lastmod>
     </url>
 </urlset>
