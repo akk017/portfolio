@@ -28,4 +28,4 @@ icon: fa-chart-diagram
 
 ### Common Algorithms
 
-![Image](/img/uploads/graphs.png)
+![Image](https://i.ibb.co/wZvY0Q9N/b5789987604a.png)

@@ -14,6 +14,27 @@
     "icon": "fa-square-check"
   },
   {
+    "type": "Page",
+    "title": "Waste Land",
+    "href": "/dump/",
+    "folder": false,
+    "icon": "fa-basketball"
+  },
+  {
+    "type": "Section",
+    "title": "Algorithmic Trading",
+    "children": [
+      {
+        "type": "Page",
+        "title": "Algorithmic Trading",
+        "href": "/Algorithmic%20Trading/",
+        "folder": false,
+        "icon": "fa-chart-diagram"
+      }
+    ],
+    "folder": true
+  },
+  {
     "type": "Section",
     "title": "CSES",
     "children": [
@@ -135,6 +156,13 @@
         "href": "/Design/CSS/",
         "folder": false,
         "icon": "fa-eye"
+      },
+      {
+        "type": "Page",
+        "title": "Fonts",
+        "href": "/Design/fonts/",
+        "folder": false,
+        "icon": "fa-font"
       }
     ],
     "folder": true
@@ -303,6 +331,34 @@
         "href": "/Read%20TakeAways/Tect/",
         "folder": false,
         "icon": "fa-file-code"
+      }
+    ],
+    "folder": true
+  },
+  {
+    "type": "Section",
+    "title": "Self Host",
+    "children": [
+      {
+        "type": "Page",
+        "title": null,
+        "href": "/Self%20Host/",
+        "folder": false,
+        "icon": null
+      }
+    ],
+    "folder": true
+  },
+  {
+    "type": "Section",
+    "title": "Kubernetes",
+    "children": [
+      {
+        "type": "Page",
+        "title": "Learn K8S",
+        "href": "/kubernetes/Learn%20Kube/",
+        "folder": false,
+        "icon": "fa-diagram-project"
       }
     ],
     "folder": true
