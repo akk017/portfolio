@@ -20,7 +20,7 @@ def populate_nav(filename):
 
 
 def last_commit(arg):
-    commit = os.getenv("PORTFOLIO_LAST_COMMIT")
+    commit = os.getenv("LAST_COMMIT")
     branch = "main"
     log.info(f"Last Commit => {branch=} {commit=}")
     return commit
