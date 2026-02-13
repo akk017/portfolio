@@ -8,6 +8,13 @@
   },
   {
     "type": "Page",
+    "title": "Component Required for Application",
+    "href": "/Components%20Required/",
+    "folder": false,
+    "icon": "fa-inbox"
+  },
+  {
+    "type": "Page",
     "title": "Todo",
     "href": "/TODO/",
     "folder": false,
