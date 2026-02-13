@@ -28,4 +28,4 @@ icon: fa-chart-diagram
 
 ### Common Algorithms
 
-![Image](https://i.ibb.co/wZvY0Q9N/b5789987604a.png)
+![Image](https://sgp.cloud.appwrite.io/v1/storage/buckets/akk-portfolio-images/files/74b7a2b4-b2f0-45f0-afbf-4eed2625cd46/view?project=akk-portfolio)

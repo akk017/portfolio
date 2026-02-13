@@ -37,7 +37,7 @@ $$
 If given tree is binary tree, then binary tree can store in flattered array.
 
 <div style="display:flex;justify-content:center;width:100%;">
-<img src="https://i.ibb.co/hRvZdQqg/ba713d246df1.png" style="height: 300px"/>
+<img src="https://sgp.cloud.appwrite.io/v1/storage/buckets/akk-portfolio-images/files/caa28b41-06cf-4c35-9e78-781d05c50df3/view?project=akk-portfolio" style="height: 300px"/>
 </div>
 
 **Flattered Array** :-
