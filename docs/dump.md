@@ -24,4 +24,10 @@ icon: fa-basketball
 
 [Primer System Design](https://primer.style/)
 
+![IMage](https://sgp.cloud.appwrite.io/v1/storage/buckets/akk-portfolio-images/files/480dbafc-2625-4085-add6-2b9a5f615f6d/view?project=akk-portfolio)
+Intresting Way to Parse Codebase with RAG.
+> Source: https://hatchet.run/customers/greptile
+
+![Image](https://sgp.cloud.appwrite.io/v1/storage/buckets/akk-portfolio-images/files/93722d98-7953-45ee-8a79-3e8e6a114303/view?project=akk-portfolio)
+
 

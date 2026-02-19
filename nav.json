@@ -22,10 +22,24 @@
   },
   {
     "type": "Page",
+    "title": "Daily Designer New",
+    "href": "/ddr/",
+    "folder": false,
+    "icon": "fa-basketball"
+  },
+  {
+    "type": "Page",
     "title": "Waste Land",
     "href": "/dump/",
     "folder": false,
     "icon": "fa-basketball"
+  },
+  {
+    "type": "Page",
+    "title": "Flow",
+    "href": "/flow/",
+    "folder": false,
+    "icon": "fa-start"
   },
   {
     "type": "Section",
