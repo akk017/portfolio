@@ -8,3 +8,5 @@ icon: fa-pen-nib
 [Robert Nystrom](https://journal.stuffwithstuff.com/)
 > Writer of this Awesome Book - [CRAFTING INTERPRETERS](https://craftinginterpreters.com/)
 
+[David A. Wheeler](https://dwheeler.com/)
+

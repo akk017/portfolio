@@ -52,4 +52,9 @@ icon: fa-file-code
         C. Scaling and Cost of Ownership: Calculate long-term costs, including maintenance, dependency management, and tech debt. Alternatives often reduce runtime overhead, lowering hosting costs and improving scalability. \
         D. Ecosystem Fit: Balance maturity with innovation; pilot in non-critical areas to test migration feasibility and ROI.
     2. Monoculture slows web evolution when one framework’s constraints become de facto limits.
+  
+!!! note "[**Jason Fried**](https://open.spotify.com/episode/3ecxE9JmIXyTouizVLQND7)"
+    by: Jason Fried
+    
+    1. The more the mass, the more engergy it takes to change its direction
 
