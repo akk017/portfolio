@@ -317,6 +317,13 @@
         "href": "/Python/namespace/",
         "folder": false,
         "icon": null
+      },
+      {
+        "type": "Page",
+        "title": "Peg Parge",
+        "href": "/Python/peg_parser/",
+        "folder": false,
+        "icon": "fa-star"
       }
     ],
     "folder": true
