@@ -58,3 +58,8 @@ icon: fa-file-code
     
     1. The more the mass, the more engergy it takes to change its direction
 
+!!! note "[**Value of Things**](https://journal.stuffwithstuff.com/)"
+    by: Bob Nystrom
+    
+    1. value is create by scarifice of time, you spend you fraction of time for another human carries more vaule.
+    2. technoloty is about making utility, now with AI it can be in fraction of time.
