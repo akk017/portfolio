@@ -288,20 +288,6 @@
   },
   {
     "type": "Section",
-    "title": "Networking",
-    "children": [
-      {
-        "type": "Page",
-        "title": null,
-        "href": "/Networking/",
-        "folder": false,
-        "icon": null
-      }
-    ],
-    "folder": true
-  },
-  {
-    "type": "Section",
     "title": "Portfolios",
     "children": [
       {
