@@ -9,7 +9,6 @@ theme:
   pygments_style:
     light: dracula
     dark: dracula
-  icon: lucide:rocket
   topbar_sections: false
   katex_options:
     macros:
