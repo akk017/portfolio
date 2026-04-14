@@ -2,7 +2,6 @@
 title: networking layer model
 date: 14-APR-2026
 sources:[Beej's Networking Guide - Ch4](https://beej.us/guide/bgnet0/html/split/the-layered-network-model.html)
-watch: true
 ---
 
 #### Glossary

@@ -75,5 +75,28 @@
                 {{ toc }}
             </div>
         </main>
+        
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Divider
+                const elements = document.querySelectorAll(".divider");
+                const char = "░";
+
+                const temp = document.createElement("span");
+                temp.innerText = char;
+                document.body.appendChild(temp);
+
+                const charWidth = temp.offsetWidth;
+                document.body.removeChild(temp);
+
+                elements.forEach((el) => {
+                    const parentWidth = el.offsetWidth;
+                    const count = Math.floor(parentWidth / charWidth);
+                    el.innerText = char.repeat(count + 3);
+                });
+            });
+        </script>
+
     </body>
 </html>

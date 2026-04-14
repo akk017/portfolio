@@ -1,13 +1,29 @@
+# Build outputs
+build/
+dist/
 site/
-garden_venv/
+.build/
 
+# Python
+__pycache__/
+*.pyc
+garden_venv/
+bin/
+
+# Project temp/test
 test/
 tmp/
-bin/
-.idea/*
-.build/*
-imagedb-api/database-response/**.json
-imagedb-api/pages-response/**.json
-imagedb-api/images
-md_compiler/build/*
+
+# IDE
+.idea/
+
+# macOS
 .DS_Store
+
+# API data
+imagedb-api/database-response/*.json
+imagedb-api/pages-response/*.json
+imagedb-api/images/
+
+# Compiler build
+md_compiler/build/

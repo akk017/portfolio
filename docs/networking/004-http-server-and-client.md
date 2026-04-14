@@ -2,7 +2,6 @@
 title: HTTP Server and Client
 sources: [Beej's Netwokring](https://beej.us/guide/bgnet0/html/split/project-http-client-and-server.html)
 sources: [C Linux Bind](https://linux.die.net/man/2/bind)
-watch: true
 ---
 
 A sample of code, connecting to socke

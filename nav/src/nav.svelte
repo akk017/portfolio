@@ -79,10 +79,10 @@
             : tree.children;
         const dirs = items
             .filter((n) => n.isDir)
-            .sort((a, b) => a.name.localeCompare(b.name));
+            .sort((a, b) => a.path.localeCompare(b.path));
         const files = items
             .filter((n) => n.isFile)
-            .sort((a, b) => a.name.localeCompare(b.name));
+            .sort((a, b) => a.path.localeCompare(b.path));
         return [...dirs, ...files];
     }
 
@@ -94,27 +94,8 @@
         window.location.href = n.path;
     }
 
-    function back() {
+function back() {
         if (current.length) current = current.slice(0, -1);
-    }
-
-    function breadcrumbs(): { name: string; idx: number }[] {
-        if (!current.length) return [];
-        return current.map((n, i) => ({ name: n.name, idx: i }));
-    }
-
-    function crumbPath(crumbs: { idx: number }[]): string {
-        if (!crumbs.length) return "/";
-        const last = crumbs[crumbs.length - 1];
-        const start = Math.max(0, last.idx - 1);
-        return current
-            .slice(start, last.idx + 1)
-            .map((n) => n.name)
-            .join("/");
-    }
-
-    function navigate(idx: number) {
-        current = current.slice(0, idx + 1);
     }
 
     function results() {
@@ -129,16 +110,6 @@
         >
         <input type="text" bind:value={query} placeholder="search" />
     </div>
-    {#if breadcrumbs().length > 0}
-        <span class="path">
-            {#each breadcrumbs() as c, i}
-                <button class="crumb" onclick={() => navigate(c.idx)}
-                    >{c.name}</button
-                >
-                {#if i < breadcrumbs().length - 1}/{/if}
-            {/each}
-        </span>
-    {/if}
 
     {#if query}
         <ul>
@@ -195,30 +166,10 @@
         justify-content: flex-start;
         flex-direction: column;
         height: 100%;
-        opacity: 0.2;
+        opacity: 0.4;
     }
     #nav-container:hover {
         opacity: 1;
-    }
-    .path {
-        padding: 8px 12px;
-        background: #f5f5f5;
-        display: flex;
-        gap: 4px;
-        align-items: center;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        text-align: left;
-    }
-    .crumb {
-        background: none;
-        border: none;
-        cursor: pointer;
-        font: inherit;
-    }
-    .crumb:hover {
-        text-decoration: underline;
     }
     #bar {
         display: flex;

@@ -1,7 +1,6 @@
 ---
 title: networking overview
 date: 09-APR-2026
-watch: true
 sources:[Beej's Networking Guide](https://beej.us/guide/bgnet0/html/split/networking-overview.html)
 ---
 

@@ -27,7 +27,7 @@ class BaseCompiler(ABC):
 
 
 class MDCompiler(BaseCompiler):
-    def __init__(self, config: "Config", extensions: list[Extension]) -> None:
+    def __init__(self, config: "Config", extensions: list[Extension|str]) -> None:
         super().__init__()
         self._config = config
         self._extention = extensions

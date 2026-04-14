@@ -15,7 +15,6 @@ IMAGEDB_API=imagedb-api
 NAV=nav
 
 webui:
-	source $$HOME/.nvm/nvm.sh
 	cd "$(PROJECT_HOME)/$(WEBUI_NAME)"
 	set -a && source .env && set +a
 	nvm use
@@ -25,28 +24,33 @@ run-server:
 	cd "$(PROJECT_HOME)/$(WEBUI_NAME)" 
 	shapeshifter
 	
-build-nav:
+build-nav: clean-nav
+	source $$HOME/.nvm/nvm.sh && nvm use 24
 	cd "$(PROJECT_HOME)/$(NAV)"
 	npm run build
 	mv ./dist/assets/index.js "$(PROJECT_HOME)/$(TEMPLATES)/$(NAV)"
 	mv ./dist/assets/index.css "$(PROJECT_HOME)/$(TEMPLATES)/$(NAV)"
 
-build: build-nav
+build: clean build-nav
 	source $(GARDEN_ENV)
 	cd "$(PROJECT_HOME)/$(MD_COMPILER)"
 	pip3 install .
 	$(MAKE) clean
 	cd "$(PROJECT_HOME)"
-	python3 main.py
+	python3 -m compiler
 
 clean:
 	cd "$(PROJECT_HOME)/$(MD_COMPILER)"
 	rm -rf build md_compiler.egg-info
+	
+clean-nav:
+	cd "$(PROJECT_HOME)/$(NAV)"
+	rm -rf dist
 
 serve: build
 	source $(GARDEN_ENV)
 	cd "$(PROJECT_HOME)"
-	python3 main.py --watch
+	python3 -m compiler --watch
 
 deploy: build
 	firebase deploy
