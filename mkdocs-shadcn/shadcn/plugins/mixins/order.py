@@ -18,10 +18,10 @@ class OrderMixin(Mixin):
     page_index = 0
     """Internal page index for orderning purpose"""
     page_indices: Set[int] = set()
-    """Internal set of pages that have hard-coded order"""
+    """Internal set of templates that have hard-coded order"""
 
     nav_order: List[str] = []
-    """Internal list of pages in the order they appear in the navigation"""
+    """Internal list of templates in the order they appear in the navigation"""
 
     def pre_order(self, nav_items: list):
         for item in nav_items:
@@ -63,7 +63,7 @@ class OrderMixin(Mixin):
         # It uses the following priority:
         # 1. order defined in the page's meta (frontmatter)
         # 2. order defined by the navigation position
-        # 3. order defined by the order of processing pages (alphabetically)
+        # 3. order defined by the order of processing templates (alphabetically)
         try:
             page.meta[ORDER_META_KEY] = page.meta.get(
                 ORDER_META_KEY,

@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$defs": {
+    "NavItem": {
+      "oneOf": [
+        { "$ref": "#/$defs/Page" },
+        { "$ref": "#/$defs/Section" }
+      ]
+    },
+    "Page": {
+      "type": "object",
+      "required": ["type", "title", "href", "folder", "icon"],
+      "properties": {
+        "type": { "const": "Page" },
+        "title": { "type": "string" },
+        "href": { "type": "string", "pattern": "^/" },
+        "folder": { "const": false },
+        "icon": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "Section": {
+      "type": "object",
+      "required": ["type", "title", "folder", "children"],
+      "properties": {
+        "type": { "const": "Section" },
+        "title": { "type": "string" },
+        "folder": { "const": true },
+        "children": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/NavItem" }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "type": "array",
+  "items": { "$ref": "#/$defs/NavItem" }
+}

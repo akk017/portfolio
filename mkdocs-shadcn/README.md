@@ -96,7 +96,7 @@ bun install
 We use the project pages to as a test project for this theme. You can run the local server in the `pages/` subdirectory.
 
 ```shell
-cd pages/
+cd templates/
 uv run mkdocs serve --watch-theme -w ..
 ```
 

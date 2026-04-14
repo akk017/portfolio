@@ -9,7 +9,7 @@
     {% endif %}
 
     {% if not current %}
-    {# when there is not active section, keep only the top level pages #}
+    {# when there is not active section, keep only the top level templates #}
     {% set current = nav|selectattr("is_page") %}
     {% endif %}
 

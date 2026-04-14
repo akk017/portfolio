@@ -1,6 +1,6 @@
 ---
 title: Todo
-icon: "fa-square-check"
+icon: fa-square-check
 order: 2
 ---
 
@@ -8,3 +8,9 @@ order: 2
 - Navigation for Mobile, and other Small Device
 - ~~Last Update Date & Time to automattically update over every deploy with a Commit and Diff showing what has beed added~~
 - Move Image from imbgg to appwrite
+
+
+!!! NOTE Callout
+Move Image from imbgg to appwrite, Navigation for Mobile, and other Small Device
+Last Update Date & Time to automattically u
+!!!

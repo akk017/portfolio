@@ -1,6 +1,11 @@
 ---
 title: CPP Tips and Tricks
 icon: fa-circle-up
+sources:[Code Forces#1](https://codeforces.com/blog/entry/15643)
+sources:[Code Forces#2](https://codeforces.com/blog/entry/15547)
+sources:[Code Forces#3](https://codeforces.com/blog/entry/74684)
+sources:[Code Forces#4](https://codeforces.com/blog/entry/925)
+sources:[Code Forces#5](https://codeforces.com/blog/entry/112926)
 ---
 
 
@@ -29,7 +34,7 @@ In `myprettyprint.hpp`, Support Only Upto 5 Args
 #endif
 ```
 
-
+<div class="divider"></div>
 
 ```cpp
 template <class T1, class T2>
@@ -62,12 +67,3 @@ ostream &operator<<(ostream &os, const T &c) {
   cerr << "Line " << __LINE__ << ": " FOR_EACH_MACRO(out, __VA_ARGS__) << "\n"
 ```
 
-
-
-<!-- https://codeforces.com/blog/entry/106346 -->
-<!-- https://codeforces.com/blog/entry/91114 -->
-https://codeforces.com/blog/entry/15643
-https://codeforces.com/blog/entry/15547
-https://codeforces.com/blog/entry/74684
-https://codeforces.com/blog/entry/925
-https://codeforces.com/blog/entry/112926

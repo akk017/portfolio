@@ -3,7 +3,7 @@ title: Useful Hooks
 icon: fa-hexagon-nodes
 ---
 
-### Commit Message
+### Pre Commit Message Hook
 
 ```bash
 

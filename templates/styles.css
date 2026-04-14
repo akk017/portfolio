@@ -1,0 +1,25 @@
+details {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+summary {
+    display: flex;
+    align-items: center;
+    color: black;
+    background-color: rgb(255 147 0 / 40%);
+}
+
+summary > div {
+    flex: 1;
+    margin: 0 !important;
+}
+
+summary > span {
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+img {
+    width: 100%;
+}

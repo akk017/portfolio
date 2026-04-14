@@ -1,6 +1,6 @@
 ---
-title: "About Me"
-icon: "fa-comment"
+title: About Me
+icon: fa-comment
 order: 1
 ---
 

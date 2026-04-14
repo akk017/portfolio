@@ -4,3 +4,10 @@ garden_venv/
 test/
 tmp/
 bin/
+.idea/*
+.build/*
+imagedb-api/database-response/**.json
+imagedb-api/pages-response/**.json
+imagedb-api/images
+md_compiler/build/*
+.DS_Store
