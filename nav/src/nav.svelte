@@ -1,32 +1,76 @@
 <script lang="ts">
     import Fuse from "fuse.js";
     import { navData, type NavItem, type Page } from "./data.js";
-    import { buildTree, type PathNode } from "./path-node.js";
+    import { buildTree, PathNode as PathNodeClass, type PathNode } from "./path-node.js";
 
     let query = $state("");
     let current = $state<PathNode[]>([]);
 
     const tree = buildTree(navData);
 
-    const fuse = new Fuse(getAllPages(), { keys: ["title"], threshold: 0.4 });
+    function loadFromStorage(): PathNode[] {
+        const saved = localStorage.getItem("nav-path");
+        if (!saved) return [];
+        try {
+            const parts = JSON.parse(saved) as string[];
+            const findNode = (nodes: PathNode[], name: string): PathNode | undefined => {
+                for (const n of nodes) {
+                    if (n.name === name) return n;
+                    if (n.isDir) {
+                        const found = findNode(n.children, name);
+                        if (found) return found;
+                    }
+                }
+                return undefined;
+            };
+            const path: PathNode[] = [];
+            for (const name of parts) {
+                const currentNodes = path.length ? path[path.length - 1].children : tree.children;
+                const node = findNode(currentNodes, name);
+                if (node) path.push(node);
+                else return [];
+            }
+            return path;
+        } catch {
+            return [];
+        }
+    }
 
-    function getAllPages(): Page[] {
-        const pages: Page[] = [];
+    $effect(() => {
+        const path = current.map(n => n.name);
+        localStorage.setItem("nav-path", JSON.stringify(path));
+    });
+
+    current = loadFromStorage();
+
+    const fuse = new Fuse(getAllItems(), { keys: ["title"], threshold: 0.4 });
+
+    function getAllItems(): (Page | { type: "folder"; title: string; href: string; folder: boolean; icon: string })[] {
+        const items: (Page | { type: "folder"; title: string; href: string; folder: boolean; icon: string })[] = [];
         function walk(nodes: PathNode[]) {
             for (const n of nodes) {
                 if (n.isFile)
-                    pages.push({
+                    items.push({
                         type: "Page" as const,
                         title: n.name,
                         href: n.path,
                         folder: false,
                         icon: n.meta.icon || "",
                     });
-                if (n.isDir && n.children.length) walk(n.children);
+                if (n.isDir) {
+                    items.push({
+                        type: "folder" as const,
+                        title: n.name,
+                        href: n.path,
+                        folder: true,
+                        icon: "folder",
+                    });
+                    if (n.children.length) walk(n.children);
+                }
             }
         }
         walk([tree]);
-        return pages;
+        return items;
     }
 
     function currentItems(): PathNode[] {
@@ -83,31 +127,53 @@
         <button onclick={() => (current = [])}
             ><span class="material-icons">bolt</span></button
         >
-        {#if current.length}<button onclick={back}
-                ><span class="material-icons">arrow_back</span></button
-            >{/if}
-
         <input type="text" bind:value={query} placeholder="search" />
     </div>
     {#if breadcrumbs().length > 0}
         <span class="path">
-            {#each breadcrumbs().slice(-2) as c, i}
+            {#each breadcrumbs() as c, i}
                 <button class="crumb" onclick={() => navigate(c.idx)}
                     >{c.name}</button
                 >
-                {#if i < 1}/{/if}
+                {#if i < breadcrumbs().length - 1}/{/if}
             {/each}
         </span>
     {/if}
 
     {#if query}
         <ul>
-            {#each results() as p}<li><a href={p.href}>{p.title}</a></li>{/each}
+            {#each results() as p}
+                <li>
+                    <a href={p.href} class="item" class:dir={p.folder} onclick={(e) => {
+                        if (p.folder) {
+                            e.preventDefault();
+                            const findNode = (nodes: PathNode[], name: string, href: string): PathNode | undefined => {
+                                for (const n of nodes) {
+                                    if (n.name === name && n.path === href) return n;
+                                    if (n.isDir) {
+                                        const found = findNode(n.children, name, href);
+                                        if (found) return found;
+                                    }
+                                }
+                                return undefined;
+                            };
+                            const node = findNode(tree.children, p.title, p.href);
+                            if (node) current = [...current, node];
+                            query = "";
+                        }
+                    }}>
+                        <span class="material-icons">{p.folder ? "folder" : "description"}</span>
+                        {p.title}
+                    </a>
+                </li>
+            {/each}
         </ul>
     {:else}
         <ul>
             {#each currentItems() as n}
-                <li
+                <button
+                    type="button"
+                    class="item"
                     class:dir={n.isDir}
                     onclick={() => (n.isDir ? enter(n) : goto(n))}
                 >
@@ -115,7 +181,7 @@
                         >{n.isDir ? "folder" : "description"}</span
                     >
                     {n.name}
-                </li>
+                </button>
             {/each}
         </ul>
     {/if}
@@ -123,11 +189,16 @@
 
 <style>
     #nav-container {
+        min-width: 300px;
         font: 13px monospace;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         flex-direction: column;
         height: 100%;
+        opacity: 0.2;
+    }
+    #nav-container:hover {
+        opacity: 1;
     }
     .path {
         padding: 8px 12px;
@@ -135,6 +206,10 @@
         display: flex;
         gap: 4px;
         align-items: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: left;
     }
     .crumb {
         background: none;
@@ -177,6 +252,8 @@
         width: 100%;
         box-sizing: border-box;
         outline: none;
+        border-left: 0px;
+        border-right: 0px;
     }
     ul {
         list-style: none;
@@ -185,22 +262,33 @@
         overflow-y: auto;
     }
     li {
+        list-style: none;
+        margin: 0;
+    }
+    .item {
         cursor: pointer;
         display: flex;
         align-items: center;
         gap: 8px;
         padding: 4px 6px;
+        background: none;
+        border: none;
+        font: inherit;
+        width: 100%;
+        text-align: left;
+        box-sizing: border-box;
     }
     .material-icons {
         font-size: 18px;
     }
-    li:hover {
-        background: #f0f0f0;
+    .item:hover {
+        background-color: black;
+        color: white;
     }
-    li.dir {
+    .item.dir {
         font-weight: bold;
     }
-    a {
+    a.item {
         color: inherit;
         text-decoration: none;
     }

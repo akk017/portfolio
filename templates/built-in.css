@@ -72,7 +72,7 @@ ul[role="group"] {
 }
 
 #nav {
-    margin-right: 8em;
+    margin-right: 4em;
     border-right: 1px solid;
 }
 
@@ -80,7 +80,7 @@ ul[role="group"] {
     min-width: 22em;
     height: calc(100vh - 60px);
     border-left: 1px solid;
-    margin-left: 8em;
+    margin-left: 4em;
 }
 
 .tree-meta > h3 {
