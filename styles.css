@@ -1,0 +1,1515 @@
+html {
+    color: blue;
+    background-color: rgb(253, 253, 253);
+}
+body {
+    margin: 0px auto;
+    max-width: 36em;
+    padding: 50px;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    text-rendering: optimizelegibility;
+    font-kerning: normal;
+}
+@media (max-width: 600px) {
+    body {
+        font-size: 0.9em;
+        padding: 12px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+}
+p {
+    margin: 1em 0px;
+}
+a {
+    color: rgb(26, 26, 26);
+}
+a:visited {
+    color: rgb(26, 26, 26);
+}
+img {
+    max-width: 100%;
+}
+svg {
+    height: auto;
+    max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 1.4em;
+}
+h5,
+h6 {
+    font-size: 1em;
+    font-style: italic;
+}
+h6 {
+    font-weight: normal;
+}
+ol,
+ul {
+    padding-left: 1.7em;
+    margin-top: 1em;
+}
+li > ol,
+li > ul {
+    margin-top: 0px;
+}
+blockquote {
+    margin: 1em 0px 1em 1.7em;
+    padding-left: 1em;
+    border-left: 2px solid rgb(230, 230, 230);
+    color: rgb(96, 96, 96);
+}
+code {
+    font-family: Menlo, Monaco, Consolas, "Lucida Console", monospace;
+    font-size: 85%;
+    margin: 0px;
+    hyphens: manual;
+}
+pre {
+    margin: 1em 0px;
+    overflow: auto;
+}
+pre code {
+    padding: 0px;
+    overflow: visible;
+    overflow-wrap: normal;
+}
+.sourceCode {
+    background-color: transparent;
+    overflow: visible;
+}
+hr {
+    background-color: rgb(26, 26, 26);
+    border: medium;
+    height: 1px;
+    margin: 1em 0px;
+}
+table {
+    margin: 1em 0px;
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+    margin-bottom: 0.75em;
+}
+tbody {
+    margin-top: 0.5em;
+    border-top: 1px solid rgb(26, 26, 26);
+    border-bottom: 1px solid rgb(26, 26, 26);
+}
+th {
+    border-top: 1px solid rgb(26, 26, 26);
+    padding: 0.25em 0.5em;
+}
+td {
+    padding: 0.125em 0.5em 0.25em;
+}
+header {
+    margin-bottom: 4em;
+    text-align: center;
+}
+#TOC li {
+    list-style: none;
+}
+#TOC ul {
+    padding-left: 1.3em;
+}
+#TOC > ul {
+    padding-left: 0px;
+}
+#TOC a:not(:hover) {
+    text-decoration: none;
+}
+code {
+    white-space: pre-wrap;
+}
+span.smallcaps {
+    font-variant: small-caps;
+}
+div.columns {
+    display: flex;
+    gap: min(4vw, 1.5em);
+}
+div.column {
+    flex: 1 1 auto;
+    overflow-x: auto;
+}
+div.hanging-indent {
+    margin-left: 1.5em;
+    text-indent: -1.5em;
+}
+ul.task-list[class] {
+    list-style: none;
+}
+ul.task-list li input[type="checkbox"] {
+    font-size: inherit;
+    width: 0.8em;
+    margin: 0px 0.8em 0.2em -1.6em;
+    vertical-align: middle;
+}
+html {
+}
+pre > code.sourceCode {
+    white-space: pre;
+    position: relative;
+}
+pre > code.sourceCode > span {
+    display: inline-block;
+    line-height: 1.25;
+}
+pre > code.sourceCode > span:empty {
+    height: 1.2em;
+}
+.sourceCode {
+    overflow: visible;
+}
+code.sourceCode > span {
+    color: inherit;
+    text-decoration: inherit;
+}
+div.sourceCode {
+    margin: 1em 0px;
+}
+pre.sourceCode {
+    margin: 0px;
+}
+@media screen {
+    div.sourceCode {
+        overflow: auto;
+    }
+}
+pre.numberSource code {
+    counter-reset: source-line 0;
+}
+pre.numberSource code > span {
+    position: relative;
+    left: -4em;
+    counter-increment: source-line 1;
+}
+pre.numberSource code > span > a:first-child::before {
+    content: counter(source-line);
+    position: relative;
+    left: -1em;
+    text-align: right;
+    vertical-align: baseline;
+    border: medium;
+    display: inline-block;
+    user-select: none;
+    padding: 0px 4px;
+    width: 4em;
+    color: rgb(170, 170, 170);
+}
+pre.numberSource {
+    margin-left: 3em;
+    border-left: 1px solid rgb(170, 170, 170);
+    padding-left: 4px;
+}
+div.sourceCode {
+}
+@media screen {
+    pre > code.sourceCode > span > a:first-child::before {
+        text-decoration: underline;
+    }
+}
+code span.al {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+code span.an {
+    color: rgb(96, 160, 176);
+    font-weight: bold;
+    font-style: italic;
+}
+code span.at {
+    color: rgb(125, 144, 41);
+}
+code span.bn {
+    color: rgb(64, 160, 112);
+}
+code span.bu {
+    color: rgb(0, 128, 0);
+}
+code span.cf {
+    color: rgb(0, 112, 32);
+    font-weight: bold;
+}
+code span.ch {
+    color: rgb(64, 112, 160);
+}
+code span.cn {
+    color: rgb(136, 0, 0);
+}
+code span.co {
+    color: rgb(96, 160, 176);
+    font-style: italic;
+}
+code span.cv {
+    color: rgb(96, 160, 176);
+    font-weight: bold;
+    font-style: italic;
+}
+code span.do {
+    color: rgb(186, 33, 33);
+    font-style: italic;
+}
+code span.dt {
+    color: rgb(144, 32, 0);
+}
+code span.dv {
+    color: rgb(64, 160, 112);
+}
+code span.er {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+code span.ex {
+}
+code span.fl {
+    color: rgb(64, 160, 112);
+}
+code span.fu {
+    color: rgb(6, 40, 126);
+}
+code span.im {
+    color: rgb(0, 128, 0);
+    font-weight: bold;
+}
+code span.in {
+    color: rgb(96, 160, 176);
+    font-weight: bold;
+    font-style: italic;
+}
+code span.kw {
+    color: rgb(0, 112, 32);
+    font-weight: bold;
+}
+code span.op {
+    color: rgb(102, 102, 102);
+}
+code span.ot {
+    color: rgb(0, 112, 32);
+}
+code span.pp {
+    color: rgb(188, 122, 0);
+}
+code span.sc {
+    color: rgb(64, 112, 160);
+}
+code span.ss {
+    color: rgb(187, 102, 136);
+}
+code span.st {
+    color: rgb(64, 112, 160);
+}
+code span.va {
+    color: rgb(25, 23, 124);
+}
+code span.vs {
+    color: rgb(64, 112, 160);
+}
+code span.wa {
+    color: rgb(96, 160, 176);
+    font-weight: bold;
+    font-style: italic;
+}
+</style > <style > @media (prefers-color-scheme:light) {
+    html {
+        color: #1a1a1a;
+        background-color: #fdfdfd;
+    }
+    body {
+        margin: 0 auto;
+        max-width: 36em;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        hyphens: auto;
+        overflow-wrap: break-word;
+        text-rendering: optimizeLegibility;
+        font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+        body {
+            font-size: 0.9em;
+            padding: 12px;
+        }
+        h1 {
+            font-size: 1.8em;
+        }
+    }
+    p {
+        margin: 1em 0;
+    }
+    a {
+        color: #1a1a1a;
+    }
+    a:visited {
+        color: #1a1a1a;
+    }
+    img {
+        max-width: 100%;
+    }
+    svg {
+        height: auto;
+        max-width: 100%;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 1.4em;
+    }
+    h5,
+    h6 {
+        font-size: 1em;
+        font-style: italic;
+    }
+    h6 {
+        font-weight: normal;
+    }
+    ol,
+    ul {
+        padding-left: 1.7em;
+        margin-top: 1em;
+    }
+    li > ol,
+    li > ul {
+        margin-top: 0;
+    }
+    blockquote {
+        margin: 1em 0 1em 1.7em;
+        padding-left: 1em;
+        border-left: 2px solid #e6e6e6;
+        color: #606060;
+    }
+    code {
+        font-family: Menlo, Monaco, Consolas, "Lucida Console", monospace;
+        font-size: 85%;
+        margin: 0;
+        hyphens: manual;
+    }
+    pre {
+        margin: 1em 0;
+        overflow: auto;
+    }
+    pre code {
+        padding: 0;
+        overflow: visible;
+        overflow-wrap: normal;
+    }
+    .sourceCode {
+        background-color: transparent;
+        overflow: visible;
+    }
+    hr {
+        background-color: #1a1a1a;
+        border: none;
+        height: 1px;
+        margin: 1em 0;
+    }
+    table {
+        margin: 1em 0;
+        border-collapse: collapse;
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+        font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+        margin-bottom: 0.75em;
+    }
+    tbody {
+        margin-top: 0.5em;
+        border-top: 1px solid #1a1a1a;
+        border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+        border-top: 1px solid #1a1a1a;
+        padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+        padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+        margin-bottom: 4em;
+        text-align: center;
+    }
+    #TOC li {
+        list-style: none;
+    }
+    #TOC ul {
+        padding-left: 1.3em;
+    }
+    #TOC > ul {
+        padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+        text-decoration: none;
+    }
+    code {
+        white-space: pre-wrap;
+    }
+    span.smallcaps {
+        font-variant: small-caps;
+    }
+    div.columns {
+        display: flex;
+        gap: min(4vw, 1.5em);
+    }
+    div.column {
+        flex: auto;
+        overflow-x: auto;
+    }
+    div.hanging-indent {
+        margin-left: 1.5em;
+        text-indent: -1.5em;
+    }
+    ul.task-list[class] {
+        list-style: none;
+    }
+    ul.task-list li input[type="checkbox"] {
+        font-size: inherit;
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1.6em;
+        vertical-align: middle;
+    }
+    .display.math {
+        display: block;
+        text-align: center;
+        margin: 0.5rem auto;
+    }
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+    pre > code.sourceCode {
+        white-space: pre;
+        position: relative;
+    }
+    pre > code.sourceCode > span {
+        display: inline-block;
+        line-height: 1.25;
+    }
+    pre > code.sourceCode > span:empty {
+        height: 1.2em;
+    }
+    .sourceCode {
+        overflow: visible;
+    }
+    code.sourceCode > span {
+        color: inherit;
+        text-decoration: inherit;
+    }
+    div.sourceCode {
+        margin: 1em 0;
+    }
+    pre.sourceCode {
+        margin: 0;
+    }
+    @media screen {
+        div.sourceCode {
+            overflow: auto;
+        }
+    }
+    pre.numberSource code {
+        counter-reset: source-line 0;
+    }
+    pre.numberSource code > span {
+        position: relative;
+        left: -4em;
+        counter-increment: source-line;
+    }
+    pre.numberSource code > span > a:first-child::before {
+        content: counter(source-line);
+        position: relative;
+        left: -1em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        display: inline-block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+        color: #aaaaaa;
+    }
+    pre.numberSource {
+        margin-left: 3em;
+        border-left: 1px solid #aaaaaa;
+        padding-left: 4px;
+    }
+    div.sourceCode {
+    }
+    @media screen {
+        pre > code.sourceCode > span > a:first-child::before {
+            text-decoration: underline;
+        }
+    }
+    code span.al {
+        color: #ff0000;
+        font-weight: bold;
+    }
+    code span.an {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+    }
+    code span.at {
+        color: #7d9029;
+    }
+    code span.bn {
+        color: #40a070;
+    }
+    code span.bu {
+        color: #008000;
+    }
+    code span.cf {
+        color: #007020;
+        font-weight: bold;
+    }
+    code span.ch {
+        color: #4070a0;
+    }
+    code span.cn {
+        color: #880000;
+    }
+    code span.co {
+        color: #60a0b0;
+        font-style: italic;
+    }
+    code span.cv {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+    }
+    code span.do {
+        color: #ba2121;
+        font-style: italic;
+    }
+    code span.dt {
+        color: #902000;
+    }
+    code span.dv {
+        color: #40a070;
+    }
+    code span.er {
+        color: #ff0000;
+        font-weight: bold;
+    }
+    code span.ex {
+    }
+    code span.fl {
+        color: #40a070;
+    }
+    code span.fu {
+        color: #06287e;
+    }
+    code span.im {
+        color: #008000;
+        font-weight: bold;
+    }
+    code span.in {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+    }
+    code span.kw {
+        color: #007020;
+        font-weight: bold;
+    }
+    code span.op {
+        color: #666666;
+    }
+    code span.ot {
+        color: #007020;
+    }
+    code span.pp {
+        color: #bc7a00;
+    }
+    code span.sc {
+        color: #4070a0;
+    }
+    code span.ss {
+        color: #bb6688;
+    }
+    code span.st {
+        color: #4070a0;
+    }
+    code span.va {
+        color: #19177c;
+    }
+    code span.vs {
+        color: #4070a0;
+    }
+    code span.wa {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+    }
+}
+</style > <style > @media (prefers-color-scheme:dark) {
+    html {
+        color: #1a1a1a;
+        background-color: #fdfdfd;
+    }
+    body {
+        margin: 0 auto;
+        max-width: 36em;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        hyphens: auto;
+        overflow-wrap: break-word;
+        text-rendering: optimizeLegibility;
+        font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+        body {
+            font-size: 0.9em;
+            padding: 12px;
+        }
+        h1 {
+            font-size: 1.8em;
+        }
+    }
+    p {
+        margin: 1em 0;
+    }
+    a {
+        color: #1a1a1a;
+    }
+    a:visited {
+        color: #1a1a1a;
+    }
+    img {
+        max-width: 100%;
+    }
+    svg {
+        height: auto;
+        max-width: 100%;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 1.4em;
+    }
+    h5,
+    h6 {
+        font-size: 1em;
+        font-style: italic;
+    }
+    h6 {
+        font-weight: normal;
+    }
+    ol,
+    ul {
+        padding-left: 1.7em;
+        margin-top: 1em;
+    }
+    li > ol,
+    li > ul {
+        margin-top: 0;
+    }
+    blockquote {
+        margin: 1em 0 1em 1.7em;
+        padding-left: 1em;
+        border-left: 2px solid #e6e6e6;
+        color: #606060;
+    }
+    code {
+        font-family: Menlo, Monaco, Consolas, "Lucida Console", monospace;
+        font-size: 85%;
+        margin: 0;
+        hyphens: manual;
+    }
+    pre {
+        margin: 1em 0;
+        overflow: auto;
+    }
+    pre code {
+        padding: 0;
+        overflow: visible;
+        overflow-wrap: normal;
+    }
+    .sourceCode {
+        background-color: transparent;
+        overflow: visible;
+    }
+    hr {
+        background-color: #1a1a1a;
+        border: none;
+        height: 1px;
+        margin: 1em 0;
+    }
+    table {
+        margin: 1em 0;
+        border-collapse: collapse;
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+        font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+        margin-bottom: 0.75em;
+    }
+    tbody {
+        margin-top: 0.5em;
+        border-top: 1px solid #1a1a1a;
+        border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+        border-top: 1px solid #1a1a1a;
+        padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+        padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+        margin-bottom: 4em;
+        text-align: center;
+    }
+    #TOC li {
+        list-style: none;
+    }
+    #TOC ul {
+        padding-left: 1.3em;
+    }
+    #TOC > ul {
+        padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+        text-decoration: none;
+    }
+    code {
+        white-space: pre-wrap;
+    }
+    span.smallcaps {
+        font-variant: small-caps;
+    }
+    div.columns {
+        display: flex;
+        gap: min(4vw, 1.5em);
+    }
+    div.column {
+        flex: auto;
+        overflow-x: auto;
+    }
+    div.hanging-indent {
+        margin-left: 1.5em;
+        text-indent: -1.5em;
+    }
+    ul.task-list[class] {
+        list-style: none;
+    }
+    ul.task-list li input[type="checkbox"] {
+        font-size: inherit;
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1.6em;
+        vertical-align: middle;
+    }
+    .display.math {
+        display: block;
+        text-align: center;
+        margin: 0.5rem auto;
+    }
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+    pre > code.sourceCode {
+        white-space: pre;
+        position: relative;
+    }
+    pre > code.sourceCode > span {
+        display: inline-block;
+        line-height: 1.25;
+    }
+    pre > code.sourceCode > span:empty {
+        height: 1.2em;
+    }
+    .sourceCode {
+        overflow: visible;
+    }
+    code.sourceCode > span {
+        color: inherit;
+        text-decoration: inherit;
+    }
+    div.sourceCode {
+        margin: 1em 0;
+    }
+    pre.sourceCode {
+        margin: 0;
+    }
+    @media screen {
+        div.sourceCode {
+            overflow: auto;
+        }
+    }
+    pre.numberSource code {
+        counter-reset: source-line 0;
+    }
+    pre.numberSource code > span {
+        position: relative;
+        left: -4em;
+        counter-increment: source-line;
+    }
+    pre.numberSource code > span > a:first-child::before {
+        content: counter(source-line);
+        position: relative;
+        left: -1em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        display: inline-block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+    }
+    pre.numberSource {
+        margin-left: 3em;
+        padding-left: 4px;
+    }
+    div.sourceCode {
+        color: #cccccc;
+        background-color: #303030;
+    }
+    @media screen {
+        pre > code.sourceCode > span > a:first-child::before {
+            text-decoration: underline;
+        }
+    }
+    code span.al {
+        color: #ffcfaf;
+    }
+    code span.an {
+        color: #7f9f7f;
+        font-weight: bold;
+    }
+    code span.at {
+    }
+    code span.bn {
+        color: #dca3a3;
+    }
+    code span.bu {
+    }
+    code span.cf {
+        color: #f0dfaf;
+    }
+    code span.ch {
+        color: #dca3a3;
+    }
+    code span.cn {
+        color: #dca3a3;
+        font-weight: bold;
+    }
+    code span.co {
+        color: #7f9f7f;
+    }
+    code span.cv {
+        color: #7f9f7f;
+        font-weight: bold;
+    }
+    code span.do {
+        color: #7f9f7f;
+    }
+    code span.dt {
+        color: #dfdfbf;
+    }
+    code span.dv {
+        color: #dcdccc;
+    }
+    code span.er {
+        color: #c3bf9f;
+    }
+    code span.ex {
+    }
+    code span.fl {
+        color: #c0bed1;
+    }
+    code span.fu {
+        color: #efef8f;
+    }
+    code span.im {
+    }
+    code span.in {
+        color: #7f9f7f;
+        font-weight: bold;
+    }
+    code span.kw {
+        color: #f0dfaf;
+    }
+    code span.op {
+        color: #f0efd0;
+    }
+    code span.ot {
+        color: #efef8f;
+    }
+    code span.pp {
+        color: #ffcfaf;
+        font-weight: bold;
+    }
+    code span.sc {
+        color: #dca3a3;
+    }
+    code span.ss {
+        color: #cc9393;
+    }
+    code span.st {
+        color: #cc9393;
+    }
+    code span.va {
+    }
+    code span.vs {
+        color: #cc9393;
+    }
+    code span.wa {
+        color: #7f9f7f;
+        font-weight: bold;
+    }
+}
+</style > <style > @media (prefers-color-scheme:dark) {
+    html {
+        color: #ddd;
+        background-color: #151515;
+    }
+    a {
+        color: #abb2bf;
+    }
+    a:visited {
+        color: #abb2bf;
+    }
+    hr {
+        background-color: #abb2bf;
+    }
+    table {
+        border-top: 1px solid #abb2bf;
+        border-bottom: 1px solid #abb2bf;
+    }
+    th {
+        border-top: 1px solid #abb2bf;
+    }
+    tbody {
+        border-top: 1px solid #abb2bf;
+        border-bottom: 1px solid #abb2bf;
+    }
+    blockquote {
+        border-left: 2px solid #282c34;
+        color: #5c6370;
+    }
+    figure > embed {
+        filter: invert(0.8);
+    }
+}
+</style > <style > pre.numberSource code > span {
+    left: -1em;
+}
+pre.numberSource {
+    margin-left: initial;
+}
+span.toc-section-number::after {
+    content: "   ";
+}
+pre > code.sourceCode > span > a:first-child::before {
+    text-decoration: none;
+}
+div.sourceCode {
+}
+pre > code.sourceCode > span {
+    display: initial;
+}
+code:not(.sourceCode) {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    border-radius: 0.2em;
+}
+pre.sourceCode {
+    border: 1px solid rgb(204, 204, 204);
+    padding: 0.5em;
+    border-radius: 0.2em;
+}
+tbody code {
+    white-space: nowrap;
+}
+code {
+    word-break: keep-all;
+}
+td {
+    vertical-align: top;
+}
+body {
+    font-size: 10pt;
+    max-width: 43em;
+    font-family: sans-serif;
+}
+html {
+}
+figure > embed {
+    max-width: 100%;
+}
+figure {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+figcaption {
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: 0.6em;
+}
+body {
+    counter-reset: figure-counter-minor 0;
+}
+figure {
+    counter-increment: figure-counter-minor 1;
+}
+figcaption::before {
+    content: "Figure " counter(figure-counter-major) "."
+        counter(figure-counter-minor) ": ";
+}
+blockquote {
+    border-left: 2px solid rgb(187, 187, 187);
+}
+nav[role="doc-toc"] > ul > li {
+    font-weight: bold;
+    margin-top: 1.2em;
+}
+nav[role="doc-toc"] > ul > li > ul {
+    font-weight: normal;
+    margin-top: 0.3em;
+}
+h1[data-number="1"] {
+    counter-set: figure-counter-major 1;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="2"] {
+    counter-set: figure-counter-major 2;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="3"] {
+    counter-set: figure-counter-major 3;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="4"] {
+    counter-set: figure-counter-major 4;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="5"] {
+    counter-set: figure-counter-major 5;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="6"] {
+    counter-set: figure-counter-major 6;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="7"] {
+    counter-set: figure-counter-major 7;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="8"] {
+    counter-set: figure-counter-major 8;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="9"] {
+    counter-set: figure-counter-major 9;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="10"] {
+    counter-set: figure-counter-major 10;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="11"] {
+    counter-set: figure-counter-major 11;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="12"] {
+    counter-set: figure-counter-major 12;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="13"] {
+    counter-set: figure-counter-major 13;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="14"] {
+    counter-set: figure-counter-major 14;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="15"] {
+    counter-set: figure-counter-major 15;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="16"] {
+    counter-set: figure-counter-major 16;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="17"] {
+    counter-set: figure-counter-major 17;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="18"] {
+    counter-set: figure-counter-major 18;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="19"] {
+    counter-set: figure-counter-major 19;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="20"] {
+    counter-set: figure-counter-major 20;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="21"] {
+    counter-set: figure-counter-major 21;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="22"] {
+    counter-set: figure-counter-major 22;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="23"] {
+    counter-set: figure-counter-major 23;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="24"] {
+    counter-set: figure-counter-major 24;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="25"] {
+    counter-set: figure-counter-major 25;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="26"] {
+    counter-set: figure-counter-major 26;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="27"] {
+    counter-set: figure-counter-major 27;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="28"] {
+    counter-set: figure-counter-major 28;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="29"] {
+    counter-set: figure-counter-major 29;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="30"] {
+    counter-set: figure-counter-major 30;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="31"] {
+    counter-set: figure-counter-major 31;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="32"] {
+    counter-set: figure-counter-major 32;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="33"] {
+    counter-set: figure-counter-major 33;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="34"] {
+    counter-set: figure-counter-major 34;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="35"] {
+    counter-set: figure-counter-major 35;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="36"] {
+    counter-set: figure-counter-major 36;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="37"] {
+    counter-set: figure-counter-major 37;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="38"] {
+    counter-set: figure-counter-major 38;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="39"] {
+    counter-set: figure-counter-major 39;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="40"] {
+    counter-set: figure-counter-major 40;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="41"] {
+    counter-set: figure-counter-major 41;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="42"] {
+    counter-set: figure-counter-major 42;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="43"] {
+    counter-set: figure-counter-major 43;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="44"] {
+    counter-set: figure-counter-major 44;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="45"] {
+    counter-set: figure-counter-major 45;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="46"] {
+    counter-set: figure-counter-major 46;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="47"] {
+    counter-set: figure-counter-major 47;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="48"] {
+    counter-set: figure-counter-major 48;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="49"] {
+    counter-set: figure-counter-major 49;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="50"] {
+    counter-set: figure-counter-major 50;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="51"] {
+    counter-set: figure-counter-major 51;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="52"] {
+    counter-set: figure-counter-major 52;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="53"] {
+    counter-set: figure-counter-major 53;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="54"] {
+    counter-set: figure-counter-major 54;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="55"] {
+    counter-set: figure-counter-major 55;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="56"] {
+    counter-set: figure-counter-major 56;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="57"] {
+    counter-set: figure-counter-major 57;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="58"] {
+    counter-set: figure-counter-major 58;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="59"] {
+    counter-set: figure-counter-major 59;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="60"] {
+    counter-set: figure-counter-major 60;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="61"] {
+    counter-set: figure-counter-major 61;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="62"] {
+    counter-set: figure-counter-major 62;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="63"] {
+    counter-set: figure-counter-major 63;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="64"] {
+    counter-set: figure-counter-major 64;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="65"] {
+    counter-set: figure-counter-major 65;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="66"] {
+    counter-set: figure-counter-major 66;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="67"] {
+    counter-set: figure-counter-major 67;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="68"] {
+    counter-set: figure-counter-major 68;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="69"] {
+    counter-set: figure-counter-major 69;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="70"] {
+    counter-set: figure-counter-major 70;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="71"] {
+    counter-set: figure-counter-major 71;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="72"] {
+    counter-set: figure-counter-major 72;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="73"] {
+    counter-set: figure-counter-major 73;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="74"] {
+    counter-set: figure-counter-major 74;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="75"] {
+    counter-set: figure-counter-major 75;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="76"] {
+    counter-set: figure-counter-major 76;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="77"] {
+    counter-set: figure-counter-major 77;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="78"] {
+    counter-set: figure-counter-major 78;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="79"] {
+    counter-set: figure-counter-major 79;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="80"] {
+    counter-set: figure-counter-major 80;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="81"] {
+    counter-set: figure-counter-major 81;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="82"] {
+    counter-set: figure-counter-major 82;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="83"] {
+    counter-set: figure-counter-major 83;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="84"] {
+    counter-set: figure-counter-major 84;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="85"] {
+    counter-set: figure-counter-major 85;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="86"] {
+    counter-set: figure-counter-major 86;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="87"] {
+    counter-set: figure-counter-major 87;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="88"] {
+    counter-set: figure-counter-major 88;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="89"] {
+    counter-set: figure-counter-major 89;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="90"] {
+    counter-set: figure-counter-major 90;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="91"] {
+    counter-set: figure-counter-major 91;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="92"] {
+    counter-set: figure-counter-major 92;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="93"] {
+    counter-set: figure-counter-major 93;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="94"] {
+    counter-set: figure-counter-major 94;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="95"] {
+    counter-set: figure-counter-major 95;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="96"] {
+    counter-set: figure-counter-major 96;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="97"] {
+    counter-set: figure-counter-major 97;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="98"] {
+    counter-set: figure-counter-major 98;
+    counter-reset: figure-counter-minor 0;
+}
+h1[data-number="99"] {
+    counter-set: figure-counter-major 99;
+    counter-reset: figure-counter-minor 0;
+}
+</style > <style id=ctre_styles > #ctre_wnd {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 3px 3px 0 0;
+    z-index: 2147483647;
+}
+@media (prefers-color-scheme: dark) {
+    #ctre_wnd {
+        background: #000;
+        box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.15);
+    }
+}
