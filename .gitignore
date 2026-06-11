@@ -27,3 +27,5 @@ imagedb-api/images/
 
 # Compiler build
 md_compiler/build/
+.firebase/
+.firebase/hosting.YnVpbGQ.cache

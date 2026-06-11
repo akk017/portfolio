@@ -72,15 +72,25 @@ ul[role="group"] {
 }
 
 #nav {
-    margin-right: 4em;
-    border-right: 1px solid;
+    margin-right: 8em;
+    border-right: 1px solid #ccc;
+    opacity: 0.2;
+}
+
+#nav:hover {
+    opacity: 1;
 }
 
 .tree-meta {
-    min-width: 22em;
+    min-width: 250px;
     height: calc(100vh - 60px);
-    border-left: 1px solid;
-    margin-left: 4em;
+    border-left: 1px solid #ccc;
+    margin-left: 8em;
+    opacity: 0.2;
+}
+
+.tree-meta:hover {
+    opacity: 1;
 }
 
 .tree-meta > h3 {
@@ -138,7 +148,7 @@ header {
     padding-bottom: 10px;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #ccc;
 }
 
 header > div > span {
@@ -155,6 +165,7 @@ header > div > span {
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    margin-block-start: 4em;
 }
 
 .content-bottom-margin {
@@ -188,7 +199,8 @@ ol {
 
 a {
     color: #002638;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-style: dotted;
     padding: 2px 5px;
 }
 
@@ -211,6 +223,7 @@ button:hover {
 a:hover {
     background-color: rgba(0, 0, 0);
     color: white;
+    text-decoration: none;
 }
 
 .divider {
@@ -237,6 +250,26 @@ a:hover {
     color: white;
 }
 
-/*code {
-    #background-color: color-mix(paleturquoise, rgba(255,255,255) 20%);
-}*/
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 22px;
+    }
+
+    #nav {
+        display: none;
+    }
+    
+    .tree-meta {
+        display: none;
+    }
+
+    .content {
+        padding: 0 40px;
+    }
+
+    header {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}

@@ -69,7 +69,7 @@ class MDCompiler(BaseCompiler):
         self.nav = self.build_nav(self._root)
         self._nav_dump = json.dumps(self.nav, indent=2, ensure_ascii=False)
 
-        shutil.rmtree(self.config.build_path)
+        shutil.rmtree(self.config.build_path, ignore_errors=True)
         os.mkdir(self.config.build_path)
 
         path = os.path.relpath(self.config.build_path, self.config.base_path)

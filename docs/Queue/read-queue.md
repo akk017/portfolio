@@ -1,19 +1,19 @@
 ---
 title: Read Queue
 icon: fa-book-open-reader
+watch: true
+date: 28-MAY-2026
 ---
 
 
 ### Design
 
-[Boiled down: fixing the variable font inheritance problem](https://pixelambacht.nl/2022/boiled-down-fixing-variable-font-inheritance/)
 
 [CSS Boilerplate](https://fokus.dev/tools/css-boilerplate/)
 
 [Web Accessibilty](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)
 
 [Design Quality](https://matthewstrom.com/writing/decentralizing-quality/)
-
 
 ### Tech
 
@@ -28,9 +28,6 @@ Paper that Discuss about why Low Latency is Important, and how if affects user e
 
 [Diff Algorithm](https://flo.znkr.io/diff/)
 
-[Debugging Book](https://www.debuggingbook.org/#A-Textbook-for-Paper,-Screen,-and-Keyboard)
-- On how debugger work.
-
 [My First Contribution to Linux](https://vkoskiv.com/first-linux-patch/)
 
 [What Makes System Calls Expensive: A Linux Internals Deep Dive](https://blog.codingconfessions.com/p/what-makes-system-calls-expensive)
@@ -41,7 +38,9 @@ Paper that Discuss about why Low Latency is Important, and how if affects user e
 [Virtual DOM is pure overhead at Svelte by Rick Harris](https://svelte.dev/blog/virtual-dom-is-pure-overhead)
 
 [Ten Commands in GO](https://bitfieldconsulting.com/posts/commandments)
+
 [Some Concurrency in GO](https://blog.cubed.run/the-cards-of-concurrency-in-go-0d7582cecb79)
+
 [Sinals in GO](https://www.calhoun.io/using-signals-with-go/)
 
 [Git Notes - Most Unloved Feature of Git](https://tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/)
@@ -57,6 +56,18 @@ Paper that Discuss about why Low Latency is Important, and how if affects user e
 [Gossip Protocol Explained](https://highscalability.com/gossip-protocol-explained/)
 
 [C++ Performance Optimization](https://abseil.io/fast/hints.html)
+
+[Metastable Failures in Distributed Systems](https://read.thecoder.cafe/p/metastable-failures)
+
+[Reducing Binary Size in Go Build](https://www.datadoghq.com/blog/engineering/agent-go-binaries/)
+
+[Securly Running Massive Snake in SSH](https://eieio.games/blog/secure-massively-multiplayer-snake/)
+
+[50 Design Sytem Pattern](https://substack.com/home/post/p-197186125)
+
+[Writing Your Own Vi Like Text Editor](https://antirez.com/news/108)
+
+[Learn About CAP Theorem](https://open.substack.com/pub/vutr/p/i-spent-8-hours-learning-the-cap)
 
 
 ### Marketing

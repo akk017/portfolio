@@ -15,6 +15,7 @@ IMAGEDB_API=imagedb-api
 NAV=nav
 
 webui:
+	source $$HOME/.nvm/nvm.sh && nvm use 24
 	cd "$(PROJECT_HOME)/$(WEBUI_NAME)"
 	set -a && source .env && set +a
 	nvm use
@@ -35,6 +36,7 @@ build: clean build-nav
 	source $(GARDEN_ENV)
 	cd "$(PROJECT_HOME)/$(MD_COMPILER)"
 	pip3 install .
+	cd ..
 	$(MAKE) clean
 	cd "$(PROJECT_HOME)"
 	python3 -m compiler
@@ -57,7 +59,7 @@ deploy: build
 
 watch:
 	cd "$(PROJECT_HOME)/$(BUILD)"
-	live-server --port=5500 "$(pwd)" --watch --no-browser
+	live-server --host=0.0.0.0 --port=5500 "$(pwd)" --watch --no-browser
 
 dev:
 	trap 'kill 0' SIGINT

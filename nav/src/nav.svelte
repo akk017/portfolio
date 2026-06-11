@@ -160,23 +160,22 @@ function back() {
 
 <style>
     #nav-container {
-        min-width: 300px;
+        min-width: 200px;
         font: 13px monospace;
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
         height: 100%;
-        opacity: 0.4;
-    }
-    #nav-container:hover {
-        opacity: 1;
     }
     #bar {
         display: flex;
         gap: 4px;
-        border: 1px solid lightgray;
+        border: 1px solid #ccc;
         height: 20px;
         padding: 4px 6px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
 
         display: flex;
         justify-content: start;

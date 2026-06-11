@@ -3,6 +3,12 @@ title: CSS Collection
 icon: fa-eye
 ---
 
+For Fix Number Spacing 
+
+```css
+font-variant: common-ligatures tabular-nums;
+```
+
 [CSS Reference](https://tympanus.net/codrops/css_reference/)
 
 <br>
